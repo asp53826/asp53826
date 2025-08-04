@@ -1,16 +1,15 @@
-## Hi there 👋
+<img src="https://github.com/asp53826/asp53826/blob/main/banner.png" alt="Computer Engineer Banner" width="100%" />
 
-<!--
-**asp53826/asp53826** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h3 align="center">👨‍💻 Computer Engineering • 🤖 AI & Machine Learning • ⚙️ Automation @ MP Equipment</h3>
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Hey there! 👋  
+I'm Aaryan Patel, a CS undergrad @ UGA with a passion for:
+- Industrial Automation + Data Analytics
+- Power BI, Python, and Machine Learning
+- AR/VR demos, CtrlX Core + Node-RED, Embedded Projects
+
+🚀 Currently interning at **MP Equipment** — building dashboards, automating ERP systems, and exploring AR/AI for industrial food processing.
+
+📫 Connect with me on [LinkedIn](https://www.linkedin.com) or check out my projects below!
