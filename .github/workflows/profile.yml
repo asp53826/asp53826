@@ -43,6 +43,13 @@ jobs:
       - name: Terminal banner
         run: python3 banner.py
 
+      # The contribution-snake animation is generated but deliberately not
+      # shown in the README. It renders the contribution calendar, and at 17
+      # contributions across 5 days that calendar is nearly empty -- GitHub
+      # already displays it natively below the README, so featuring an
+      # animated version only makes the sparsest thing on the page the most
+      # eye-catching. The assets stay current so it can be dropped in the
+      # moment there is a year of activity worth animating.
       - name: Contribution snake
         uses: Platane/snk@v3
         with:

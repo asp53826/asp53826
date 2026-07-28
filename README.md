@@ -87,14 +87,6 @@ flowchart LR
   I --> J --> K --> L
 ```
 
-## Contributions
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/snake-light.svg">
-  <img alt="A snake animation consuming the contribution graph" src="assets/snake-dark.svg" width="100%">
-</picture>
-
 ## Stack
 
 ```
