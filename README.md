@@ -1,15 +1,85 @@
-<img src="https://github.com/asp53826/asp53826/blob/main/banner.png" alt="Computer Engineer Banner" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="banner-light.svg">
+  <img alt="Aaryan Patel — computer science at UGA, building machine learning infrastructure from scratch" src="banner-dark.svg" width="100%">
+</picture>
 
-<h3 align="center">👨‍💻 Computer Engineering • 🤖 AI & Machine Learning • ⚙️ Automation @ MP Equipment</h3>
+## Systems, not scripts
 
----
+I'm a computer science undergrad at UGA. Most of what I build is the layer
+*underneath* machine learning — the schedulers, indexes, collectives and
+evaluation harnesses that decide whether a model is actually usable — written
+from scratch and benchmarked against the thing it is supposed to beat.
 
-### Hey there! 👋  
-I'm Aaryan Patel, a CS undergrad @ UGA with a passion for:
-- Industrial Automation + Data Analytics
-- Power BI, Python, and Machine Learning
-- AR/VR demos, CtrlX Core + Node-RED, Embedded Projects
+Two rules I hold myself to across every repo here:
 
-🚀 Currently interning at **MP Equipment** — building dashboards, automating ERP systems, and exploring AR/AI for industrial food processing.
+- **The deliverable is a measurement, not a demo.** Every project ships a
+  benchmark you can run, against a real baseline, on data I didn't generate to
+  flatter myself.
+- **Report where it loses.** A speedup with no regime where it's slower is
+  usually a broken benchmark. Each README has a section on the cases the
+  approach handles badly, because that's the part that shows I understand it.
 
-📫 Connect with me on [LinkedIn](https://www.linkedin.com) or check out my projects below!
+## What I've built
+
+| project | what it is | the number that matters |
+|---|---|---|
+| **[vllm-lite](https://github.com/asp53826/vllm-lite)** | LLM inference server — paged KV cache, continuous batching, prefix caching, speculative decoding, OpenAI-compatible API | **94% KV utilization vs 21%** for static batching; 2.9x throughput at 5.5x better TTFT |
+| **[annlite](https://github.com/asp53826/annlite)** | HNSW vector index in C++17 — hand-vectorized distance kernels, Python bindings, HTTP service | Parity with **FAISS** at 0.99 recall, **1.83x faster at 0.999** — the same Pareto frontier, not a beaten benchmark |
+| **[dist-train](https://github.com/asp53826/dist-train)** | Distributed training — ring all-reduce built from `send`/`recv`, plus data, tensor and pipeline parallelism | Ring moves **58.7 MB/worker vs 234.9 MB** naive at 8 workers, and the gap widens exactly as the arithmetic predicts |
+| **[rag-eval](https://github.com/asp53826/rag-eval)** | RAG pipeline plus a reproducible eval harness that gates retrieval quality in CI | BM25 on SciFact reproduces the published BEIR number — **0.6643 vs 0.665** — so the ablations measure ideas, not my bugs |
+| **[feature-store](https://github.com/asp53826/feature-store)** | Point-in-time correct training data, streaming materialization, drift monitoring | Time-travel leakage inflates the offline score by **0.059 AUC**, measured by keeping the leaky join next to the correct one |
+| **[grammar-decode](https://github.com/asp53826/grammar-decode)** | Constrained decoding — JSON Schema compiled to a character automaton, then a cached token mask over a 50k vocabulary | **100% schema conformance against a 0% baseline**; masking up to 1203x faster than replaying the vocabulary |
+| **[agent-harness](https://github.com/asp53826/agent-harness)** | LLM agent runtime — a five-layer sandbox and a programmatically graded benchmark | 57 tests, **25 of them escape attempts**. The sandbox is tested by attacking it, and refuses to run where it can't enforce |
+| **[codebase-qa](https://github.com/asp53826/codebase-qa)** | Codebase Q&A service built around the unglamorous parts: auth, rate limiting, durable job queue, cost tracking, tracing | scrypt-hashed keys, constant-time comparison, revocation as a timestamp — the prototype-to-service gap, written down |
+
+## How the pieces fit
+
+Not eight unrelated weekend projects — one path through a production ML stack,
+built end to end.
+
+```mermaid
+flowchart LR
+  subgraph TRAIN [train]
+    B[feature-store<br/>point-in-time joins]
+    A[dist-train<br/>ring all-reduce]
+  end
+  subgraph SERVE [serve]
+    C[vllm-lite<br/>paged KV + batching]
+    D[grammar-decode<br/>constrained decoding]
+  end
+  subgraph RETRIEVE [retrieve]
+    E[annlite<br/>HNSW index]
+    F[rag-eval<br/>eval harness]
+  end
+  subgraph APPLY [apply]
+    G[agent-harness<br/>sandbox + benchmark]
+    H[codebase-qa<br/>the boring parts]
+  end
+
+  B --> A --> C --> D
+  E --> F --> H
+  C --> G
+  D --> H
+```
+
+## Stack
+
+```
+systems      C++17 · Python · Java · SIMD intrinsics · POSIX rlimits · seatbelt/bubblewrap
+ml           PyTorch · torch.distributed · HNSW · BM25 · cross-encoder reranking
+services     FastAPI · SQLite/Postgres · durable job queues · scrypt · tracing
+industrial   Power BI · Node-RED · CtrlX Core · ERP automation
+```
+
+Day job: automation and analytics at **MP Equipment** — dashboards, ERP
+automation, and AR/AI for industrial food processing.
+
+## Elsewhere
+
+`aaryansp26@gmail.com`
+
+Every repo above is MIT licensed. Clone one and run the benchmark — that's what
+it's there for.
+
+<sub>Banner generated by <a href="banner.py">banner.py</a>: animated SVG, two themes, respects <code>prefers-reduced-motion</code>.</sub>
