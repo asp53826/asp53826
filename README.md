@@ -42,7 +42,7 @@ Two rules I hold myself to across every repo here:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/telemetry-light.svg">
-  <img alt="Portfolio telemetry: 12 repositories, 529 test functions, 934 KB of source across 8 languages, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
+  <img alt="Portfolio telemetry: 12 repositories, 529 test functions, 912 KB of source across 8 languages, 273 files, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
 </picture>
 
 <sub>Regenerated daily by <a href=".github/workflows/profile.yml">a GitHub Action</a> that reads every repo and <a href="scripts/telemetry.py">counts the test functions in the source</a> — not typed in by hand, and not fetched from a third-party stats service that could rate-limit or vanish. It reports <b>test functions</b>; <code>pytest</code> collects 639 cases from them, because four of these repos parametrise.</sub>
