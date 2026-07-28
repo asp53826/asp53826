@@ -37,6 +37,16 @@ Two rules I hold myself to across every repo here:
 | **[sar-focus](https://github.com/asp53826/sar-focus)** | SAR image formation — pulse compression, backprojection, phase gradient autofocus, impulse response analysis | Resolution within **0.5%** of `0.886·c/2B` and `0.886·λR/2L`; sidelobes converge to the **−13.26 dB** theoretical floor |
 | **[vio-nav](https://github.com/asp53826/vio-nav)** | GPS-denied navigation — MSCKF visual-inertial odometry, IMU preintegration on SO(3), null-space feature marginalisation | **51.9x** lower drift than inertial dead reckoning at 40 s; **65x** when the IMU bias starts unknown |
 
+## Portfolio telemetry
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/telemetry-light.svg">
+  <img alt="Portfolio telemetry: 12 repositories, 529 test functions, 934 KB of source across 8 languages, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
+</picture>
+
+<sub>Regenerated daily by <a href=".github/workflows/profile.yml">a GitHub Action</a> that reads every repo and <a href="scripts/telemetry.py">counts the test functions in the source</a> — not typed in by hand, and not fetched from a third-party stats service that could rate-limit or vanish. It reports <b>test functions</b>; <code>pytest</code> collects 639 cases from them, because four of these repos parametrise.</sub>
+
 ## How the pieces fit
 
 Not twelve unrelated weekend projects. Eight are one path through a production
@@ -76,6 +86,14 @@ flowchart LR
   D --> H
   I --> J --> K --> L
 ```
+
+## Contributions
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/snake-light.svg">
+  <img alt="A snake animation consuming the contribution graph" src="assets/snake-dark.svg" width="100%">
+</picture>
 
 ## Stack
 

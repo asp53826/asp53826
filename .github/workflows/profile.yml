@@ -1,0 +1,64 @@
+name: refresh profile
+
+# Everything on this profile is generated here and committed to this repo.
+# Nothing is fetched from a third-party badge or stats service at page-load
+# time, so there is no external dependency that can rate-limit it, change its
+# output, or disappear and leave broken images behind.
+
+on:
+  schedule:
+    - cron: "17 4 * * *"        # daily, off the hour to avoid the stampede
+  workflow_dispatch:
+  push:
+    branches: [main]
+    # Deliberately narrow: this job commits to assets/, so triggering on
+    # assets/ would make it retrigger itself forever.
+    paths:
+      - "scripts/**"
+      - "banner.py"
+      - ".github/workflows/profile.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-refresh
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Portfolio telemetry
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/telemetry.py
+
+      - name: Terminal banner
+        run: python3 banner.py
+
+      - name: Contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake-dark.svg?palette=github-dark
+            assets/snake-light.svg?palette=github-light
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A assets banner-dark.svg banner-light.svg
+          if git diff --staged --quiet; then
+            echo "nothing changed"
+          else
+            git commit -m "Refresh profile telemetry and snake [skip ci]"
+            git push
+          fi
