@@ -39,8 +39,8 @@ LIGHT = {
 }
 
 SYSTEMS = [
-    "vllm-lite", "annlite", "dist-train", "feature-store",
-    "rag-eval", "agent-harness", "codebase-qa", "grammar-decode",
+    "vllm-lite", "annlite", "dist-train", "feature-store", "rag-eval",
+    "agent-harness", "codebase-qa", "grammar-decode", "track-fusion",
 ]
 
 
@@ -87,7 +87,7 @@ def build(t):
     ]
 
     final_y = y + LINE * 6 + 34
-    head, tail = "488 passed", " across 8 repositories"
+    head, tail = "555 passed", " across 9 repositories"
     # Monospace advance is 0.6em, so the caret can be placed after the text
     # instead of guessed at. A hardcoded x here sat on top of the last word.
     caret_x = PAD + len(head + tail) * 18 * 0.6 + 6

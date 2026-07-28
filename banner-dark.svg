@@ -48,9 +48,10 @@
     <g class="ln" style="animation-delay:1.40s"><rect x="575" y="217" width="129" height="24" rx="5" fill="none" stroke="#30363d"/><text x="585" y="234" class="mono sm" fill="#7d8590">agent-harness</text></g>
     <g class="ln" style="animation-delay:1.46s"><rect x="712" y="217" width="112" height="24" rx="5" fill="none" stroke="#30363d"/><text x="722" y="234" class="mono sm" fill="#7d8590">codebase-qa</text></g>
     <g class="ln" style="animation-delay:1.52s"><rect x="832" y="217" width="138" height="24" rx="5" fill="none" stroke="#30363d"/><text x="842" y="234" class="mono sm" fill="#7d8590">grammar-decode</text></g>
+    <g class="ln" style="animation-delay:1.58s"><rect x="978" y="217" width="121" height="24" rx="5" fill="none" stroke="#30363d"/><text x="988" y="234" class="mono sm" fill="#7d8590">track-fusion</text></g>
   <g class="ln" style="animation-delay:1.7s">
     <text x="40" y="276" class="mono sz" fill="#3fb950">$</text>
     <text x="62" y="276" class="mono sz" fill="#e6edf3">pytest -q --all</text>
   </g>
-  <g class="ln" style="animation-delay:2.0s"><text x="40" y="306" class="mono sz" fill="#3fb950">488 passed<tspan fill="#7d8590"> across 8 repositories</tspan></text><rect x="392" y="291" width="10" height="20" fill="#56d4dd" class="caret"/></g>
+  <g class="ln" style="animation-delay:2.0s"><text x="40" y="306" class="mono sz" fill="#3fb950">555 passed<tspan fill="#7d8590"> across 9 repositories</tspan></text><rect x="392" y="291" width="10" height="20" fill="#56d4dd" class="caret"/></g>
 </svg>
