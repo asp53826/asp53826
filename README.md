@@ -24,6 +24,7 @@ Two rules I hold myself to across every repo here:
 
 | project | what it is | the number that matters |
 |---|---|---|
+| **[columnar-engine](https://github.com/asp53826/columnar-engine)** | C++17 vector-at-a-time query engine — validity bitmaps, selection vectors, grouped aggregation, hash joins and a separate scalar oracle | **5,880 assertions**, zero differential mismatches; vectorization crosses from 0.85× at 1k rows to **1.73×** at 1M |
 | **[lsm-tree](https://github.com/asp53826/lsm-tree)** | C++17 storage engine — checksummed WAL, ordered memtables, immutable SSTables, Bloom filters, tombstones and crash-safe compaction | **4,061 assertions** plus 100 randomized hard crashes with **zero acknowledged writes lost**; 34.7k synced writes/s |
 | **[wal-recovery](https://github.com/asp53826/wal-recovery)** | Transactional write-ahead log — binary record codec, CRC32, atomic replay, damaged-tail repair and external crash oracle | 200 `SIGKILL` rounds, **zero acknowledged transactions lost** and zero partial transactions exposed |
 | **[vllm-lite](https://github.com/asp53826/vllm-lite)** | LLM inference server — paged KV cache, continuous batching, prefix caching, speculative decoding, OpenAI-compatible API | **94% KV utilization vs 21%** for static batching; 2.9x throughput at 5.5x better TTFT |
@@ -44,14 +45,14 @@ Two rules I hold myself to across every repo here:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/telemetry-light.svg">
-  <img alt="Portfolio telemetry: 14 repositories, 546 test functions, 945 KB of source across 8 languages, 295 files, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
+  <img alt="Portfolio telemetry: 15 repositories, 555 test functions, 1008 KB of source across 8 languages, 305 files, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
 </picture>
 
 <sub>Regenerated daily by <a href=".github/workflows/profile.yml">a GitHub Action</a> that reads every repo and <a href="scripts/telemetry.py">counts the test functions in the source</a> — not typed in by hand, and not fetched from a third-party stats service that could rate-limit or vanish. It reports <b>test functions</b>; <code>pytest</code> collects 639 cases from them, because four of these repos parametrise.</sub>
 
 ## How the pieces fit
 
-Not fourteen unrelated weekend projects. Ten form one path through a production
+Not fifteen unrelated weekend projects. Eleven form one path through a production
 ML stack and the storage substrate beneath it. The other four are sensing and estimation —
 coherent imaging, target tracking, recovering bits from a corrupted waveform,
 and navigating without GPS — which is the same habit of measuring against a
@@ -62,6 +63,7 @@ flowchart LR
   subgraph STORE [store]
     M[wal-recovery<br/>atomic durable replay]
     N[lsm-tree<br/>SSTables + compaction]
+    O[columnar-engine<br/>vectorized analytics]
   end
   subgraph TRAIN [train]
     B[feature-store<br/>point-in-time joins]
@@ -86,7 +88,7 @@ flowchart LR
     L[vio-nav<br/>MSCKF visual-inertial]
   end
 
-  M --> N --> B --> A --> C --> D
+  M --> N --> O --> B --> A --> C --> D
   E --> F --> H
   C --> G
   D --> H
@@ -96,7 +98,7 @@ flowchart LR
 ## Stack
 
 ```
-systems      C++17 · Python · Java · WAL · LSM/SSTables · Bloom filters · SIMD · POSIX
+systems      C++17 · Python · Java · WAL · LSM/SSTables · columnar execution · SIMD · POSIX
 ml           PyTorch · torch.distributed · HNSW · BM25 · cross-encoder reranking
 signal       QPSK · RRC filters · carrier/timing acquisition · LDPC · min-sum decoding
 radar        SAR backprojection · PGA autofocus · Kalman/IMM filtering · JPDA · OSPA

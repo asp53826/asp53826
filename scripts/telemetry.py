@@ -29,7 +29,7 @@ TOKEN = os.environ.get("GITHUB_TOKEN", "")
 # coursework, the profile repo itself) is deliberately excluded rather than
 # filtered heuristically, so the panel can't silently start counting noise.
 PORTFOLIO = [
-    "wal-recovery", "lsm-tree", "vllm-lite", "annlite", "dist-train",
+    "wal-recovery", "lsm-tree", "columnar-engine", "vllm-lite", "annlite", "dist-train",
     "rag-eval", "feature-store",
     "grammar-decode", "agent-harness", "codebase-qa", "track-fusion",
     "sdr-receiver", "sar-focus", "vio-nav",
