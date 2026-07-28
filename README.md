@@ -24,9 +24,9 @@ Two rules I hold myself to across every repo here:
 
 | project | what it is | the number that matters |
 |---|---|---|
-| **[columnar-engine](https://github.com/asp53826/columnar-engine)** | C++17 vector-at-a-time query engine — validity bitmaps, selection vectors, grouped aggregation, hash joins and a separate scalar oracle | **5,880 assertions**, zero differential mismatches; vectorization crosses from 0.85× at 1k rows to **1.73×** at 1M |
-| **[lsm-tree](https://github.com/asp53826/lsm-tree)** | C++17 storage engine — checksummed WAL, ordered memtables, immutable SSTables, Bloom filters, tombstones and crash-safe compaction | **4,061 assertions** plus 100 randomized hard crashes with **zero acknowledged writes lost**; 34.7k synced writes/s |
-| **[wal-recovery](https://github.com/asp53826/wal-recovery)** | Transactional write-ahead log — binary record codec, CRC32, atomic replay, damaged-tail repair and external crash oracle | 200 `SIGKILL` rounds, **zero acknowledged transactions lost** and zero partial transactions exposed |
+| **[columnar-engine](https://github.com/asp53826/columnar-engine)** | C++17 vector-at-a-time engine — null bitmaps, selection vectors, joins, aggregation, TPC-H Q1 and scalar differential oracles | **6,288 assertions**; Q1 processes 53.1M rows/s and batched filters reach **1.94×** scalar |
+| **[lsm-tree](https://github.com/asp53826/lsm-tree)** | C++17 storage engine — WAL, memtables, SSTables, Bloom filters, version-aware range scans and crash-safe compaction | **4,064 assertions** plus 100 randomized hard crashes with **zero acknowledged writes lost** |
+| **[wal-recovery](https://github.com/asp53826/wal-recovery)** | Transactional WAL — CRC32 records, atomic replay, damaged-tail repair, external crash oracle and validated group commit | Zero crash-campaign losses; 16-way group commit reaches **40.2k tx/s, 2.58×** single commit |
 | **[vllm-lite](https://github.com/asp53826/vllm-lite)** | LLM inference server — paged KV cache, continuous batching, prefix caching, speculative decoding, OpenAI-compatible API | **94% KV utilization vs 21%** for static batching; 2.9x throughput at 5.5x better TTFT |
 | **[annlite](https://github.com/asp53826/annlite)** | HNSW vector index in C++17 — hand-vectorized distance kernels, Python bindings, HTTP service | Parity with **FAISS** at 0.99 recall, **1.83x faster at 0.999** — the same Pareto frontier, not a beaten benchmark |
 | **[dist-train](https://github.com/asp53826/dist-train)** | Distributed training — ring all-reduce built from `send`/`recv`, plus data, tensor and pipeline parallelism | Ring moves **58.7 MB/worker vs 234.9 MB** naive at 8 workers, and the gap widens exactly as the arithmetic predicts |
@@ -45,7 +45,7 @@ Two rules I hold myself to across every repo here:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/telemetry-light.svg">
-  <img alt="Portfolio telemetry: 15 repositories, 555 test functions, 1008 KB of source across 8 languages, 305 files, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
+  <img alt="Portfolio telemetry: 15 repositories, 560 test functions, 1023 KB of source across 8 languages, 305 files, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
 </picture>
 
 <sub>Regenerated daily by <a href=".github/workflows/profile.yml">a GitHub Action</a> that reads every repo and <a href="scripts/telemetry.py">counts the test functions in the source</a> — not typed in by hand, and not fetched from a third-party stats service that could rate-limit or vanish. It reports <b>test functions</b>; <code>pytest</code> collects 639 cases from them, because four of these repos parametrise.</sub>
