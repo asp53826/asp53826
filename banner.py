@@ -7,7 +7,7 @@ Run it and commit the output:
     python3 banner.py
 """
 
-W, H = 1200, 340
+W, H = 1200, 368
 PAD = 40
 LINE = 30
 MONO = "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace"
@@ -41,6 +41,7 @@ LIGHT = {
 SYSTEMS = [
     "vllm-lite", "annlite", "dist-train", "feature-store", "rag-eval",
     "agent-harness", "codebase-qa", "grammar-decode", "track-fusion",
+    "sdr-receiver", "sar-focus",
 ]
 
 
@@ -56,19 +57,32 @@ def prompt_line(y, cmd, t, delay):
   </g>"""
 
 
+CHIP_ROW = 28
+
+
 def chips(y, t, delay):
-    """The repo names, laid out on one row with measured-ish spacing."""
-    out, x = [], PAD
+    """The repo names, wrapping onto as many rows as they need.
+
+    Wrapping rather than shrinking: the tenth repo overflowed a single row by
+    3px, and the fix that scales is to let the block grow downward instead of
+    quietly reducing the type every time one is added.
+
+    Returns the markup and the row count, so the caller can shift what follows.
+    """
+    out, x, row = [], PAD, 0
     for i, name in enumerate(SYSTEMS):
         w = len(name) * 8.4 + 20
+        if x + w > W - PAD:
+            row, x = row + 1, PAD
+        yy = y + row * CHIP_ROW
         out.append(
             f'    <g class="ln" style="animation-delay:{delay + i * 0.06:.2f}s">'
-            f'<rect x="{x:.0f}" y="{y - 15}" width="{w:.0f}" height="24" rx="5" '
+            f'<rect x="{x:.0f}" y="{yy - 15}" width="{w:.0f}" height="24" rx="5" '
             f'fill="none" stroke="{t["border"]}"/>'
-            f'<text x="{x + 10:.0f}" y="{y + 2}" class="mono sm" fill="{t["dim"]}">{name}</text></g>'
+            f'<text x="{x + 10:.0f}" y="{yy + 2}" class="mono sm" fill="{t["dim"]}">{name}</text></g>'
         )
         x += w + 8
-    return "\n".join(out)
+    return "\n".join(out), row + 1
 
 
 def build(t):
@@ -82,12 +96,16 @@ def build(t):
         f'<text x="{PAD}" y="{y + LINE * 2}" class="mono sm" fill="{t["dim"]}">'
         f'I build the infrastructure under machine learning, from scratch, and then measure it.</text></g>',
         prompt_line(y + LINE * 3 + 14, "ls ~/systems", t, 0.9),
-        chips(y + LINE * 4 + 20, t, 1.1),
-        prompt_line(y + LINE * 5 + 34, "pytest -q --all", t, 1.7),
+    ]
+    chip_svg, chip_rows = chips(y + LINE * 4 + 20, t, 1.1)
+    extra = (chip_rows - 1) * CHIP_ROW
+    body += [
+        chip_svg,
+        prompt_line(y + LINE * 5 + 34 + extra, "pytest -q --all", t, 1.7),
     ]
 
-    final_y = y + LINE * 6 + 34
-    head, tail = "555 passed", " across 9 repositories"
+    final_y = y + LINE * 6 + 34 + extra
+    head, tail = "602 passed", " across 11 repositories"
     # Monospace advance is 0.6em, so the caret can be placed after the text
     # instead of guessed at. A hardcoded x here sat on top of the last word.
     caret_x = PAD + len(head + tail) * 18 * 0.6 + 6

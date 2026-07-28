@@ -33,12 +33,16 @@ Two rules I hold myself to across every repo here:
 | **[agent-harness](https://github.com/asp53826/agent-harness)** | LLM agent runtime — a five-layer sandbox and a programmatically graded benchmark | 57 tests, **25 of them escape attempts**. The sandbox is tested by attacking it, and refuses to run where it can't enforce |
 | **[codebase-qa](https://github.com/asp53826/codebase-qa)** | Codebase Q&A service built around the unglamorous parts: auth, rate limiting, durable job queue, cost tracking, tracing | scrypt-hashed keys, constant-time comparison, revocation as a timestamp — the prototype-to-service gap, written down |
 | **[sdr-receiver](https://github.com/asp53826/sdr-receiver)** | QPSK software-defined-radio receiver — RRC pulse shaping, carrier/timing acquisition, soft decisions, regular LDPC decoding | Full impaired receiver tracks coherent theory; **0 observed errors in 21,600 bits at 4–8 dB** after the LDPC waterfall |
+| **[track-fusion](https://github.com/asp53826/track-fusion)** | Multi-target tracking — IMM filter bank, JPDA data association, Wald-test track scoring, OSPA evaluation | IMM cuts localisation error **47%** through a manoeuvre and costs **45%** on a target that never turns — both ends measured |
+| **[sar-focus](https://github.com/asp53826/sar-focus)** | SAR image formation — pulse compression, backprojection, phase gradient autofocus, impulse response analysis | Resolution within **0.5%** of `0.886·c/2B` and `0.886·λR/2L`; sidelobes converge to the **−13.26 dB** theoretical floor |
 
 ## How the pieces fit
 
-Not nine unrelated weekend projects. Eight of them are one path through a
-production ML stack, built end to end; the ninth is digital communications,
-where the same measurement discipline is applied to synchronization and coding.
+Not eleven unrelated weekend projects. Eight are one path through a production
+ML stack, built end to end. The other three are radar and communications —
+coherent imaging, target tracking, and getting bits off a corrupted waveform —
+which is the same habit of measuring against a known answer pointed somewhere
+harder to fool yourself about.
 
 ```mermaid
 flowchart LR
@@ -58,14 +62,17 @@ flowchart LR
     G[agent-harness<br/>sandbox + benchmark]
     H[codebase-qa<br/>the boring parts]
   end
-  subgraph SIGNAL [receive]
+  subgraph SIGNAL [sense and receive]
     I[sdr-receiver<br/>QPSK + LDPC]
+    J[sar-focus<br/>SAR image formation]
+    K[track-fusion<br/>IMM + JPDA tracking]
   end
 
   B --> A --> C --> D
   E --> F --> H
   C --> G
   D --> H
+  I --> J --> K
 ```
 
 ## Stack
@@ -74,6 +81,7 @@ flowchart LR
 systems      C++17 · Python · Java · SIMD intrinsics · POSIX rlimits · seatbelt/bubblewrap
 ml           PyTorch · torch.distributed · HNSW · BM25 · cross-encoder reranking
 signal       QPSK · RRC filters · carrier/timing acquisition · LDPC · min-sum decoding
+radar        SAR backprojection · PGA autofocus · Kalman/IMM filtering · JPDA · OSPA
 services     FastAPI · SQLite/Postgres · durable job queues · scrypt · tracing
 industrial   Power BI · Node-RED · CtrlX Core · ERP automation
 ```
