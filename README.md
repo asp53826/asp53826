@@ -24,6 +24,8 @@ Two rules I hold myself to across every repo here:
 
 | project | what it is | the number that matters |
 |---|---|---|
+| **[lsm-tree](https://github.com/asp53826/lsm-tree)** | C++17 storage engine — checksummed WAL, ordered memtables, immutable SSTables, Bloom filters, tombstones and crash-safe compaction | **4,061 assertions** plus 100 randomized hard crashes with **zero acknowledged writes lost**; 34.7k synced writes/s |
+| **[wal-recovery](https://github.com/asp53826/wal-recovery)** | Transactional write-ahead log — binary record codec, CRC32, atomic replay, damaged-tail repair and external crash oracle | 200 `SIGKILL` rounds, **zero acknowledged transactions lost** and zero partial transactions exposed |
 | **[vllm-lite](https://github.com/asp53826/vllm-lite)** | LLM inference server — paged KV cache, continuous batching, prefix caching, speculative decoding, OpenAI-compatible API | **94% KV utilization vs 21%** for static batching; 2.9x throughput at 5.5x better TTFT |
 | **[annlite](https://github.com/asp53826/annlite)** | HNSW vector index in C++17 — hand-vectorized distance kernels, Python bindings, HTTP service | Parity with **FAISS** at 0.99 recall, **1.83x faster at 0.999** — the same Pareto frontier, not a beaten benchmark |
 | **[dist-train](https://github.com/asp53826/dist-train)** | Distributed training — ring all-reduce built from `send`/`recv`, plus data, tensor and pipeline parallelism | Ring moves **58.7 MB/worker vs 234.9 MB** naive at 8 workers, and the gap widens exactly as the arithmetic predicts |
@@ -42,21 +44,25 @@ Two rules I hold myself to across every repo here:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/telemetry-light.svg">
-  <img alt="Portfolio telemetry: 12 repositories, 529 test functions, 912 KB of source across 8 languages, 273 files, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
+  <img alt="Portfolio telemetry: 14 repositories, 546 test functions, 945 KB of source across 8 languages, 295 files, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
 </picture>
 
 <sub>Regenerated daily by <a href=".github/workflows/profile.yml">a GitHub Action</a> that reads every repo and <a href="scripts/telemetry.py">counts the test functions in the source</a> — not typed in by hand, and not fetched from a third-party stats service that could rate-limit or vanish. It reports <b>test functions</b>; <code>pytest</code> collects 639 cases from them, because four of these repos parametrise.</sub>
 
 ## How the pieces fit
 
-Not twelve unrelated weekend projects. Eight are one path through a production
-ML stack, built end to end. The other four are sensing and estimation —
+Not fourteen unrelated weekend projects. Ten form one path through a production
+ML stack and the storage substrate beneath it. The other four are sensing and estimation —
 coherent imaging, target tracking, recovering bits from a corrupted waveform,
 and navigating without GPS — which is the same habit of measuring against a
 known answer, pointed somewhere harder to fool yourself about.
 
 ```mermaid
 flowchart LR
+  subgraph STORE [store]
+    M[wal-recovery<br/>atomic durable replay]
+    N[lsm-tree<br/>SSTables + compaction]
+  end
   subgraph TRAIN [train]
     B[feature-store<br/>point-in-time joins]
     A[dist-train<br/>ring all-reduce]
@@ -80,7 +86,7 @@ flowchart LR
     L[vio-nav<br/>MSCKF visual-inertial]
   end
 
-  B --> A --> C --> D
+  M --> N --> B --> A --> C --> D
   E --> F --> H
   C --> G
   D --> H
@@ -90,7 +96,7 @@ flowchart LR
 ## Stack
 
 ```
-systems      C++17 · Python · Java · SIMD intrinsics · POSIX rlimits · seatbelt/bubblewrap
+systems      C++17 · Python · Java · WAL · LSM/SSTables · Bloom filters · SIMD · POSIX
 ml           PyTorch · torch.distributed · HNSW · BM25 · cross-encoder reranking
 signal       QPSK · RRC filters · carrier/timing acquisition · LDPC · min-sum decoding
 radar        SAR backprojection · PGA autofocus · Kalman/IMM filtering · JPDA · OSPA
