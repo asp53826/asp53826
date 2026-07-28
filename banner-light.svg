@@ -51,9 +51,10 @@
     <g class="ln" style="animation-delay:1.58s"><rect x="978" y="217" width="121" height="24" rx="5" fill="none" stroke="#d1d9e0"/><text x="988" y="234" class="mono sm" fill="#59636e">track-fusion</text></g>
     <g class="ln" style="animation-delay:1.64s"><rect x="40" y="245" width="121" height="24" rx="5" fill="none" stroke="#d1d9e0"/><text x="50" y="262" class="mono sm" fill="#59636e">sdr-receiver</text></g>
     <g class="ln" style="animation-delay:1.70s"><rect x="169" y="245" width="96" height="24" rx="5" fill="none" stroke="#d1d9e0"/><text x="179" y="262" class="mono sm" fill="#59636e">sar-focus</text></g>
+    <g class="ln" style="animation-delay:1.76s"><rect x="272" y="245" width="79" height="24" rx="5" fill="none" stroke="#d1d9e0"/><text x="282" y="262" class="mono sm" fill="#59636e">vio-nav</text></g>
   <g class="ln" style="animation-delay:1.7s">
     <text x="40" y="304" class="mono sz" fill="#1a7f37">$</text>
     <text x="62" y="304" class="mono sz" fill="#1f2328">pytest -q --all</text>
   </g>
-  <g class="ln" style="animation-delay:2.0s"><text x="40" y="334" class="mono sz" fill="#1a7f37">602 passed<tspan fill="#59636e"> across 11 repositories</tspan></text><rect x="402" y="319" width="10" height="20" fill="#0550ae" class="caret"/></g>
+  <g class="ln" style="animation-delay:2.0s"><text x="40" y="334" class="mono sz" fill="#1a7f37">639 passed<tspan fill="#59636e"> across 12 repositories</tspan></text><rect x="402" y="319" width="10" height="20" fill="#0550ae" class="caret"/></g>
 </svg>

@@ -35,14 +35,15 @@ Two rules I hold myself to across every repo here:
 | **[sdr-receiver](https://github.com/asp53826/sdr-receiver)** | QPSK software-defined-radio receiver — RRC pulse shaping, carrier/timing acquisition, soft decisions, regular LDPC decoding | Full impaired receiver tracks coherent theory; **0 observed errors in 21,600 bits at 4–8 dB** after the LDPC waterfall |
 | **[track-fusion](https://github.com/asp53826/track-fusion)** | Multi-target tracking — IMM filter bank, JPDA data association, Wald-test track scoring, OSPA evaluation | IMM cuts localisation error **47%** through a manoeuvre and costs **45%** on a target that never turns — both ends measured |
 | **[sar-focus](https://github.com/asp53826/sar-focus)** | SAR image formation — pulse compression, backprojection, phase gradient autofocus, impulse response analysis | Resolution within **0.5%** of `0.886·c/2B` and `0.886·λR/2L`; sidelobes converge to the **−13.26 dB** theoretical floor |
+| **[vio-nav](https://github.com/asp53826/vio-nav)** | GPS-denied navigation — MSCKF visual-inertial odometry, IMU preintegration on SO(3), null-space feature marginalisation | **51.9x** lower drift than inertial dead reckoning at 40 s; **65x** when the IMU bias starts unknown |
 
 ## How the pieces fit
 
-Not eleven unrelated weekend projects. Eight are one path through a production
-ML stack, built end to end. The other three are radar and communications —
-coherent imaging, target tracking, and getting bits off a corrupted waveform —
-which is the same habit of measuring against a known answer pointed somewhere
-harder to fool yourself about.
+Not twelve unrelated weekend projects. Eight are one path through a production
+ML stack, built end to end. The other four are sensing and estimation —
+coherent imaging, target tracking, recovering bits from a corrupted waveform,
+and navigating without GPS — which is the same habit of measuring against a
+known answer, pointed somewhere harder to fool yourself about.
 
 ```mermaid
 flowchart LR
@@ -66,13 +67,14 @@ flowchart LR
     I[sdr-receiver<br/>QPSK + LDPC]
     J[sar-focus<br/>SAR image formation]
     K[track-fusion<br/>IMM + JPDA tracking]
+    L[vio-nav<br/>MSCKF visual-inertial]
   end
 
   B --> A --> C --> D
   E --> F --> H
   C --> G
   D --> H
-  I --> J --> K
+  I --> J --> K --> L
 ```
 
 ## Stack
@@ -82,6 +84,7 @@ systems      C++17 · Python · Java · SIMD intrinsics · POSIX rlimits · seat
 ml           PyTorch · torch.distributed · HNSW · BM25 · cross-encoder reranking
 signal       QPSK · RRC filters · carrier/timing acquisition · LDPC · min-sum decoding
 radar        SAR backprojection · PGA autofocus · Kalman/IMM filtering · JPDA · OSPA
+estimation   IMU preintegration · SO(3)/Lie groups · MSCKF · ATE/RPE · triangulation
 services     FastAPI · SQLite/Postgres · durable job queues · scrypt · tracing
 industrial   Power BI · Node-RED · CtrlX Core · ERP automation
 ```
