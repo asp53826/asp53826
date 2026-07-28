@@ -24,6 +24,7 @@ Two rules I hold myself to across every repo here:
 
 | project | what it is | the number that matters |
 |---|---|---|
+| **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | C++17 distributed-database correctness lab — Raft elections/log repair/majority commit, serializable MVCC, and P-compositional linearizability checking | **598 assertions** across seeded partitions; ~0.69M 3-node replicated writes/s and **11-tick** five-node failover |
 | **[columnar-engine](https://github.com/asp53826/columnar-engine)** | C++17 vector-at-a-time engine — null bitmaps, selection vectors, joins, aggregation, TPC-H Q1 and scalar differential oracles | **6,288 assertions**; Q1 processes 53.1M rows/s and batched filters reach **1.94×** scalar |
 | **[lsm-tree](https://github.com/asp53826/lsm-tree)** | C++17 storage engine — WAL, memtables, SSTables, Bloom filters, version-aware range scans and crash-safe compaction | **4,064 assertions** plus 100 randomized hard crashes with **zero acknowledged writes lost** |
 | **[wal-recovery](https://github.com/asp53826/wal-recovery)** | Transactional WAL — CRC32 records, atomic replay, damaged-tail repair, external crash oracle and validated group commit | Zero crash-campaign losses; 16-way group commit reaches **40.2k tx/s, 2.58×** single commit |
@@ -45,14 +46,14 @@ Two rules I hold myself to across every repo here:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/telemetry-light.svg">
-  <img alt="Portfolio telemetry: 15 repositories, 560 test functions, 1023 KB of source across 8 languages, 305 files, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
+  <img alt="Portfolio telemetry: 16 repositories, 573 test functions, 1069 KB of source across 8 languages, 320 files, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
 </picture>
 
-<sub>Regenerated daily by <a href=".github/workflows/profile.yml">a GitHub Action</a> that reads every repo and <a href="scripts/telemetry.py">counts the test functions in the source</a> — not typed in by hand, and not fetched from a third-party stats service that could rate-limit or vanish. It reports <b>test functions</b>; <code>pytest</code> collects 639 cases from them, because four of these repos parametrise.</sub>
+<sub>Regenerated daily by <a href=".github/workflows/profile.yml">a GitHub Action</a> that reads every repo and <a href="scripts/telemetry.py">counts the test functions in the source</a> — not typed in by hand, and not fetched from a third-party stats service that could rate-limit or vanish. It reports <b>test functions</b>; parametrized suites and looped invariants expand those into many more checks (598 assertions in <code>raft-mvcc</code> alone).</sub>
 
 ## How the pieces fit
 
-Not fifteen unrelated weekend projects. Eleven form one path through a production
+Not sixteen unrelated weekend projects. Twelve form one path through a production
 ML stack and the storage substrate beneath it. The other four are sensing and estimation —
 coherent imaging, target tracking, recovering bits from a corrupted waveform,
 and navigating without GPS — which is the same habit of measuring against a
@@ -63,6 +64,7 @@ flowchart LR
   subgraph STORE [store]
     M[wal-recovery<br/>atomic durable replay]
     N[lsm-tree<br/>SSTables + compaction]
+    P[raft-mvcc<br/>consensus + snapshots]
     O[columnar-engine<br/>vectorized analytics]
   end
   subgraph TRAIN [train]
@@ -88,7 +90,7 @@ flowchart LR
     L[vio-nav<br/>MSCKF visual-inertial]
   end
 
-  M --> N --> O --> B --> A --> C --> D
+  M --> N --> P --> O --> B --> A --> C --> D
   E --> F --> H
   C --> G
   D --> H
@@ -98,7 +100,7 @@ flowchart LR
 ## Stack
 
 ```
-systems      C++17 · Python · Java · WAL · LSM/SSTables · columnar execution · SIMD · POSIX
+systems      C++17 · Python · Java · Raft · MVCC · WAL · LSM/SSTables · columnar execution · SIMD · POSIX
 ml           PyTorch · torch.distributed · HNSW · BM25 · cross-encoder reranking
 signal       QPSK · RRC filters · carrier/timing acquisition · LDPC · min-sum decoding
 radar        SAR backprojection · PGA autofocus · Kalman/IMM filtering · JPDA · OSPA
