@@ -40,7 +40,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/telemetry.py
 
-      - name: Terminal banner
+      - name: Profile visuals
         run: python3 banner.py
 
       # The contribution-snake animation is generated but deliberately not

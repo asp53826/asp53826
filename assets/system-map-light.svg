@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-label="Architecture map connecting ingestion, storage, compute, serving, verification, financial data, machine learning, autonomy, and correctness.">
+  <defs>
+    <linearGradient id="bus-light" x1="0" x2="1">
+      <stop stop-color="#7048d7"/><stop offset=".33" stop-color="#145fe0"/>
+      <stop offset=".66" stop-color="#007d9d"/><stop offset="1" stop-color="#9b6400"/>
+    </linearGradient>
+    <pattern id="map-grid-light" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".8" fill="#5b789d" opacity=".1"/>
+    </pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .bus { stroke-dasharray: 8 13; animation: route 6s linear infinite; }
+    .return { animation-direction: reverse; animation-duration: 8s; }
+    .node { opacity:0; animation: node-in .55s ease forwards; }
+    .n1 { animation-delay:.12s; } .n2 { animation-delay:.24s; } .n3 { animation-delay:.36s; }
+    .ping { transform-box:fill-box; transform-origin:center; animation: ping 2.4s ease-in-out infinite; }
+    @keyframes route { to { stroke-dashoffset:-168; } }
+    @keyframes node-in { from { opacity:0; transform:translateY(7px); } to { opacity:1; transform:none; } }
+    @keyframes ping { 0%,100% { opacity:.45; transform:scale(.75); } 50% { opacity:1; transform:scale(1.3); } }
+    @media (prefers-reduced-motion: reduce) {
+      .bus,.node,.ping { animation:none; }
+      .node { opacity:1; }
+    }
+  </style>
+  <rect width="1200" height="390" rx="16" fill="#f7fbff"/>
+  <rect width="1200" height="390" rx="16" fill="url(#map-grid-light)"/>
+  <rect x="1" y="1" width="1198" height="388" rx="15" fill="none" stroke="#c4d5ea"/>
+  <text x="55" y="42" class="mono" font-size="11" letter-spacing="2.2" fill="#007d9d">SYSTEM TOPOLOGY // CLAIMS FLOW ONLY AFTER VERIFICATION</text>
+  <circle cx="1128" cy="38" r="4" fill="#087a4c" class="ping"/>
+  <text x="1115" y="42" text-anchor="end" class="mono" font-size="10" letter-spacing="1" fill="#526a88">LIVE</text>
+
+  <path d="M235 141H265M445 141H475M655 141H685M865 141H895" fill="none" stroke="url(#bus-light)" stroke-width="3" class="bus"/>
+  <path d="M180 182V222H1020V248" fill="none" stroke="#c4d5ea" stroke-width="2" class="bus return"/>
+  <path d="M460 248V218H790V248M740 248V218" fill="none" stroke="#145fe0" stroke-opacity=".48" stroke-width="2" class="bus"/>
+  <path d="M1020 330V354H180V330" fill="none" stroke="#087a4c" stroke-opacity=".42" stroke-width="2" class="bus return"/>
+
+  <g class="node n0"><rect x="55" y="100" width="180" height="82" rx="10" fill="#ffffff" stroke="#c4d5ea"/><rect x="55" y="100" width="4" height="82" rx="2" fill="#7048d7"/><circle cx="79" cy="126" r="5" fill="#7048d7" class="ping"/><text x="94" y="130" class="mono" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0b1730">INGEST</text><text x="79" y="157" class="mono" font-size="10" letter-spacing=".7" fill="#526a88">EDGAR · SIGNAL</text></g><g class="node n1"><rect x="265" y="100" width="180" height="82" rx="10" fill="#ffffff" stroke="#c4d5ea"/><rect x="265" y="100" width="4" height="82" rx="2" fill="#087a4c"/><circle cx="289" cy="126" r="5" fill="#087a4c" class="ping"/><text x="304" y="130" class="mono" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0b1730">STORE</text><text x="289" y="157" class="mono" font-size="10" letter-spacing=".7" fill="#526a88">WAL · LSM · MVCC</text></g><g class="node n2"><rect x="475" y="100" width="180" height="82" rx="10" fill="#ffffff" stroke="#c4d5ea"/><rect x="475" y="100" width="4" height="82" rx="2" fill="#145fe0"/><circle cx="499" cy="126" r="5" fill="#145fe0" class="ping"/><text x="514" y="130" class="mono" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0b1730">COMPUTE</text><text x="499" y="157" class="mono" font-size="10" letter-spacing=".7" fill="#526a88">COLUMNAR · DIST</text></g><g class="node n3"><rect x="685" y="100" width="180" height="82" rx="10" fill="#ffffff" stroke="#c4d5ea"/><rect x="685" y="100" width="4" height="82" rx="2" fill="#007d9d"/><circle cx="709" cy="126" r="5" fill="#007d9d" class="ping"/><text x="724" y="130" class="mono" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0b1730">SERVE</text><text x="709" y="157" class="mono" font-size="10" letter-spacing=".7" fill="#526a88">vLLM · HNSW · RAG</text></g><g class="node n0"><rect x="895" y="100" width="250" height="82" rx="10" fill="#ffffff" stroke="#c4d5ea"/><rect x="895" y="100" width="4" height="82" rx="2" fill="#9b6400"/><circle cx="919" cy="126" r="5" fill="#9b6400" class="ping"/><text x="934" y="130" class="mono" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0b1730">VERIFY</text><text x="919" y="157" class="mono" font-size="10" letter-spacing=".7" fill="#526a88">ORACLES · EVALS · LIMITS</text></g><g class="node n1"><rect x="55" y="248" width="250" height="82" rx="10" fill="#ffffff" stroke="#c4d5ea"/><rect x="55" y="248" width="4" height="82" rx="2" fill="#7048d7"/><circle cx="79" cy="274" r="5" fill="#7048d7" class="ping"/><text x="94" y="278" class="mono" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0b1730">FINANCIAL DATA</text><text x="79" y="305" class="mono" font-size="10" letter-spacing=".7" fill="#526a88">XBRL → COMPARABLE FACTS</text></g><g class="node n2"><rect x="335" y="248" width="250" height="82" rx="10" fill="#ffffff" stroke="#c4d5ea"/><rect x="335" y="248" width="4" height="82" rx="2" fill="#145fe0"/><circle cx="359" cy="274" r="5" fill="#145fe0" class="ping"/><text x="374" y="278" class="mono" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0b1730">ML SYSTEMS</text><text x="359" y="305" class="mono" font-size="10" letter-spacing=".7" fill="#526a88">TRAIN → RETRIEVE → SERVE</text></g><g class="node n3"><rect x="615" y="248" width="250" height="82" rx="10" fill="#ffffff" stroke="#c4d5ea"/><rect x="615" y="248" width="4" height="82" rx="2" fill="#9b6400"/><circle cx="639" cy="274" r="5" fill="#9b6400" class="ping"/><text x="654" y="278" class="mono" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0b1730">AUTONOMY</text><text x="639" y="305" class="mono" font-size="10" letter-spacing=".7" fill="#526a88">SDR → SAR → TRACK → VIO</text></g><g class="node n0"><rect x="895" y="248" width="250" height="82" rx="10" fill="#ffffff" stroke="#c4d5ea"/><rect x="895" y="248" width="4" height="82" rx="2" fill="#087a4c"/><circle cx="919" cy="274" r="5" fill="#087a4c" class="ping"/><text x="934" y="278" class="mono" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0b1730">CORRECTNESS</text><text x="919" y="305" class="mono" font-size="10" letter-spacing=".7" fill="#526a88">FAULTS → WITNESS → CLAIM</text></g>
+  <text x="55" y="368" class="mono" font-size="10" letter-spacing="1.2" fill="#526a88">EACH REPOSITORY SHIPS A REPRODUCIBLE CHECK, A BASELINE, AND THE REGIME WHERE IT LOSES.</text>
+</svg>
