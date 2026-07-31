@@ -1,122 +1,122 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="banner-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="banner-light.svg">
-  <img alt="Aaryan Patel — computer science at UGA, building machine learning infrastructure from scratch" src="banner-dark.svg" width="100%">
+  <img alt="Aaryan Patel — systems engineer building measured infrastructure across storage, machine learning, sensing, and financial data" src="banner-dark.svg" width="100%">
 </picture>
+
+<p align="center">
+  <a href="#financial-data">FINANCIAL DATA</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#storage--execution">STORAGE + EXECUTION</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#ml-infrastructure">ML INFRASTRUCTURE</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#signal--autonomy">SIGNAL + AUTONOMY</a>
+</p>
 
 ## Systems, not scripts
 
-I'm a computer science undergrad at UGA. Most of what I build is the layer
-*underneath* machine learning — the schedulers, indexes, collectives and
-evaluation harnesses that decide whether a model is actually usable — written
-from scratch and benchmarked against the thing it is supposed to beat.
+I'm a computer science undergrad at UGA building the layer underneath the
+model: storage engines, distributed runtimes, retrieval systems, signal
+processors, and financial-data infrastructure.
 
-Two rules I hold myself to across every repo here:
+Every repository follows the same contract:
 
-- **The deliverable is a measurement, not a demo.** Every project ships a
-  benchmark you can run, against a real baseline, on data I didn't generate to
-  flatter myself.
-- **Report where it loses.** A speedup with no regime where it's slower is
-  usually a broken benchmark. Each README has a section on the cases the
-  approach handles badly, because that's the part that shows I understand it.
+> **Build the mechanism. Attack the assumptions. Measure against a real
+> baseline. Publish where it loses.**
 
-## What I've built
+That means the output is not a screenshot or a notebook that ran once. It is a
+reproducible benchmark, a correctness oracle, or a fault campaign that another
+engineer can clone and challenge.
 
-| project | what it is | the number that matters |
-|---|---|---|
-| **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | C++17 distributed-database correctness lab — Raft elections/log repair/majority commit, serializable MVCC, and P-compositional linearizability checking | **598 assertions** across seeded partitions; ~0.69M 3-node replicated writes/s and **11-tick** five-node failover |
-| **[columnar-engine](https://github.com/asp53826/columnar-engine)** | C++17 vector-at-a-time engine — null bitmaps, selection vectors, joins, aggregation, TPC-H Q1 and scalar differential oracles | **6,288 assertions**; Q1 processes 53.1M rows/s and batched filters reach **1.94×** scalar |
-| **[lsm-tree](https://github.com/asp53826/lsm-tree)** | C++17 storage engine — WAL, memtables, SSTables, Bloom filters, version-aware range scans and crash-safe compaction | **4,064 assertions** plus 100 randomized hard crashes with **zero acknowledged writes lost** |
-| **[wal-recovery](https://github.com/asp53826/wal-recovery)** | Transactional WAL — CRC32 records, atomic replay, damaged-tail repair, external crash oracle and validated group commit | Zero crash-campaign losses; 16-way group commit reaches **40.2k tx/s, 2.58×** single commit |
-| **[vllm-lite](https://github.com/asp53826/vllm-lite)** | LLM inference server — paged KV cache, continuous batching, prefix caching, speculative decoding, OpenAI-compatible API | **94% KV utilization vs 21%** for static batching; 2.9x throughput at 5.5x better TTFT |
-| **[annlite](https://github.com/asp53826/annlite)** | HNSW vector index in C++17 — hand-vectorized distance kernels, Python bindings, HTTP service | Parity with **FAISS** at 0.99 recall, **1.83x faster at 0.999** — the same Pareto frontier, not a beaten benchmark |
-| **[dist-train](https://github.com/asp53826/dist-train)** | Distributed training — ring all-reduce built from `send`/`recv`, plus data, tensor and pipeline parallelism | Ring moves **58.7 MB/worker vs 234.9 MB** naive at 8 workers, and the gap widens exactly as the arithmetic predicts |
-| **[rag-eval](https://github.com/asp53826/rag-eval)** | RAG pipeline plus a reproducible eval harness that gates retrieval quality in CI | BM25 on SciFact reproduces the published BEIR number — **0.6643 vs 0.665** — so the ablations measure ideas, not my bugs |
-| **[feature-store](https://github.com/asp53826/feature-store)** | Point-in-time correct training data, streaming materialization, drift monitoring | Time-travel leakage inflates the offline score by **0.059 AUC**, measured by keeping the leaky join next to the correct one |
-| **[grammar-decode](https://github.com/asp53826/grammar-decode)** | Constrained decoding — JSON Schema compiled to a character automaton, then a cached token mask over a 50k vocabulary | **100% schema conformance against a 0% baseline**; masking up to 1203x faster than replaying the vocabulary |
-| **[agent-harness](https://github.com/asp53826/agent-harness)** | LLM agent runtime — a five-layer sandbox and a programmatically graded benchmark | 57 tests, **25 of them escape attempts**. The sandbox is tested by attacking it, and refuses to run where it can't enforce |
-| **[codebase-qa](https://github.com/asp53826/codebase-qa)** | Codebase Q&A service built around the unglamorous parts: auth, rate limiting, durable job queue, cost tracking, tracing | scrypt-hashed keys, constant-time comparison, revocation as a timestamp — the prototype-to-service gap, written down |
-| **[sdr-receiver](https://github.com/asp53826/sdr-receiver)** | QPSK software-defined-radio receiver — RRC pulse shaping, carrier/timing acquisition, soft decisions, regular LDPC decoding | Full impaired receiver tracks coherent theory; **0 observed errors in 21,600 bits at 4–8 dB** after the LDPC waterfall |
-| **[track-fusion](https://github.com/asp53826/track-fusion)** | Multi-target tracking — IMM filter bank, JPDA data association, Wald-test track scoring, OSPA evaluation | IMM cuts localisation error **47%** through a manoeuvre and costs **45%** on a target that never turns — both ends measured |
-| **[sar-focus](https://github.com/asp53826/sar-focus)** | SAR image formation — pulse compression, backprojection, phase gradient autofocus, impulse response analysis | Resolution within **0.5%** of `0.886·c/2B` and `0.886·λR/2L`; sidelobes converge to the **−13.26 dB** theoretical floor |
-| **[vio-nav](https://github.com/asp53826/vio-nav)** | GPS-denied navigation — MSCKF visual-inertial odometry, IMU preintegration on SO(3), null-space feature marginalisation | **51.9x** lower drift than inertial dead reckoning at 40 s; **65x** when the IMU bias starts unknown |
+## Current signal
+
+| system | what is implemented | measured proof |
+|---|---|---:|
+| **[edgar-mcp](https://github.com/asp53826/edgar-mcp)** | MCP server over SEC EDGAR with identity resolution, filing overflow history, bounded text windows, XBRL discovery, per-host caching, and a global request pacer | **32 tests**; warm 10-K read **138×** faster; peak request window held at the SEC's **10 req/s** ceiling |
+| **[xbrl-normalize](https://github.com/asp53826/xbrl-normalize)** | 19 canonical financial line items with period-aware tag selection, restatement handling, derivations, provenance, and accounting-identity checks | **102-company** cross-industry benchmark; assets and liabilities at **100% coverage**; **96.1%** exact identity balance |
+| **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | Raft elections, conflict repair and majority commit combined with serializable MVCC, safe-point GC, and P-compositional linearizability checking | **598 assertions** across seeded partitions; **11-tick** five-node failover in the in-process simulator |
+| **[columnar-engine](https://github.com/asp53826/columnar-engine)** | C++17 vector-at-a-time engine with null bitmaps, selection vectors, joins, aggregation, TPC-H Q1, and scalar differential oracles | **6,288 assertions**; Q1 at **53.1M rows/s**; batched filters **1.94×** scalar |
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/system-map-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/system-map-light.svg">
+  <img alt="Animated topology connecting ingestion, storage, compute, serving, verification, financial data, machine learning, autonomy, and correctness" src="assets/system-map-dark.svg" width="100%">
+</picture>
+
+## Build channels
+
+### Financial data
+
+| project | evidence |
+|---|---|
+| **[edgar-mcp](https://github.com/asp53826/edgar-mcp)** | EDGAR filing/facts tools; cache validation; iXBRL cleanup; context-safe windows; rate-limit enforcement |
+| **[xbrl-normalize](https://github.com/asp53826/xbrl-normalize)** | comparable statements across 102 filers; provenance on every value; missing is never silently zero |
+
+### Storage + execution
+
+| project | evidence |
+|---|---|
+| **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | consensus + serializable snapshots + machine-checkable histories |
+| **[columnar-engine](https://github.com/asp53826/columnar-engine)** | vectorized execution checked against scalar oracles |
+| **[lsm-tree](https://github.com/asp53826/lsm-tree)** | WAL, memtables, SSTables, Bloom filters, range scans, crash-safe compaction; **4,064 assertions** |
+| **[wal-recovery](https://github.com/asp53826/wal-recovery)** | CRC32 records, damaged-tail repair, atomic replay; 100 crash trials with **zero acknowledged writes lost** |
+
+### ML infrastructure
+
+| project | evidence |
+|---|---|
+| **[vllm-lite](https://github.com/asp53826/vllm-lite)** | paged KV cache, continuous batching, prefix caching, speculative decoding; **94% vs 21%** KV utilization |
+| **[annlite](https://github.com/asp53826/annlite)** | HNSW + SIMD + Python bindings; FAISS parity at 0.99 recall and **1.83×** faster at 0.999 |
+| **[dist-train](https://github.com/asp53826/dist-train)** | ring all-reduce from `send`/`recv`; **58.7 vs 234.9 MB/worker** at eight workers |
+| **[rag-eval](https://github.com/asp53826/rag-eval)** | hybrid retrieval, reranking, hallucination metrics, and CI gates; SciFact **0.6643 vs 0.665** published BM25 |
+| **[feature-store](https://github.com/asp53826/feature-store)** | point-in-time joins and streaming materialization; leakage measured at **+0.059 AUC** |
+| **[grammar-decode](https://github.com/asp53826/grammar-decode)** | JSON Schema → character automaton → cached token mask; **100% vs 0%** conformance baseline |
+| **[agent-harness](https://github.com/asp53826/agent-harness)** | five-layer sandbox and graded benchmark; 57 tests, including **25 escape attempts** |
+| **[codebase-qa](https://github.com/asp53826/codebase-qa)** | auth, rate limits, durable jobs, cost tracking, and tracing—the prototype-to-service gap |
+
+### Signal + autonomy
+
+| project | evidence |
+|---|---|
+| **[sdr-receiver](https://github.com/asp53826/sdr-receiver)** | QPSK, RRC, acquisition, soft decisions, LDPC; **0 errors in 21,600 bits** at 4–8 dB after the waterfall |
+| **[sar-focus](https://github.com/asp53826/sar-focus)** | pulse compression, backprojection, PGA autofocus; resolution within **0.5%** of theory |
+| **[track-fusion](https://github.com/asp53826/track-fusion)** | IMM + JPDA + Wald scoring + OSPA; reports the manoeuvre regime where IMM wins and straight-line regime where it costs |
+| **[vio-nav](https://github.com/asp53826/vio-nav)** | MSCKF, SO(3) preintegration, null-space feature marginalisation; **51.9×** lower drift than inertial dead reckoning |
 
 ## Portfolio telemetry
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/telemetry-light.svg">
-  <img alt="Portfolio telemetry: 16 repositories, 573 test functions, 1069 KB of source across 8 languages, 320 files, with a per-repository test bar chart and language distribution" src="assets/telemetry-dark.svg" width="100%">
+  <img alt="Measured portfolio telemetry generated from the public repository source" src="assets/telemetry-dark.svg" width="100%">
 </picture>
 
-<sub>Regenerated daily by <a href=".github/workflows/profile.yml">a GitHub Action</a> that reads every repo and <a href="scripts/telemetry.py">counts the test functions in the source</a> — not typed in by hand, and not fetched from a third-party stats service that could rate-limit or vanish. It reports <b>test functions</b>; parametrized suites and looped invariants expand those into many more checks (598 assertions in <code>raft-mvcc</code> alone).</sub>
+<sub>Regenerated daily by <a href=".github/workflows/profile.yml">GitHub
+Actions</a>. The panel reads the repositories and counts test functions from
+source; no third-party stats card, hand-edited total, or page-load API call is
+involved. Parametrized suites and looped invariants expand into many more checks
+than the function count—for example, <code>raft-mvcc</code> alone executes 598
+assertions.</sub>
 
-## How the pieces fit
+## Working stack
 
-Not sixteen unrelated weekend projects. Twelve form one path through a production
-ML stack and the storage substrate beneath it. The other four are sensing and estimation —
-coherent imaging, target tracking, recovering bits from a corrupted waveform,
-and navigating without GPS — which is the same habit of measuring against a
-known answer, pointed somewhere harder to fool yourself about.
-
-```mermaid
-flowchart LR
-  subgraph STORE [store]
-    M[wal-recovery<br/>atomic durable replay]
-    N[lsm-tree<br/>SSTables + compaction]
-    P[raft-mvcc<br/>consensus + snapshots]
-    O[columnar-engine<br/>vectorized analytics]
-  end
-  subgraph TRAIN [train]
-    B[feature-store<br/>point-in-time joins]
-    A[dist-train<br/>ring all-reduce]
-  end
-  subgraph SERVE [serve]
-    C[vllm-lite<br/>paged KV + batching]
-    D[grammar-decode<br/>constrained decoding]
-  end
-  subgraph RETRIEVE [retrieve]
-    E[annlite<br/>HNSW index]
-    F[rag-eval<br/>eval harness]
-  end
-  subgraph APPLY [apply]
-    G[agent-harness<br/>sandbox + benchmark]
-    H[codebase-qa<br/>the boring parts]
-  end
-  subgraph SIGNAL [sense and receive]
-    I[sdr-receiver<br/>QPSK + LDPC]
-    J[sar-focus<br/>SAR image formation]
-    K[track-fusion<br/>IMM + JPDA tracking]
-    L[vio-nav<br/>MSCKF visual-inertial]
-  end
-
-  M --> N --> P --> O --> B --> A --> C --> D
-  E --> F --> H
-  C --> G
-  D --> H
-  I --> J --> K --> L
+```text
+SYSTEMS    C++17 · Python · Raft · MVCC · WAL · LSM/SSTables · SIMD · POSIX
+ML INFRA   PyTorch · distributed collectives · HNSW · BM25 · reranking · evals
+FINANCE    SEC EDGAR · XBRL · accounting identities · provenance · MCP
+SIGNAL     QPSK · RRC · LDPC · SAR · Kalman/IMM · JPDA · OSPA
+ESTIMATE   IMU preintegration · SO(3) · MSCKF · ATE/RPE · triangulation
+SERVICES   FastAPI · SQLite/Postgres · durable queues · scrypt · tracing
+INDUSTRY   Power BI · Node-RED · CtrlX Core · ERP automation
 ```
 
-## Stack
-
-```
-systems      C++17 · Python · Java · Raft · MVCC · WAL · LSM/SSTables · columnar execution · SIMD · POSIX
-ml           PyTorch · torch.distributed · HNSW · BM25 · cross-encoder reranking
-signal       QPSK · RRC filters · carrier/timing acquisition · LDPC · min-sum decoding
-radar        SAR backprojection · PGA autofocus · Kalman/IMM filtering · JPDA · OSPA
-estimation   IMU preintegration · SO(3)/Lie groups · MSCKF · ATE/RPE · triangulation
-services     FastAPI · SQLite/Postgres · durable job queues · scrypt · tracing
-industrial   Power BI · Node-RED · CtrlX Core · ERP automation
-```
-
-Day job: automation and analytics at **MP Equipment** — dashboards, ERP
+Day job: automation and analytics at **MP Equipment**—dashboards, ERP
 automation, and AR/AI for industrial food processing.
 
-## Elsewhere
+## Open channel
 
-`aaryansp26@gmail.com`
+**[aaryansp26@gmail.com](mailto:aaryansp26@gmail.com)**
 
-Every repo above is MIT licensed. Clone one and run the benchmark — that's what
-it's there for.
+Every system above is MIT licensed. Clone one, run the benchmark, and inspect
+the regime where it breaks.
 
-<sub>Banner generated by <a href="banner.py">banner.py</a>: animated SVG, two themes, respects <code>prefers-reduced-motion</code>.</sub>
+<sub>Hero, topology, and telemetry are generated in this repository. Both
+themes are first-party SVGs and respect <code>prefers-reduced-motion</code>.</sub>

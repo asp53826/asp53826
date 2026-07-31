@@ -29,14 +29,15 @@ TOKEN = os.environ.get("GITHUB_TOKEN", "")
 # coursework, the profile repo itself) is deliberately excluded rather than
 # filtered heuristically, so the panel can't silently start counting noise.
 PORTFOLIO = [
-    "raft-mvcc", "wal-recovery", "lsm-tree", "columnar-engine", "vllm-lite", "annlite", "dist-train",
-    "rag-eval", "feature-store",
+    "edgar-mcp", "xbrl-normalize",
+    "raft-mvcc", "wal-recovery", "lsm-tree", "columnar-engine",
+    "vllm-lite", "annlite", "dist-train", "rag-eval", "feature-store",
     "grammar-decode", "agent-harness", "codebase-qa", "track-fusion",
     "sdr-receiver", "sar-focus", "vio-nav",
 ]
 
 TEST_PATTERNS = [
-    re.compile(rb"^\s*def\s+test_\w+", re.M),        # pytest / unittest
+    re.compile(rb"^\s*(?:async\s+)?def\s+test_\w+", re.M),  # pytest / unittest
     re.compile(rb"^\s*TEST\w*\s*\(", re.M),          # gtest
     re.compile(rb"^\s*(?:public\s+)?void\s+test\w+", re.M | re.I),
 ]
