@@ -106,6 +106,7 @@ engineer can clone and challenge.
 | **[query-planner](https://github.com/asp53826/query-planner)** | histograms, MCV lists and a from-scratch HyperLogLog feeding System R estimation; bushy DP, left-deep DP and greedy search; a vectorised executor so plans can be timed | q-errors to **76×** cost **1.00×** runtime against a perfect-information oracle, while left-deep search costs **2.15×**; cost model rank correlation **0.77** |
 | **[hotstuff-bft](https://github.com/asp53826/hotstuff-bft)** | chained HotStuff driven by an adversary that equivocates, withholds, reorders and forges certificates, with checkers scored by a mutation catalogue | safety clean at and below **f** and broken immediately above it at both n=4 and n=7; **5/9** broken rules caught with **0** false positives; **3 real bugs** found, each with a reproducing seed |
 | **[ptq-budget](https://github.com/asp53826/ptq-budget)** | RTN, GPTQ and AWQ against an exact fp32 reference on a corpus whose optimal perplexity is known in closed form | GPTQ halves perplexity damage while sitting **39% further** from the original weights — weight error picks the worse method; granularity alone swings 2-bit damage **239.5% → 30.9%** |
+| **[sampling-profiler](https://github.com/asp53826/sampling-profiler)** | SIGPROF sampling with stack aggregation, folded output, and an error analysis scored against workloads of known CPU share | detectability floor derived and verified as **n = 4(1−p)/p**; publishes the two regimes where it is confidently wrong — **66.3% reported as 10.8%**, and a busy thread at **0.0%** |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/proof-dark.svg">
@@ -154,6 +155,7 @@ the tables where the units survive.</sub>
 |---|---|
 | **[dst-harness](https://github.com/asp53826/dst-harness)** | deterministic simulation with seeded partitions, crashes and torn writes; scored by seeds-to-first-catch over **12 planted Raft defects**, and it found two real ones in its own target |
 | **[cdcl-sat](https://github.com/asp53826/cdcl-sat)** | every UNSAT answer emitted as a DRAT refutation and verified by **drat-trim**, not by me; publishes the ablation where its own restart strategy is worth nothing |
+| **[sampling-profiler](https://github.com/asp53826/sampling-profiler)** | scores a profiler against known ground truth and reports where it cannot see: a C call at 6× underattribution and a worker thread at zero |
 | **[hotstuff-bft](https://github.com/asp53826/hotstuff-bft)** | proves the adversary is strong enough before making any safety claim — the same harness must break safety above **f**, and does; four surviving mutants are published rather than dropped |
 
 ### ML infrastructure
