@@ -70,6 +70,7 @@ engineer can clone and challenge.
 | **[dst-harness](https://github.com/asp53826/dst-harness)** | deterministic simulation testing: virtual clock, network and disk, seeded fault injection, Raft's five safety properties, and a Wing-Gong linearizability checker over the client history | **12 of 12** planted Raft defects caught, seeds-to-first-catch **1 to 485**; control clean over **2,000 seeds**; found **2 real bugs**, both written up with reproducing seeds |
 | **[cdcl-sat](https://github.com/asp53826/cdcl-sat)** | CDCL solver in C++17: watched literals with blockers, 1UIP analysis with recursive minimization, VSIDS, Luby restarts, LBD reduction, DRAT proof emission | **1,960 assertions**; **180/180** refutations verified by **drat-trim**, an external checker; **300/300** verdicts agreeing with CaDiCaL 3.0.1 |
 | **[query-planner](https://github.com/asp53826/query-planner)** | histograms, MCV lists and a from-scratch HyperLogLog feeding System R estimation; bushy DP, left-deep DP and greedy search; a vectorised executor so plans can be timed | q-errors to **76×** cost **1.00×** runtime against a perfect-information oracle, while left-deep search costs **2.15×**; cost model rank correlation **0.77** |
+| **[hotstuff-bft](https://github.com/asp53826/hotstuff-bft)** | chained HotStuff driven by an adversary that equivocates, withholds, reorders and forges certificates, with checkers scored by a mutation catalogue | safety clean at and below **f** and broken immediately above it at both n=4 and n=7; **5/9** broken rules caught with **0** false positives; **3 real bugs** found, each with a reproducing seed |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/proof-dark.svg">
@@ -118,6 +119,7 @@ the tables where the units survive.</sub>
 |---|---|
 | **[dst-harness](https://github.com/asp53826/dst-harness)** | deterministic simulation with seeded partitions, crashes and torn writes; scored by seeds-to-first-catch over **12 planted Raft defects**, and it found two real ones in its own target |
 | **[cdcl-sat](https://github.com/asp53826/cdcl-sat)** | every UNSAT answer emitted as a DRAT refutation and verified by **drat-trim**, not by me; publishes the ablation where its own restart strategy is worth nothing |
+| **[hotstuff-bft](https://github.com/asp53826/hotstuff-bft)** | proves the adversary is strong enough before making any safety claim — the same harness must break safety above **f**, and does; four surviving mutants are published rather than dropped |
 
 ### ML infrastructure
 

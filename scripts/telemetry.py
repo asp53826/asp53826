@@ -34,7 +34,7 @@ PORTFOLIO = [
     "vllm-lite", "annlite", "dist-train", "rag-eval", "feature-store",
     "grammar-decode", "agent-harness", "codebase-qa", "track-fusion",
     "sdr-receiver", "sar-focus", "vio-nav",
-    "dst-harness", "cdcl-sat", "query-planner",
+    "dst-harness", "cdcl-sat", "query-planner", "hotstuff-bft",
 ]
 
 TEST_PATTERNS = [
