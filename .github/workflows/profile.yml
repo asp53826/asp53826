@@ -49,6 +49,9 @@ jobs:
       - name: Baseline proof wall
         run: python3 scripts/proofwall.py
 
+      - name: Source-backed toolchain matrix
+        run: python3 scripts/toolchain.py
+
       # The contribution-snake animation is generated but deliberately not
       # shown in the README. It renders the contribution calendar, and at 17
       # contributions across 5 days that calendar is nearly empty -- GitHub
