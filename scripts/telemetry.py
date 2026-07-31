@@ -264,7 +264,9 @@ def main():
     total = sum(r["tests"] for r in repos)
     with open("assets/summary.json", "w") as f:
         json.dump({"repos": len(repos), "tests": total,
-                   "bytes": sum(langs.values()), "generated": stamp}, f, indent=2)
+                   "bytes": sum(langs.values()), "languages": len(langs),
+                   "files": sum(r["files"] for r in repos),
+                   "generated": stamp}, f, indent=2)
     print(f"total: {len(repos)} repos, {total} tests")
     return 0
 

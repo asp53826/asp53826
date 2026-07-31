@@ -11,6 +11,31 @@
   <a href="#signal--autonomy">SIGNAL + AUTONOMY</a>
 </p>
 
+## Verification deck
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/credentials-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/credentials-light.svg">
+  <img alt="Source-verified credential array covering public systems, tests, source volume, languages, live labs, and proof methods" src="assets/credentials-dark.svg" width="100%">
+</picture>
+
+<p align="center">
+  <a href="https://github.com/asp53826/edgar-mcp/actions/workflows/ci.yml"><img alt="edgar-mcp CI" src="https://github.com/asp53826/edgar-mcp/actions/workflows/ci.yml/badge.svg?branch=main"></a>&nbsp;
+  <a href="https://github.com/asp53826/raft-mvcc/actions/workflows/ci.yml"><img alt="raft-mvcc CI" src="https://github.com/asp53826/raft-mvcc/actions/workflows/ci.yml/badge.svg?branch=main"></a>&nbsp;
+  <a href="https://github.com/asp53826/columnar-engine/actions/workflows/ci.yml"><img alt="columnar-engine CI" src="https://github.com/asp53826/columnar-engine/actions/workflows/ci.yml/badge.svg?branch=main"></a>&nbsp;
+  <a href="https://github.com/asp53826/annlite/actions/workflows/ci.yml"><img alt="annlite CI" src="https://github.com/asp53826/annlite/actions/workflows/ci.yml/badge.svg?branch=main"></a>
+</p>
+<p align="center">
+  <a href="https://github.com/asp53826/agent-harness/actions/workflows/ci.yml"><img alt="agent-harness CI" src="https://github.com/asp53826/agent-harness/actions/workflows/ci.yml/badge.svg?branch=main"></a>&nbsp;
+  <a href="https://github.com/asp53826/sar-focus/actions/workflows/ci.yml"><img alt="sar-focus tests" src="https://github.com/asp53826/sar-focus/actions/workflows/ci.yml/badge.svg?branch=main"></a>&nbsp;
+  <a href="https://github.com/asp53826/track-fusion/actions/workflows/ci.yml"><img alt="track-fusion tests" src="https://github.com/asp53826/track-fusion/actions/workflows/ci.yml/badge.svg?branch=main"></a>&nbsp;
+  <a href="https://github.com/asp53826/vio-nav/actions/workflows/ci.yml"><img alt="vio-nav tests" src="https://github.com/asp53826/vio-nav/actions/workflows/ci.yml/badge.svg?branch=main"></a>
+</p>
+
+<sub>The credential array is generated from the public source itself. The live
+status badges come directly from each repository's GitHub Actions workflow—no
+third-party badge service, decorative certifications, or invented awards.</sub>
+
 ## Systems, not scripts
 
 I'm a computer science undergrad at UGA building the layer underneath the
