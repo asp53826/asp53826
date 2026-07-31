@@ -87,7 +87,7 @@ the tables where the units survive.</sub>
 | **[rag-eval](https://github.com/asp53826/rag-eval)** | hybrid retrieval, reranking, hallucination metrics, and CI gates; SciFact **0.6643 vs 0.665** published BM25 |
 | **[feature-store](https://github.com/asp53826/feature-store)** | point-in-time joins and streaming materialization; leakage measured at **+0.059 AUC** |
 | **[grammar-decode](https://github.com/asp53826/grammar-decode)** | JSON Schema → character automaton → cached token mask; **100% vs 0%** conformance baseline |
-| **[agent-harness](https://github.com/asp53826/agent-harness)** | five-layer sandbox and graded benchmark; 57 tests, including **25 escape attempts** |
+| **[agent-harness](https://github.com/asp53826/agent-harness)** | five-layer sandbox and graded benchmark; 58 tests, including **26 escape attempts** |
 | **[codebase-qa](https://github.com/asp53826/codebase-qa)** | auth, rate limits, durable jobs, cost tracking, and tracing—the prototype-to-service gap |
 
 ### Signal + autonomy
