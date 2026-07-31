@@ -1,8 +1,8 @@
 {
-  "repos": 23,
-  "tests": 806,
-  "bytes": 1523201,
+  "repos": 24,
+  "tests": 839,
+  "bytes": 1598495,
   "languages": 8,
-  "files": 485,
+  "files": 511,
   "generated": "2026-07-31"
 }
