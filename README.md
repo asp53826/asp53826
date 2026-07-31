@@ -8,7 +8,8 @@
   <a href="#financial-data">FINANCIAL DATA</a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#storage--execution">STORAGE + EXECUTION</a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#ml-infrastructure">ML INFRASTRUCTURE</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#signal--autonomy">SIGNAL + AUTONOMY</a>
+  <a href="#signal--autonomy">SIGNAL + AUTONOMY</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#toolchain--delivery">TOOLCHAIN</a>
 </p>
 
 ## Verification deck
@@ -103,8 +104,8 @@ the tables where the units survive.</sub>
 
 | project | evidence |
 |---|---|
-| **[lob-market-making](https://github.com/asp53826/lob-market-making)** | limit order book with price-time priority and post-only orders, informed-trader flow, three quoting strategies, exact PnL decomposition, and adverse-selection measurement | **36 tests**; paired 12-seed comparison; the naive strategy wins on PnL and loses on every risk-adjusted metric at **7×** the inventory deviation |
-| **[aad-greeks](https://github.com/asp53826/aad-greeks)** | tape-based reverse-mode automatic differentiation over Monte Carlo paths, with pricers written once and differentiated rather than hand-derived | **19 tests**; Greeks match analytic formulas to **5.6e-16**; cost stays **1.7-2.4×** the price across a 50× change in input count |
+| **[lob-market-making](https://github.com/asp53826/lob-market-making)** | price-time priority, post-only orders, informed flow, exact PnL decomposition, and a paired strategy comparison across 12 seeds |
+| **[aad-greeks](https://github.com/asp53826/aad-greeks)** | reverse-mode AD over Monte Carlo paths; Greeks match analytic formulas to **5.6e-16** while cost stays **1.7–2.4×** the price across a 50× change in input count |
 | **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | consensus + serializable snapshots + machine-checkable histories |
 | **[columnar-engine](https://github.com/asp53826/columnar-engine)** | vectorized execution checked against scalar oracles |
 | **[lsm-tree](https://github.com/asp53826/lsm-tree)** | WAL, memtables, SSTables, Bloom filters, range scans, crash-safe compaction; **4,064 assertions** |
@@ -166,6 +167,18 @@ source; no third-party stats card, hand-edited total, or page-load API call is
 involved. Parametrized suites and looped invariants expand into many more checks
 than the function count—for example, <code>raft-mvcc</code> alone executes 598
 assertions.</sub>
+
+## Toolchain + delivery
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/toolchain-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/toolchain-light.svg">
+  <img alt="Execution matrix of 21 source-backed development technologies spanning build, verification, numerical computing, serving, storage, and delivery" src="assets/toolchain-dark.svg" width="100%">
+</picture>
+
+<sub>Every item appears in public source, a build manifest, a CI workflow, or a
+reproducible verification path in this portfolio. The matrix is generated in
+this repository and does not depend on a third-party badge service.</sub>
 
 ## Working stack
 

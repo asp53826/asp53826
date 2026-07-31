@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="486" viewBox="0 0 1200 486" role="img" aria-label="Execution matrix of 21 source-backed technologies: C++17, Python, SQL, Bash, Git, GNU Make, Docker, GitHub Actions, pytest, sanitizers, DRAT-trim, CaDiCaL, HTTPX, GitHub Pages, NumPy, SciPy, PyTorch, FAISS, FastAPI, SQLite, and MCP.">
+  <defs>
+    <linearGradient id="bg-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050814"/>
+      <stop offset=".52" stop-color="#0a1020"/>
+      <stop offset="1" stop-color="#0d1628"/>
+    </linearGradient>
+    <linearGradient id="signal-dark" x1="0" x2="1">
+      <stop stop-color="#4de7ff" stop-opacity="0"/>
+      <stop offset=".48" stop-color="#4de7ff" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#68f5ae" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid-dark" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="#8da2bf" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .code { font-size:9px; letter-spacing:1.2px; }
+    .tool { font-size:13px; font-weight:720; }
+    .role { font-size:8.5px; font-weight:650; letter-spacing:1.1px; }
+    .row-title { font-size:11px; font-weight:700; letter-spacing:1.2px; }
+    .row-sub { font-size:9.5px; letter-spacing:.35px; }
+    .tile,.row-label { animation:enter .65s cubic-bezier(.18,.78,.28,1) backwards; }
+    .pip { animation:pulse 2.6s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+    .signal { animation:signal 6s linear infinite; }
+    @keyframes enter { from { transform:translateY(8px); } }
+    @keyframes pulse { 0%,100% { opacity:.35; transform:scale(.8); } 50% { opacity:1; transform:scale(1.2); } }
+    @keyframes signal { to { stroke-dashoffset:-180; } }
+    @media (prefers-reduced-motion: reduce) {
+      .tile,.row-label,.pip,.signal { animation:none; }
+    }
+  </style>
+  <rect width="1200" height="486" rx="16" fill="url(#bg-dark)"/>
+  <rect width="1200" height="486" rx="16" fill="url(#grid-dark)"/>
+  <rect x=".75" y=".75" width="1198.5" height="484.5" rx="15.25" fill="none" stroke="#20314d" stroke-width="1.5"/>
+
+  <text x="42" y="46" class="sans" font-size="22" font-weight="760" letter-spacing=".7" fill="#f4f8ff">EXECUTION MATRIX // 21</text>
+  <text x="42" y="70" class="mono" font-size="11" letter-spacing="1.15" fill="#8da2bf">TOOLS THAT BUILD, BREAK, MEASURE, AND SHIP THE PUBLIC SYSTEMS</text>
+  <circle cx="1014" cy="45" r="4" fill="#68f5ae" class="pip"/>
+  <text x="1028" y="49" class="mono" font-size="10.5" letter-spacing="1.1" fill="#68f5ae">SOURCE BACKED</text>
+  <path d="M42 96H1158" stroke="#20314d"/>
+  <path class="signal" d="M42 96H1158" stroke="url(#signal-dark)" stroke-width="2" stroke-dasharray="28 152"/>
+
+  <g class="row-label" style="animation-delay:0.00s">
+      <text x="42" y="159" class="mono row-title" fill="#4de7ff">BUILD SURFACE</text>
+      <text x="42" y="180" class="mono row-sub" fill="#8da2bf">compile · automate · package</text>
+      <path d="M42 198H181" stroke="#20314d"/>
+      <circle cx="187" cy="198" r="3" fill="#4de7ff" class="pip"/>
+    </g>
+    <g class="row-label" style="animation-delay:0.10s">
+      <text x="42" y="265" class="mono row-title" fill="#9b7bff">PROOF + DELIVERY</text>
+      <text x="42" y="286" class="mono row-sub" fill="#8da2bf">attack · verify · publish</text>
+      <path d="M42 304H181" stroke="#20314d"/>
+      <circle cx="187" cy="304" r="3" fill="#9b7bff" class="pip"/>
+    </g>
+    <g class="row-label" style="animation-delay:0.20s">
+      <text x="42" y="371" class="mono row-title" fill="#68f5ae">RUNTIME + DATA</text>
+      <text x="42" y="392" class="mono row-sub" fill="#8da2bf">compute · retrieve · serve</text>
+      <path d="M42 410H181" stroke="#20314d"/>
+      <circle cx="187" cy="410" r="3" fill="#68f5ae" class="pip"/>
+    </g>
+  <g class="tile" style="animation-delay:0.035s">
+      <rect x="208.0" y="132" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M209.0 160H335.0" stroke="#20314d"/>
+      <path d="M220.0 132H251.0" stroke="#4de7ff" stroke-width="2.5"/>
+      <text x="220.0" y="151" class="mono code" fill="#8da2bf">01</text>
+      <circle cx="322.0" cy="146" r="3" fill="#4de7ff" class="pip"/>
+      <text x="220.0" y="181" class="sans tool" fill="#f4f8ff">C++17</text>
+      <text x="220.0" y="196" class="mono role" fill="#4de7ff">SYSTEMS</text>
+    </g>
+    <g class="tile" style="animation-delay:0.070s">
+      <rect x="345.0" y="132" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M346.0 160H472.0" stroke="#20314d"/>
+      <path d="M357.0 132H388.0" stroke="#4f8cff" stroke-width="2.5"/>
+      <text x="357.0" y="151" class="mono code" fill="#8da2bf">02</text>
+      <circle cx="459.0" cy="146" r="3" fill="#4f8cff" class="pip"/>
+      <text x="357.0" y="181" class="sans tool" fill="#f4f8ff">Python</text>
+      <text x="357.0" y="196" class="mono role" fill="#4f8cff">CONTROL</text>
+    </g>
+    <g class="tile" style="animation-delay:0.105s">
+      <rect x="482.0" y="132" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M483.0 160H609.0" stroke="#20314d"/>
+      <path d="M494.0 132H525.0" stroke="#9b7bff" stroke-width="2.5"/>
+      <text x="494.0" y="151" class="mono code" fill="#8da2bf">03</text>
+      <circle cx="596.0" cy="146" r="3" fill="#9b7bff" class="pip"/>
+      <text x="494.0" y="181" class="sans tool" fill="#f4f8ff">SQL</text>
+      <text x="494.0" y="196" class="mono role" fill="#9b7bff">QUERY</text>
+    </g>
+    <g class="tile" style="animation-delay:0.140s">
+      <rect x="619.0" y="132" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M620.0 160H746.0" stroke="#20314d"/>
+      <path d="M631.0 132H662.0" stroke="#ffcb66" stroke-width="2.5"/>
+      <text x="631.0" y="151" class="mono code" fill="#8da2bf">04</text>
+      <circle cx="733.0" cy="146" r="3" fill="#ffcb66" class="pip"/>
+      <text x="631.0" y="181" class="sans tool" fill="#f4f8ff">Bash</text>
+      <text x="631.0" y="196" class="mono role" fill="#ffcb66">AUTOMATE</text>
+    </g>
+    <g class="tile" style="animation-delay:0.175s">
+      <rect x="756.0" y="132" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M757.0 160H883.0" stroke="#20314d"/>
+      <path d="M768.0 132H799.0" stroke="#68f5ae" stroke-width="2.5"/>
+      <text x="768.0" y="151" class="mono code" fill="#8da2bf">05</text>
+      <circle cx="870.0" cy="146" r="3" fill="#68f5ae" class="pip"/>
+      <text x="768.0" y="181" class="sans tool" fill="#f4f8ff">Git</text>
+      <text x="768.0" y="196" class="mono role" fill="#68f5ae">VERSION</text>
+    </g>
+    <g class="tile" style="animation-delay:0.210s">
+      <rect x="893.0" y="132" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M894.0 160H1020.0" stroke="#20314d"/>
+      <path d="M905.0 132H936.0" stroke="#4f8cff" stroke-width="2.5"/>
+      <text x="905.0" y="151" class="mono code" fill="#8da2bf">06</text>
+      <circle cx="1007.0" cy="146" r="3" fill="#4f8cff" class="pip"/>
+      <text x="905.0" y="181" class="sans tool" fill="#f4f8ff">GNU Make</text>
+      <text x="905.0" y="196" class="mono role" fill="#4f8cff">BUILD</text>
+    </g>
+    <g class="tile" style="animation-delay:0.245s">
+      <rect x="1030.0" y="132" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M1031.0 160H1157.0" stroke="#20314d"/>
+      <path d="M1042.0 132H1073.0" stroke="#4de7ff" stroke-width="2.5"/>
+      <text x="1042.0" y="151" class="mono code" fill="#8da2bf">07</text>
+      <circle cx="1144.0" cy="146" r="3" fill="#4de7ff" class="pip"/>
+      <text x="1042.0" y="181" class="sans tool" fill="#f4f8ff">Docker</text>
+      <text x="1042.0" y="196" class="mono role" fill="#4de7ff">PACKAGE</text>
+    </g>
+    <g class="tile" style="animation-delay:0.280s">
+      <rect x="208.0" y="238" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M209.0 266H335.0" stroke="#20314d"/>
+      <path d="M220.0 238H251.0" stroke="#4f8cff" stroke-width="2.5"/>
+      <text x="220.0" y="257" class="mono code" fill="#8da2bf">08</text>
+      <circle cx="322.0" cy="252" r="3" fill="#4f8cff" class="pip"/>
+      <text x="220.0" y="287" class="sans tool" fill="#f4f8ff">GitHub Actions</text>
+      <text x="220.0" y="302" class="mono role" fill="#4f8cff">CI</text>
+    </g>
+    <g class="tile" style="animation-delay:0.315s">
+      <rect x="345.0" y="238" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M346.0 266H472.0" stroke="#20314d"/>
+      <path d="M357.0 238H388.0" stroke="#9b7bff" stroke-width="2.5"/>
+      <text x="357.0" y="257" class="mono code" fill="#8da2bf">09</text>
+      <circle cx="459.0" cy="252" r="3" fill="#9b7bff" class="pip"/>
+      <text x="357.0" y="287" class="sans tool" fill="#f4f8ff">pytest</text>
+      <text x="357.0" y="302" class="mono role" fill="#9b7bff">TEST</text>
+    </g>
+    <g class="tile" style="animation-delay:0.350s">
+      <rect x="482.0" y="238" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M483.0 266H609.0" stroke="#20314d"/>
+      <path d="M494.0 238H525.0" stroke="#ffcb66" stroke-width="2.5"/>
+      <text x="494.0" y="257" class="mono code" fill="#8da2bf">10</text>
+      <circle cx="596.0" cy="252" r="3" fill="#ffcb66" class="pip"/>
+      <text x="494.0" y="287" class="sans tool" fill="#f4f8ff">ASan + UBSan</text>
+      <text x="494.0" y="302" class="mono role" fill="#ffcb66">MEMORY</text>
+    </g>
+    <g class="tile" style="animation-delay:0.385s">
+      <rect x="619.0" y="238" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M620.0 266H746.0" stroke="#20314d"/>
+      <path d="M631.0 238H662.0" stroke="#68f5ae" stroke-width="2.5"/>
+      <text x="631.0" y="257" class="mono code" fill="#8da2bf">11</text>
+      <circle cx="733.0" cy="252" r="3" fill="#68f5ae" class="pip"/>
+      <text x="631.0" y="287" class="sans tool" fill="#f4f8ff">DRAT-trim</text>
+      <text x="631.0" y="302" class="mono role" fill="#68f5ae">PROOF</text>
+    </g>
+    <g class="tile" style="animation-delay:0.420s">
+      <rect x="756.0" y="238" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M757.0 266H883.0" stroke="#20314d"/>
+      <path d="M768.0 238H799.0" stroke="#4f8cff" stroke-width="2.5"/>
+      <text x="768.0" y="257" class="mono code" fill="#8da2bf">12</text>
+      <circle cx="870.0" cy="252" r="3" fill="#4f8cff" class="pip"/>
+      <text x="768.0" y="287" class="sans tool" fill="#f4f8ff">CaDiCaL</text>
+      <text x="768.0" y="302" class="mono role" fill="#4f8cff">ORACLE</text>
+    </g>
+    <g class="tile" style="animation-delay:0.455s">
+      <rect x="893.0" y="238" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M894.0 266H1020.0" stroke="#20314d"/>
+      <path d="M905.0 238H936.0" stroke="#4de7ff" stroke-width="2.5"/>
+      <text x="905.0" y="257" class="mono code" fill="#8da2bf">13</text>
+      <circle cx="1007.0" cy="252" r="3" fill="#4de7ff" class="pip"/>
+      <text x="905.0" y="287" class="sans tool" fill="#f4f8ff">HTTPX</text>
+      <text x="905.0" y="302" class="mono role" fill="#4de7ff">CLIENT</text>
+    </g>
+    <g class="tile" style="animation-delay:0.490s">
+      <rect x="1030.0" y="238" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M1031.0 266H1157.0" stroke="#20314d"/>
+      <path d="M1042.0 238H1073.0" stroke="#4de7ff" stroke-width="2.5"/>
+      <text x="1042.0" y="257" class="mono code" fill="#8da2bf">14</text>
+      <circle cx="1144.0" cy="252" r="3" fill="#4de7ff" class="pip"/>
+      <text x="1042.0" y="287" class="sans tool" fill="#f4f8ff">GitHub Pages</text>
+      <text x="1042.0" y="302" class="mono role" fill="#4de7ff">LIVE</text>
+    </g>
+    <g class="tile" style="animation-delay:0.525s">
+      <rect x="208.0" y="344" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M209.0 372H335.0" stroke="#20314d"/>
+      <path d="M220.0 344H251.0" stroke="#9b7bff" stroke-width="2.5"/>
+      <text x="220.0" y="363" class="mono code" fill="#8da2bf">15</text>
+      <circle cx="322.0" cy="358" r="3" fill="#9b7bff" class="pip"/>
+      <text x="220.0" y="393" class="sans tool" fill="#f4f8ff">NumPy</text>
+      <text x="220.0" y="408" class="mono role" fill="#9b7bff">ARRAY</text>
+    </g>
+    <g class="tile" style="animation-delay:0.560s">
+      <rect x="345.0" y="344" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M346.0 372H472.0" stroke="#20314d"/>
+      <path d="M357.0 344H388.0" stroke="#ffcb66" stroke-width="2.5"/>
+      <text x="357.0" y="363" class="mono code" fill="#8da2bf">16</text>
+      <circle cx="459.0" cy="358" r="3" fill="#ffcb66" class="pip"/>
+      <text x="357.0" y="393" class="sans tool" fill="#f4f8ff">SciPy</text>
+      <text x="357.0" y="408" class="mono role" fill="#ffcb66">NUMERIC</text>
+    </g>
+    <g class="tile" style="animation-delay:0.595s">
+      <rect x="482.0" y="344" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M483.0 372H609.0" stroke="#20314d"/>
+      <path d="M494.0 344H525.0" stroke="#68f5ae" stroke-width="2.5"/>
+      <text x="494.0" y="363" class="mono code" fill="#8da2bf">17</text>
+      <circle cx="596.0" cy="358" r="3" fill="#68f5ae" class="pip"/>
+      <text x="494.0" y="393" class="sans tool" fill="#f4f8ff">PyTorch</text>
+      <text x="494.0" y="408" class="mono role" fill="#68f5ae">TENSOR</text>
+    </g>
+    <g class="tile" style="animation-delay:0.630s">
+      <rect x="619.0" y="344" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M620.0 372H746.0" stroke="#20314d"/>
+      <path d="M631.0 344H662.0" stroke="#4f8cff" stroke-width="2.5"/>
+      <text x="631.0" y="363" class="mono code" fill="#8da2bf">18</text>
+      <circle cx="733.0" cy="358" r="3" fill="#4f8cff" class="pip"/>
+      <text x="631.0" y="393" class="sans tool" fill="#f4f8ff">FAISS</text>
+      <text x="631.0" y="408" class="mono role" fill="#4f8cff">BASELINE</text>
+    </g>
+    <g class="tile" style="animation-delay:0.665s">
+      <rect x="756.0" y="344" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M757.0 372H883.0" stroke="#20314d"/>
+      <path d="M768.0 344H799.0" stroke="#4de7ff" stroke-width="2.5"/>
+      <text x="768.0" y="363" class="mono code" fill="#8da2bf">19</text>
+      <circle cx="870.0" cy="358" r="3" fill="#4de7ff" class="pip"/>
+      <text x="768.0" y="393" class="sans tool" fill="#f4f8ff">FastAPI</text>
+      <text x="768.0" y="408" class="mono role" fill="#4de7ff">SERVE</text>
+    </g>
+    <g class="tile" style="animation-delay:0.700s">
+      <rect x="893.0" y="344" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M894.0 372H1020.0" stroke="#20314d"/>
+      <path d="M905.0 344H936.0" stroke="#4de7ff" stroke-width="2.5"/>
+      <text x="905.0" y="363" class="mono code" fill="#8da2bf">20</text>
+      <circle cx="1007.0" cy="358" r="3" fill="#4de7ff" class="pip"/>
+      <text x="905.0" y="393" class="sans tool" fill="#f4f8ff">SQLite</text>
+      <text x="905.0" y="408" class="mono role" fill="#4de7ff">DURABLE</text>
+    </g>
+    <g class="tile" style="animation-delay:0.735s">
+      <rect x="1030.0" y="344" width="128.0" height="72" rx="10"
+            fill="#0a1020" stroke="#20314d"/>
+      <path d="M1031.0 372H1157.0" stroke="#20314d"/>
+      <path d="M1042.0 344H1073.0" stroke="#4f8cff" stroke-width="2.5"/>
+      <text x="1042.0" y="363" class="mono code" fill="#8da2bf">21</text>
+      <circle cx="1144.0" cy="358" r="3" fill="#4f8cff" class="pip"/>
+      <text x="1042.0" y="393" class="sans tool" fill="#f4f8ff">MCP</text>
+      <text x="1042.0" y="408" class="mono role" fill="#4f8cff">PROTOCOL</text>
+    </g>
+
+  <line x1="42" y1="444" x2="1158" y2="444" stroke="#20314d"/>
+  <text x="42" y="467" class="mono" font-size="9.5" letter-spacing="1" fill="#8da2bf">PUBLIC SOURCE · BUILD MANIFESTS · CI WORKFLOWS · EXTERNAL ORACLES</text>
+  <text x="1158" y="467" text-anchor="end" class="mono" font-size="9.5" fill="#8da2bf">NO DECORATIVE CERTIFICATIONS</text>
+</svg>
