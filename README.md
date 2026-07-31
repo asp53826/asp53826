@@ -30,9 +30,9 @@ engineer can clone and challenge.
 
 | system | what is implemented | measured proof |
 |---|---|---:|
-| **[edgar-mcp](https://github.com/asp53826/edgar-mcp)** | MCP server over SEC EDGAR with identity resolution, filing overflow history, bounded text windows, XBRL discovery, per-host caching, and a global request pacer | **32 tests**; warm 10-K read **138×** faster; peak request window held at the SEC's **10 req/s** ceiling |
-| **[xbrl-normalize](https://github.com/asp53826/xbrl-normalize)** | 19 canonical financial line items with period-aware tag selection, restatement handling, derivations, provenance, and accounting-identity checks | **102-company** cross-industry benchmark; assets and liabilities at **100% coverage**; **96.1%** exact identity balance |
-| **[lob-market-making](https://github.com/asp53826/lob-market-making)** | limit order book with price-time priority and post-only orders, informed-trader flow, three quoting strategies, exact PnL decomposition, and adverse-selection measurement | **36 tests**; paired 12-seed comparison; the naive strategy wins on PnL and loses on every risk-adjusted metric at **7×** the inventory deviation |
+| **[edgar-mcp](https://github.com/asp53826/edgar-mcp)** ([live](https://asp53826.github.io/edgar-mcp/)) | MCP server over SEC EDGAR with identity resolution, filing overflow history, bounded text windows, XBRL discovery, per-host caching, and a global request pacer | **32 tests**; warm 10-K read **138×** faster; peak request window held at the SEC's **10 req/s** ceiling |
+| **[xbrl-normalize](https://github.com/asp53826/xbrl-normalize)** ([live](https://asp53826.github.io/xbrl-normalize/)) | 19 canonical financial line items with period-aware tag selection, restatement handling, derivations, provenance, and accounting-identity checks | **102-company** cross-industry benchmark; assets and liabilities at **100% coverage**; **96.1%** exact identity balance |
+| **[lob-market-making](https://github.com/asp53826/lob-market-making)** ([live](https://asp53826.github.io/lob-market-making/)) | limit order book with price-time priority and post-only orders, informed-trader flow, three quoting strategies, exact PnL decomposition, and adverse-selection measurement | **36 tests**; paired 12-seed comparison; the naive strategy wins on PnL and loses on every risk-adjusted metric at **7×** the inventory deviation |
 | **[aad-greeks](https://github.com/asp53826/aad-greeks)** | tape-based reverse-mode automatic differentiation over Monte Carlo paths, with pricers written once and differentiated rather than hand-derived | **19 tests**; Greeks match analytic formulas to **5.6e-16**; cost stays **1.7-2.4×** the price across a 50× change in input count |
 | **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | Raft elections, conflict repair and majority commit combined with serializable MVCC, safe-point GC, and P-compositional linearizability checking | **598 assertions** across seeded partitions; **11-tick** five-node failover in the in-process simulator |
 | **[columnar-engine](https://github.com/asp53826/columnar-engine)** | C++17 vector-at-a-time engine with null bitmaps, selection vectors, joins, aggregation, TPC-H Q1, and scalar differential oracles | **6,288 assertions**; Q1 at **53.1M rows/s**; batched filters **1.94×** scalar |
@@ -98,6 +98,18 @@ the tables where the units survive.</sub>
 | **[sar-focus](https://github.com/asp53826/sar-focus)** | pulse compression, backprojection, PGA autofocus; resolution within **0.5%** of theory |
 | **[track-fusion](https://github.com/asp53826/track-fusion)** | IMM + JPDA + Wald scoring + OSPA; reports the manoeuvre regime where IMM wins and straight-line regime where it costs |
 | **[vio-nav](https://github.com/asp53826/vio-nav)** | MSCKF, SO(3) preintegration, null-space feature marginalisation; **51.9×** lower drift than inertial dead reckoning |
+
+## Interactive results
+
+Four of these publish a live page built in the same repository — no CDN, no
+third-party script, and every figure traceable to the benchmark that produced it.
+
+| page | what you can drive |
+|---|---|
+| **[aad-greeks](https://asp53826.github.io/aad-greeks/)** | drag the bump size and watch a finite difference find its error floor and climb back out of it; drag payoff smoothing and watch an adjoint delta go from exactly zero to correct |
+| **[lob-market-making](https://asp53826.github.io/lob-market-making/)** | a live order book getting picked off, with sliders for spread, inventory skew and toxic flow; re-sort the strategy table and watch the ranking invert |
+| **[xbrl-normalize](https://asp53826.github.io/xbrl-normalize/)** | step the tag resolver through five filers and watch it reject stale tags; toggle mezzanine equity and watch the balance sheet stop balancing |
+| **[edgar-mcp](https://asp53826.github.io/edgar-mcp/)** | fire a burst of tool calls at a token bucket and a strict pacer, and see which one breaks the limit it enforces |
 
 ## Portfolio telemetry
 
