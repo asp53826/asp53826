@@ -44,9 +44,19 @@ ROWS = [
     ("vllm-lite", 4.48, "4.48x", "KV-cache utilisation vs static batching (94% / 21%)", "green"),
     ("lob-market-making", 4.38, "4.38x", "Sharpe, inventory-skewed vs naive (5.7 / 1.3)", "amber"),
     ("dist-train", 4.00, "4.00x", "bytes per worker vs all-gather, 8 workers", "violet"),
+    ("query-planner", 2.15, "2.15x", "bushy DP vs left-deep DP, same 25 queries", "blue"),
     ("columnar-engine", 1.94, "1.94x", "batched filter vs scalar, same result set", "cyan"),
+    ("cdcl-sat", 1.94, "1.94x", "VSIDS decay vs frozen scores, same 25 instances", "amber"),
     ("annlite", 1.83, "1.83x", "query throughput vs FAISS at 0.999 recall", "green"),
 ]
+
+# dst-harness is deliberately absent. Its result is 12 of 12 planted defects
+# caught with a clean control over 2,000 seeds, which is a conformance rate and
+# not a ratio over a baseline - the same reason the crash campaigns stay in the
+# tables. cdcl-sat's comparison against CaDiCaL is absent for a different
+# reason: the ratio inverts with instance size (0.5x at 150 variables, 2.7x
+# against at 300), so any single number would be a choice of instance size
+# rather than a result. The ablation above has no such freedom.
 
 TICKS = [1, 2, 5, 10, 25, 50, 100, 200]
 LO, HI = 1.0, 200.0
@@ -67,7 +77,8 @@ def build(t):
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {h}" '
         f'width="{W}" height="{h}" role="img" '
-        f'aria-label="Measured speedups against named baselines across seven systems">',
+        f'aria-label="Measured speedups against named baselines across '
+        f'{len(ROWS)} systems">',
         "<defs>",
         f'<linearGradient id="sheen-{t["name"]}" x1="0" y1="0" x2="1" y2="0">'
         f'<stop offset="0" stop-color="{t["cyan"]}" stop-opacity="0"/>'

@@ -31,6 +31,11 @@
   <a href="https://github.com/asp53826/track-fusion/actions/workflows/ci.yml"><img alt="track-fusion tests" src="https://github.com/asp53826/track-fusion/actions/workflows/ci.yml/badge.svg?branch=main"></a>&nbsp;
   <a href="https://github.com/asp53826/vio-nav/actions/workflows/ci.yml"><img alt="vio-nav tests" src="https://github.com/asp53826/vio-nav/actions/workflows/ci.yml/badge.svg?branch=main"></a>
 </p>
+<p align="center">
+  <a href="https://github.com/asp53826/dst-harness/actions/workflows/ci.yml"><img alt="dst-harness tests" src="https://github.com/asp53826/dst-harness/actions/workflows/ci.yml/badge.svg?branch=main"></a>&nbsp;
+  <a href="https://github.com/asp53826/cdcl-sat/actions/workflows/ci.yml"><img alt="cdcl-sat CI" src="https://github.com/asp53826/cdcl-sat/actions/workflows/ci.yml/badge.svg?branch=main"></a>&nbsp;
+  <a href="https://github.com/asp53826/query-planner/actions/workflows/ci.yml"><img alt="query-planner tests" src="https://github.com/asp53826/query-planner/actions/workflows/ci.yml/badge.svg?branch=main"></a>
+</p>
 
 <sub>The credential array is generated from the public source itself. The live
 status badges come directly from each repository's GitHub Actions workflow—no
@@ -61,6 +66,9 @@ engineer can clone and challenge.
 | **[aad-greeks](https://github.com/asp53826/aad-greeks)** | tape-based reverse-mode automatic differentiation over Monte Carlo paths, with pricers written once and differentiated rather than hand-derived | **19 tests**; Greeks match analytic formulas to **5.6e-16**; cost stays **1.7-2.4×** the price across a 50× change in input count |
 | **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | Raft elections, conflict repair and majority commit combined with serializable MVCC, safe-point GC, and P-compositional linearizability checking | **598 assertions** across seeded partitions; **11-tick** five-node failover in the in-process simulator |
 | **[columnar-engine](https://github.com/asp53826/columnar-engine)** | C++17 vector-at-a-time engine with null bitmaps, selection vectors, joins, aggregation, TPC-H Q1, and scalar differential oracles | **6,288 assertions**; Q1 at **53.1M rows/s**; batched filters **1.94×** scalar |
+| **[dst-harness](https://github.com/asp53826/dst-harness)** | deterministic simulation testing: virtual clock, network and disk, seeded fault injection, Raft's five safety properties, and a Wing-Gong linearizability checker over the client history | **12 of 12** planted Raft defects caught, seeds-to-first-catch **1 to 485**; control clean over **2,000 seeds**; found **2 real bugs**, both written up with reproducing seeds |
+| **[cdcl-sat](https://github.com/asp53826/cdcl-sat)** | CDCL solver in C++17: watched literals with blockers, 1UIP analysis with recursive minimization, VSIDS, Luby restarts, LBD reduction, DRAT proof emission | **1,960 assertions**; **180/180** refutations verified by **drat-trim**, an external checker; **300/300** verdicts agreeing with CaDiCaL 3.0.1 |
+| **[query-planner](https://github.com/asp53826/query-planner)** | histograms, MCV lists and a from-scratch HyperLogLog feeding System R estimation; bushy DP, left-deep DP and greedy search; a vectorised executor so plans can be timed | q-errors to **76×** cost **1.00×** runtime against a perfect-information oracle, while left-deep search costs **2.15×**; cost model rank correlation **0.77** |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/proof-dark.svg">
@@ -101,6 +109,14 @@ the tables where the units survive.</sub>
 | **[columnar-engine](https://github.com/asp53826/columnar-engine)** | vectorized execution checked against scalar oracles |
 | **[lsm-tree](https://github.com/asp53826/lsm-tree)** | WAL, memtables, SSTables, Bloom filters, range scans, crash-safe compaction; **4,064 assertions** |
 | **[wal-recovery](https://github.com/asp53826/wal-recovery)** | CRC32 records, damaged-tail repair, atomic replay; 100 crash trials with **zero acknowledged writes lost** |
+| **[query-planner](https://github.com/asp53826/query-planner)** | join ordering, cost model and cardinality estimation scored against a perfect-information oracle; reports that the search space matters **20× more** than the estimates |
+
+### Correctness + verification
+
+| project | evidence |
+|---|---|
+| **[dst-harness](https://github.com/asp53826/dst-harness)** | deterministic simulation with seeded partitions, crashes and torn writes; scored by seeds-to-first-catch over **12 planted Raft defects**, and it found two real ones in its own target |
+| **[cdcl-sat](https://github.com/asp53826/cdcl-sat)** | every UNSAT answer emitted as a DRAT refutation and verified by **drat-trim**, not by me; publishes the ablation where its own restart strategy is worth nothing |
 
 ### ML infrastructure
 
