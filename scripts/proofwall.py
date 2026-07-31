@@ -39,10 +39,11 @@ LIGHT = {
 # (repo, ratio, headline, baseline it was measured against, colour token)
 ROWS = [
     ("edgar-mcp", 138.0, "138x", "warm cached 10-K read vs cold fetch", "cyan"),
+    ("aad-greeks", 53.3, "53.3x", "all Greeks vs central differences, 50 inputs", "blue"),
     ("vio-nav", 51.9, "51.9x", "translation drift vs inertial dead reckoning", "violet"),
     ("vllm-lite", 4.48, "4.48x", "KV-cache utilisation vs static batching (94% / 21%)", "green"),
     ("lob-market-making", 4.38, "4.38x", "Sharpe, inventory-skewed vs naive (5.7 / 1.3)", "amber"),
-    ("dist-train", 4.00, "4.00x", "bytes per worker vs all-gather, 8 workers", "blue"),
+    ("dist-train", 4.00, "4.00x", "bytes per worker vs all-gather, 8 workers", "violet"),
     ("columnar-engine", 1.94, "1.94x", "batched filter vs scalar, same result set", "cyan"),
     ("annlite", 1.83, "1.83x", "query throughput vs FAISS at 0.999 recall", "green"),
 ]
