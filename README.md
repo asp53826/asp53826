@@ -105,6 +105,7 @@ engineer can clone and challenge.
 | **[cdcl-sat](https://github.com/asp53826/cdcl-sat)** | CDCL solver in C++17: watched literals with blockers, 1UIP analysis with recursive minimization, VSIDS, Luby restarts, LBD reduction, DRAT proof emission | **1,960 assertions**; **180/180** refutations verified by **drat-trim**, an external checker; **300/300** verdicts agreeing with CaDiCaL 3.0.1 |
 | **[query-planner](https://github.com/asp53826/query-planner)** | histograms, MCV lists and a from-scratch HyperLogLog feeding System R estimation; bushy DP, left-deep DP and greedy search; a vectorised executor so plans can be timed | q-errors to **76×** cost **1.00×** runtime against a perfect-information oracle, while left-deep search costs **2.15×**; cost model rank correlation **0.77** |
 | **[hotstuff-bft](https://github.com/asp53826/hotstuff-bft)** | chained HotStuff driven by an adversary that equivocates, withholds, reorders and forges certificates, with checkers scored by a mutation catalogue | safety clean at and below **f** and broken immediately above it at both n=4 and n=7; **5/9** broken rules caught with **0** false positives; **3 real bugs** found, each with a reproducing seed |
+| **[ptq-budget](https://github.com/asp53826/ptq-budget)** | RTN, GPTQ and AWQ against an exact fp32 reference on a corpus whose optimal perplexity is known in closed form | GPTQ halves perplexity damage while sitting **39% further** from the original weights — weight error picks the worse method; granularity alone swings 2-bit damage **239.5% → 30.9%** |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/proof-dark.svg">
@@ -159,6 +160,7 @@ the tables where the units survive.</sub>
 
 | project | evidence |
 |---|---|
+| **[ptq-budget](https://github.com/asp53826/ptq-budget)** | weight-only INT8/4/3/2 with an exact oracle; publishes that its own headline metric, weight error, ranks the methods backwards |
 | **[vllm-lite](https://github.com/asp53826/vllm-lite)** | paged KV cache, continuous batching, prefix caching, speculative decoding; **94% vs 21%** KV utilization |
 | **[annlite](https://github.com/asp53826/annlite)** | HNSW + SIMD + Python bindings; FAISS parity at 0.99 recall and **1.83×** faster at 0.999 |
 | **[dist-train](https://github.com/asp53826/dist-train)** | ring all-reduce from `send`/`recv`; **58.7 vs 234.9 MB/worker** at eight workers |
