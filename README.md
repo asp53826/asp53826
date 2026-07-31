@@ -14,6 +14,18 @@
   <img alt="Aaryan Systems Observatory — measured systems, not portfolio theater" src="https://asp53826.github.io/social/observatory.png" width="100%">
 </a>
 
+## Interactive verification
+
+| enter | what you can verify |
+|---|---|
+| **[Verification Theater](https://asp53826.github.io/#theater)** | inject a published failure into `raft-mvcc`, `edgar-mcp`, or `track-fusion`; replay six deterministic checkpoints; open the source and benchmark drawer |
+| **[90-second recruiter tour](https://asp53826.github.io/)** | select Systems, Quant, Defense, or ML Infrastructure and move through a timed, pausable proof narrative |
+| **[Architecture constellation](https://asp53826.github.io/#map)** | see how twelve systems connect through one command/source/oracle/limitation contract |
+| **[Evidence desk](https://asp53826.github.io/#evidence-desk)** | ask where a system loses, how it was verified, or how to reproduce it; answers are restricted to the committed manifest |
+| **[Benchmark time machine](https://asp53826.github.io/#ledger)** | inspect the invalid baseline, correction, commit, and current verification command |
+
+**Download a role packet:** [Systems](https://asp53826.github.io/recruiter/systems.pdf) · [Quant / Finance](https://asp53826.github.io/recruiter/quant.pdf) · [Defense / Autonomy](https://asp53826.github.io/recruiter/defense.pdf) · [ML Infrastructure](https://asp53826.github.io/recruiter/ml-infrastructure.pdf)
+
 ## Choose your signal
 
 | recruiter route | enter through | three strongest proofs |
