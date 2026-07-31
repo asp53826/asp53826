@@ -59,8 +59,8 @@
 <text class="fade" style="animation-delay:0.34s" x="272" y="154" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8da2bf">warm cached 10-K read vs cold fetch</text>
 <text class="fade" style="animation-delay:0.10s" x="44" y="189" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13.5" font-weight="600" fill="#f4f8ff">aad-greeks</text>
 <rect x="272" y="173" width="788" height="17" rx="4" fill="#0a1020" opacity=".55"/>
-<rect class="bar" style="animation-delay:0.10s" x="272" y="173" width="591.3" height="17" rx="4" fill="url(#bar-blue-dark)" filter="url(#glow-dark)"/>
-<text class="fade" style="animation-delay:0.38s" x="873.3" y="187" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#4f8cff">53.3x</text>
+<rect class="bar" style="animation-delay:0.10s" x="272" y="173" width="578.8" height="17" rx="4" fill="url(#bar-blue-dark)" filter="url(#glow-dark)"/>
+<text class="fade" style="animation-delay:0.38s" x="860.8" y="187" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#4f8cff">49.0x</text>
 <text class="fade" style="animation-delay:0.44s" x="272" y="206" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#8da2bf">all Greeks vs central differences, 50 inputs</text>
 <text class="fade" style="animation-delay:0.20s" x="44" y="241" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13.5" font-weight="600" fill="#f4f8ff">vio-nav</text>
 <rect x="272" y="225" width="788" height="17" rx="4" fill="#0a1020" opacity=".55"/>

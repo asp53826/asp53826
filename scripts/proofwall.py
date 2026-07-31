@@ -39,7 +39,7 @@ LIGHT = {
 # (repo, ratio, headline, baseline it was measured against, colour token)
 ROWS = [
     ("edgar-mcp", 138.0, "138x", "warm cached 10-K read vs cold fetch", "cyan"),
-    ("aad-greeks", 53.3, "53.3x", "all Greeks vs central differences, 50 inputs", "blue"),
+    ("aad-greeks", 49.0, "49.0x", "all Greeks vs central differences, 50 inputs", "blue"),
     ("vio-nav", 51.9, "51.9x", "translation drift vs inertial dead reckoning", "violet"),
     ("vllm-lite", 4.48, "4.48x", "KV-cache utilisation vs static batching (94% / 21%)", "green"),
     ("lob-market-making", 4.38, "4.38x", "Sharpe, inventory-skewed vs naive (5.7 / 1.3)", "amber"),

@@ -33,7 +33,7 @@ engineer can clone and challenge.
 | **[edgar-mcp](https://github.com/asp53826/edgar-mcp)** | MCP server over SEC EDGAR with identity resolution, filing overflow history, bounded text windows, XBRL discovery, per-host caching, and a global request pacer | **32 tests**; warm 10-K read **138×** faster; peak request window held at the SEC's **10 req/s** ceiling |
 | **[xbrl-normalize](https://github.com/asp53826/xbrl-normalize)** | 19 canonical financial line items with period-aware tag selection, restatement handling, derivations, provenance, and accounting-identity checks | **102-company** cross-industry benchmark; assets and liabilities at **100% coverage**; **96.1%** exact identity balance |
 | **[lob-market-making](https://github.com/asp53826/lob-market-making)** | limit order book with price-time priority and post-only orders, informed-trader flow, three quoting strategies, exact PnL decomposition, and adverse-selection measurement | **36 tests**; paired 12-seed comparison; the naive strategy wins on PnL and loses on every risk-adjusted metric at **7×** the inventory deviation |
-| **[aad-greeks](https://github.com/asp53826/aad-greeks)** | tape-based reverse-mode automatic differentiation over Monte Carlo paths, with pricers written once and differentiated rather than hand-derived | **19 tests**; Greeks match analytic formulas to **5.6e-16**; cost stays **1.7-2.1×** the price across a 50× change in input count |
+| **[aad-greeks](https://github.com/asp53826/aad-greeks)** | tape-based reverse-mode automatic differentiation over Monte Carlo paths, with pricers written once and differentiated rather than hand-derived | **19 tests**; Greeks match analytic formulas to **5.6e-16**; cost stays **1.7-2.4×** the price across a 50× change in input count |
 | **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | Raft elections, conflict repair and majority commit combined with serializable MVCC, safe-point GC, and P-compositional linearizability checking | **598 assertions** across seeded partitions; **11-tick** five-node failover in the in-process simulator |
 | **[columnar-engine](https://github.com/asp53826/columnar-engine)** | C++17 vector-at-a-time engine with null bitmaps, selection vectors, joins, aggregation, TPC-H Q1, and scalar differential oracles | **6,288 assertions**; Q1 at **53.1M rows/s**; batched filters **1.94×** scalar |
 
@@ -64,14 +64,14 @@ the tables where the units survive.</sub>
 | **[edgar-mcp](https://github.com/asp53826/edgar-mcp)** | EDGAR filing/facts tools; cache validation; iXBRL cleanup; context-safe windows; rate-limit enforcement |
 | **[xbrl-normalize](https://github.com/asp53826/xbrl-normalize)** | comparable statements across 102 filers; provenance on every value; missing is never silently zero |
 | **[lob-market-making](https://github.com/asp53826/lob-market-making)** | post-only matching, informed flow, exact spread-capture/inventory split; two bugs that flattered the results are documented in `DESIGN.md` |
-| **[aad-greeks](https://github.com/asp53826/aad-greeks)** | adjoint Greeks at constant cost in the input count; publishes the payoff where pathwise AAD returns a delta of exactly zero and is silently wrong |
+| **[aad-greeks](https://github.com/asp53826/aad-greeks)** ([live](https://asp53826.github.io/aad-greeks/)) | adjoint Greeks at constant cost in the input count; publishes the payoff where pathwise AAD returns a delta of exactly zero and is silently wrong |
 
 ### Storage + execution
 
 | project | evidence |
 |---|---|
 | **[lob-market-making](https://github.com/asp53826/lob-market-making)** | limit order book with price-time priority and post-only orders, informed-trader flow, three quoting strategies, exact PnL decomposition, and adverse-selection measurement | **36 tests**; paired 12-seed comparison; the naive strategy wins on PnL and loses on every risk-adjusted metric at **7×** the inventory deviation |
-| **[aad-greeks](https://github.com/asp53826/aad-greeks)** | tape-based reverse-mode automatic differentiation over Monte Carlo paths, with pricers written once and differentiated rather than hand-derived | **19 tests**; Greeks match analytic formulas to **5.6e-16**; cost stays **1.7-2.1×** the price across a 50× change in input count |
+| **[aad-greeks](https://github.com/asp53826/aad-greeks)** | tape-based reverse-mode automatic differentiation over Monte Carlo paths, with pricers written once and differentiated rather than hand-derived | **19 tests**; Greeks match analytic formulas to **5.6e-16**; cost stays **1.7-2.4×** the price across a 50× change in input count |
 | **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | consensus + serializable snapshots + machine-checkable histories |
 | **[columnar-engine](https://github.com/asp53826/columnar-engine)** | vectorized execution checked against scalar oracles |
 | **[lsm-tree](https://github.com/asp53826/lsm-tree)** | WAL, memtables, SSTables, Bloom filters, range scans, crash-safe compaction; **4,064 assertions** |
