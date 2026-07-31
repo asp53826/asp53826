@@ -32,8 +32,21 @@ engineer can clone and challenge.
 |---|---|---:|
 | **[edgar-mcp](https://github.com/asp53826/edgar-mcp)** | MCP server over SEC EDGAR with identity resolution, filing overflow history, bounded text windows, XBRL discovery, per-host caching, and a global request pacer | **32 tests**; warm 10-K read **138×** faster; peak request window held at the SEC's **10 req/s** ceiling |
 | **[xbrl-normalize](https://github.com/asp53826/xbrl-normalize)** | 19 canonical financial line items with period-aware tag selection, restatement handling, derivations, provenance, and accounting-identity checks | **102-company** cross-industry benchmark; assets and liabilities at **100% coverage**; **96.1%** exact identity balance |
+| **[lob-market-making](https://github.com/asp53826/lob-market-making)** | limit order book with price-time priority and post-only orders, informed-trader flow, three quoting strategies, exact PnL decomposition, and adverse-selection measurement | **36 tests**; paired 12-seed comparison; the naive strategy wins on PnL and loses on every risk-adjusted metric at **7×** the inventory deviation |
 | **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | Raft elections, conflict repair and majority commit combined with serializable MVCC, safe-point GC, and P-compositional linearizability checking | **598 assertions** across seeded partitions; **11-tick** five-node failover in the in-process simulator |
 | **[columnar-engine](https://github.com/asp53826/columnar-engine)** | C++17 vector-at-a-time engine with null bitmaps, selection vectors, joins, aggregation, TPC-H Q1, and scalar differential oracles | **6,288 assertions**; Q1 at **53.1M rows/s**; batched filters **1.94×** scalar |
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/proof-light.svg">
+  <img alt="Measured speedups plotted against the named baseline each was tested against, on a log axis" src="assets/proof-dark.svg" width="100%">
+</picture>
+
+<sub>Only results that reduce to a ratio over a <em>named</em> baseline appear
+above. Throughput, utilisation and drift are not comparable quantities, so
+putting them on one axis without a baseline would be decoration dressed as
+evidence — the conformance rates, crash campaigns and coverage numbers stay in
+the tables where the units survive.</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/system-map-dark.svg">
@@ -49,11 +62,13 @@ engineer can clone and challenge.
 |---|---|
 | **[edgar-mcp](https://github.com/asp53826/edgar-mcp)** | EDGAR filing/facts tools; cache validation; iXBRL cleanup; context-safe windows; rate-limit enforcement |
 | **[xbrl-normalize](https://github.com/asp53826/xbrl-normalize)** | comparable statements across 102 filers; provenance on every value; missing is never silently zero |
+| **[lob-market-making](https://github.com/asp53826/lob-market-making)** | post-only matching, informed flow, exact spread-capture/inventory split; two bugs that flattered the results are documented in `DESIGN.md` |
 
 ### Storage + execution
 
 | project | evidence |
 |---|---|
+| **[lob-market-making](https://github.com/asp53826/lob-market-making)** | limit order book with price-time priority and post-only orders, informed-trader flow, three quoting strategies, exact PnL decomposition, and adverse-selection measurement | **36 tests**; paired 12-seed comparison; the naive strategy wins on PnL and loses on every risk-adjusted metric at **7×** the inventory deviation |
 | **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** | consensus + serializable snapshots + machine-checkable histories |
 | **[columnar-engine](https://github.com/asp53826/columnar-engine)** | vectorized execution checked against scalar oracles |
 | **[lsm-tree](https://github.com/asp53826/lsm-tree)** | WAL, memtables, SSTables, Bloom filters, range scans, crash-safe compaction; **4,064 assertions** |
@@ -102,6 +117,7 @@ assertions.</sub>
 SYSTEMS    C++17 · Python · Raft · MVCC · WAL · LSM/SSTables · SIMD · POSIX
 ML INFRA   PyTorch · distributed collectives · HNSW · BM25 · reranking · evals
 FINANCE    SEC EDGAR · XBRL · accounting identities · provenance · MCP
+MARKETS    limit order books · price-time priority · adverse selection · Avellaneda-Stoikov
 SIGNAL     QPSK · RRC · LDPC · SAR · Kalman/IMM · JPDA · OSPA
 ESTIMATE   IMU preintegration · SO(3) · MSCKF · ATE/RPE · triangulation
 SERVICES   FastAPI · SQLite/Postgres · durable queues · scrypt · tracing
