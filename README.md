@@ -5,12 +5,46 @@
 </picture>
 
 <p align="center">
-  <a href="#financial-data">FINANCIAL DATA</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#storage--execution">STORAGE + EXECUTION</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#ml-infrastructure">ML INFRASTRUCTURE</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#signal--autonomy">SIGNAL + AUTONOMY</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#toolchain--delivery">TOOLCHAIN</a>
+  <a href="https://asp53826.github.io/"><strong>OPEN THE SYSTEMS OBSERVATORY</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/resume/Aaryan-Patel-Systems-Resume.pdf">RÉSUMÉ</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/data/evidence.json">EVIDENCE MANIFEST</a>
 </p>
+
+<a href="https://asp53826.github.io/">
+  <img alt="Aaryan Systems Observatory — measured systems, not portfolio theater" src="https://asp53826.github.io/social/observatory.png" width="100%">
+</a>
+
+## Choose your signal
+
+| recruiter route | enter through | three strongest proofs |
+|---|---|---|
+| **Systems** | **[open route](https://asp53826.github.io/systems/)** | [raft-mvcc](https://github.com/asp53826/raft-mvcc) · [columnar-engine](https://github.com/asp53826/columnar-engine) · [dst-harness](https://github.com/asp53826/dst-harness) |
+| **Quant / Finance** | **[open route](https://asp53826.github.io/quant/)** | [edgar-mcp](https://github.com/asp53826/edgar-mcp) · [aad-greeks](https://github.com/asp53826/aad-greeks) · [lob-market-making](https://github.com/asp53826/lob-market-making) |
+| **Defense / Autonomy** | **[open route](https://asp53826.github.io/defense/)** | [track-fusion](https://github.com/asp53826/track-fusion) · [sar-focus](https://github.com/asp53826/sar-focus) · [vio-nav](https://github.com/asp53826/vio-nav) |
+| **ML Infrastructure** | **[open route](https://asp53826.github.io/ml-infrastructure/)** | [annlite](https://github.com/asp53826/annlite) · [vllm-lite](https://github.com/asp53826/vllm-lite) · [dist-train](https://github.com/asp53826/dist-train) |
+
+> **Currently building:** evidence infrastructure that generates this profile,
+> recruiter routes, proof cards, repository artwork, a one-page résumé, and a
+> machine-readable claim-to-benchmark manifest from one source of truth.
+
+## Three proof passports
+
+| [raft-mvcc](https://github.com/asp53826/raft-mvcc) | [edgar-mcp](https://github.com/asp53826/edgar-mcp) | [track-fusion](https://github.com/asp53826/track-fusion) |
+|---|---|---|
+| Raft + serializable MVCC + linearizability checking | bounded EDGAR tools + cache validation + global pacing | IMM + JPDA + track scoring + OSPA |
+| **598 assertions** across seeded faults | **138×** warm 10-K read; SEC ceiling enforced | **47%** lower localization error; failure sweep published |
+| `make test` | `make test` | `python -m pytest -q` |
+
+<details>
+<summary><strong>Start here — reproduce all three flagship results</strong></summary>
+
+```bash
+git clone https://github.com/asp53826/raft-mvcc && cd raft-mvcc && make test
+git clone https://github.com/asp53826/edgar-mcp && cd edgar-mcp && make test
+git clone https://github.com/asp53826/track-fusion && cd track-fusion && python -m pip install -e '.[dev]' && python -m pytest -q
+```
+
+</details>
 
 ## Verification deck
 
@@ -201,7 +235,9 @@ automation, and AR/AI for industrial food processing.
 
 ## Open channel
 
-**[aaryansp26@gmail.com](mailto:aaryansp26@gmail.com)**
+**[aaryansp26@gmail.com](mailto:aaryansp26@gmail.com)** ·
+**[one-page systems résumé](https://asp53826.github.io/resume/Aaryan-Patel-Systems-Resume.pdf)** ·
+**[Systems Observatory](https://asp53826.github.io/)**
 
 Every system above is MIT licensed. Clone one, run the benchmark, and inspect
 the regime where it breaks.
