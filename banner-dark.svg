@@ -120,9 +120,9 @@
       <line x1="823" y1="402" x2="823" y2="450" stroke="#20314d"/>
       <text x="82" y="422" class="mono" font-size="22" font-weight="700" fill="#4de7ff">20</text>
       <text x="82" y="443" class="mono" font-size="10" letter-spacing="1.5" fill="#8da2bf">PUBLIC SYSTEMS</text>
-      <text x="337" y="422" class="mono" font-size="22" font-weight="700" fill="#68f5ae">681</text>
+      <text x="337" y="422" class="mono" font-size="22" font-weight="700" fill="#68f5ae">682</text>
       <text x="337" y="443" class="mono" font-size="10" letter-spacing="1.5" fill="#8da2bf">TEST FUNCTIONS</text>
-      <text x="592" y="422" class="mono" font-size="22" font-weight="700" fill="#9b7bff">1,217 KB</text>
+      <text x="592" y="422" class="mono" font-size="22" font-weight="700" fill="#9b7bff">1,223 KB</text>
       <text x="592" y="443" class="mono" font-size="10" letter-spacing="1.5" fill="#8da2bf">MEASURED SOURCE</text>
       <text x="847" y="422" class="mono" font-size="22" font-weight="700" fill="#ffcb66">MIT</text>
       <text x="847" y="443" class="mono" font-size="10" letter-spacing="1.5" fill="#8da2bf">CLONE · RUN · VERIFY</text>
