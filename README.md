@@ -119,6 +119,7 @@ engineer can clone and challenge.
 | **[hotstuff-bft](https://github.com/asp53826/hotstuff-bft)** | chained HotStuff driven by an adversary that equivocates, withholds, reorders and forges certificates, with checkers scored by a mutation catalogue | safety clean at and below **f** and broken immediately above it at both n=4 and n=7; **5/9** broken rules caught with **0** false positives; **3 real bugs** found, each with a reproducing seed |
 | **[ptq-budget](https://github.com/asp53826/ptq-budget)** | RTN, GPTQ and AWQ against an exact fp32 reference on a corpus whose optimal perplexity is known in closed form | GPTQ halves perplexity damage while sitting **39% further** from the original weights — weight error picks the worse method; granularity alone swings 2-bit damage **239.5% → 30.9%** |
 | **[sampling-profiler](https://github.com/asp53826/sampling-profiler)** | SIGPROF sampling with stack aggregation, folded output, and an error analysis scored against workloads of known CPU share | detectability floor derived and verified as **n = 4(1−p)/p**; publishes the two regimes where it is confidently wrong — **66.3% reported as 10.8%**, and a busy thread at **0.0%** |
+| **[backtest-honest](https://github.com/asp53826/backtest-honest)** | deflated Sharpe and purged/embargoed CV, calibrated on random walks where every strategy's true Sharpe is zero | a 500-variant search on pure noise posts Sharpe **0.99**; uncorrected backtests declare a discovery in **7.5%** of signal-free markets, deflated Sharpe in **0%** |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/proof-dark.svg">
@@ -148,6 +149,7 @@ the tables where the units survive.</sub>
 | **[xbrl-normalize](https://github.com/asp53826/xbrl-normalize)** | comparable statements across 102 filers; provenance on every value; missing is never silently zero |
 | **[lob-market-making](https://github.com/asp53826/lob-market-making)** | post-only matching, informed flow, exact spread-capture/inventory split; two bugs that flattered the results are documented in `DESIGN.md` |
 | **[aad-greeks](https://github.com/asp53826/aad-greeks)** ([live](https://asp53826.github.io/aad-greeks/)) | adjoint Greeks at constant cost in the input count; publishes the payoff where pathwise AAD returns a delta of exactly zero and is silently wrong |
+| **[backtest-honest](https://github.com/asp53826/backtest-honest)** | measures its own selection bias against a market with no signal, and publishes the edge size its own correction is too weak to certify |
 
 ### Storage + execution
 
