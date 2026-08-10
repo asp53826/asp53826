@@ -5,7 +5,8 @@
 </picture>
 
 <p align="center">
-  <a href="https://asp53826.github.io/labs/"><strong>ENTER THE PROOF LABORATORY</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/counterexample/"><strong>ENTER COUNTEREXAMPLE</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/labs/">PROOF LABORATORY</a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/">SYSTEMS OBSERVATORY</a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/resume/Aaryan-Patel-Systems-Resume.pdf">RÉSUMÉ</a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/data/evidence.json">EVIDENCE MANIFEST</a>
@@ -19,6 +20,7 @@
 
 | enter | what you can verify |
 |---|---|
+| **[COUNTEREXAMPLE](https://asp53826.github.io/counterexample/)** | operate twelve real failure capsules across eight source engines; scrub each causal tape, inspect exact commits and tests, download content-bound receipts, and verify the stable release's GitHub-signed provenance |
 | **[FAULTLINE](https://asp53826.github.io/labs/faultline/)** | operate the real C++17 Raft + MVCC engine in WebAssembly; create a minority leader, heal conflict, and run both passing and failing linearizability histories |
 | **[SIGNALROOM](https://asp53826.github.io/labs/signalroom/)** | replay IMM, JPDA, VIO, and SAR regimes while truth, measurements, residuals, and the losing condition remain visible |
 | **[MARKETWIRE](https://asp53826.github.io/labs/marketwire/)** | change toxicity, quote age, and inventory control; compare the explanatory tape with the committed 20,000-step, 12-seed benchmark |
@@ -45,10 +47,10 @@
 | **Defense / Autonomy** | **[open route](https://asp53826.github.io/defense/)** | [track-fusion](https://github.com/asp53826/track-fusion) · [sar-focus](https://github.com/asp53826/sar-focus) · [vio-nav](https://github.com/asp53826/vio-nav) |
 | **ML Infrastructure** | **[open route](https://asp53826.github.io/ml-infrastructure/)** | [annlite](https://github.com/asp53826/annlite) · [vllm-lite](https://github.com/asp53826/vllm-lite) · [dist-train](https://github.com/asp53826/dist-train) |
 
-> **Current flagship:** FAULTLINE compiles the repository's C++17 consensus,
-> MVCC, and linearizability sources to WebAssembly. The same release pipeline
-> ships native and browser artifacts with checksums, an SPDX SBOM, and
-> GitHub-signed provenance.
+> **Current flagship:** COUNTEREXAMPLE connects twelve losing regimes from
+> eight public engines into one constrained failure register. Every case binds
+> an exact revision, witness, limitation, content digest, and signed stable
+> release—then opens the same protocol to external counterexamples.
 
 ## Three proof passports
 
