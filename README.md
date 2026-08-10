@@ -5,7 +5,8 @@
 </picture>
 
 <p align="center">
-  <a href="https://asp53826.github.io/"><strong>OPEN THE SYSTEMS OBSERVATORY</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/labs/"><strong>ENTER THE PROOF LABORATORY</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/">SYSTEMS OBSERVATORY</a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/resume/Aaryan-Patel-Systems-Resume.pdf">RÉSUMÉ</a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/data/evidence.json">EVIDENCE MANIFEST</a>
 </p>
@@ -18,6 +19,15 @@
 
 | enter | what you can verify |
 |---|---|
+| **[FAULTLINE](https://asp53826.github.io/labs/faultline/)** | operate the real C++17 Raft + MVCC engine in WebAssembly; create a minority leader, heal conflict, and run both passing and failing linearizability histories |
+| **[SIGNALROOM](https://asp53826.github.io/labs/signalroom/)** | replay IMM, JPDA, VIO, and SAR regimes while truth, measurements, residuals, and the losing condition remain visible |
+| **[MARKETWIRE](https://asp53826.github.io/labs/marketwire/)** | change toxicity, quote age, and inventory control; compare the explanatory tape with the committed 20,000-step, 12-seed benchmark |
+| **[KERNELARENA](https://asp53826.github.io/labs/kernelarena/)** | invoke the running TensorForge compiler across three shapes; inspect IR, fusion, memory reuse, generated WGSL, and a browser-local oracle |
+| **[Benchmark Observatory](https://asp53826.github.io/benchmarks/)** | inspect exact commits, commands, environments, units, and limitations without forcing unrelated metrics onto one leaderboard |
+| **[Engineering papers](https://asp53826.github.io/papers/)** | read the method and failure analysis behind consensus partitions, sensor-fusion losses, market risk, AAD, and GPU compilation |
+| **[Demo Cinema](https://asp53826.github.io/cinema/)** | watch four narrated, captioned engineering films under one minute, then enter the corresponding live system |
+| **[Three-minute proof tours](https://asp53826.github.io/tours/)** | follow Systems, Autonomy, Quant, or ML Infrastructure through mechanism → attack → oracle → boundary |
+| **[Merged contribution track](https://asp53826.github.io/contributions/)** | inspect accepted changes outside my own repositories without vanity counts or fabricated collaboration |
 | **[Verification Theater](https://asp53826.github.io/#theater)** | inject a published failure into `raft-mvcc`, `edgar-mcp`, or `track-fusion`; replay six deterministic checkpoints; open the source and benchmark drawer |
 | **[90-second recruiter tour](https://asp53826.github.io/)** | select Systems, Quant, Defense, or ML Infrastructure and move through a timed, pausable proof narrative |
 | **[Architecture constellation](https://asp53826.github.io/#map)** | see how twelve systems connect through one command/source/oracle/limitation contract |
@@ -35,9 +45,10 @@
 | **Defense / Autonomy** | **[open route](https://asp53826.github.io/defense/)** | [track-fusion](https://github.com/asp53826/track-fusion) · [sar-focus](https://github.com/asp53826/sar-focus) · [vio-nav](https://github.com/asp53826/vio-nav) |
 | **ML Infrastructure** | **[open route](https://asp53826.github.io/ml-infrastructure/)** | [annlite](https://github.com/asp53826/annlite) · [vllm-lite](https://github.com/asp53826/vllm-lite) · [dist-train](https://github.com/asp53826/dist-train) |
 
-> **Currently building:** evidence infrastructure that generates this profile,
-> recruiter routes, proof cards, repository artwork, a one-page résumé, and a
-> machine-readable claim-to-benchmark manifest from one source of truth.
+> **Current flagship:** FAULTLINE compiles the repository's C++17 consensus,
+> MVCC, and linearizability sources to WebAssembly. The same release pipeline
+> ships native and browser artifacts with checksums, an SPDX SBOM, and
+> GitHub-signed provenance.
 
 ## Three proof passports
 
