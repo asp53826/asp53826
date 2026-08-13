@@ -20,6 +20,7 @@ jobs:
     with:
       owner: asp53826
       repositories: |-
+        faultgraph
         raft-mvcc
         edgar-mcp
         track-fusion
