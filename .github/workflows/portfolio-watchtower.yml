@@ -13,6 +13,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  profile-curator:
+    permissions:
+      contents: write
+    uses: asp53826/portfolio-ops/.github/workflows/profile-curator.yml@v1.3.0
+    with:
+      owner: asp53826
+      repositories: |-
+        raft-mvcc
+        edgar-mcp
+        track-fusion
+        tensorforge-webgpu
+        columnar-engine
+        hotstuff-bft
+        counterexample
+        portfolio-ops
+
   public-surfaces:
     permissions:
       contents: read
