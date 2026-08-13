@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="https://asp53826.github.io/counterexample/"><strong>ENTER COUNTEREXAMPLE</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/proofgraph/"><strong>OPEN PROOFGRAPH</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/recruiter/"><strong>OPEN ENGINEERING OS</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/tours/">TAKE A PROOF TOUR</a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/resume/Aaryan-Patel-Systems-Resume.pdf">RÉSUMÉ</a>&nbsp;&nbsp;·&nbsp;&nbsp;
@@ -25,6 +26,11 @@
 
 Each route is a short, role-specific path through live systems, source, tests,
 measured evidence, and the regime where the result stops holding.
+
+**[PROOFGRAPH](https://asp53826.github.io/proofgraph/)** is the interactive
+router across those routes: choose a hiring lens, then traverse one claim
+through its attack, oracle, measurement, boundary, exact source revision, and
+signed receipt.
 
 ## Six proof cartridges
 
