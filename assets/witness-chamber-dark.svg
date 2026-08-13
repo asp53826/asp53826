@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1168" height="230" viewBox="0 0 1168 230" role="img" aria-label="WITNESS live reproducibility chamber: four receipt-bound runtimes execute in the browser.">
+  <defs>
+    <linearGradient id="wd-panel" x1="0" x2="1"><stop stop-color="#070B0D"/><stop offset=".55" stop-color="#0C1517"/><stop offset="1" stop-color="#091011"/></linearGradient>
+    <pattern id="wd-grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#30403A" stroke-opacity=".22"/></pattern>
+    <filter id="wd-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <style>
+    .d{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.scan{animation:wd-scan 4s linear infinite}.pulse{animation:wd-pulse 2s steps(2) infinite}.dash{stroke-dasharray:5 12;animation:wd-dash 6s linear infinite}@keyframes wd-scan{from{transform:translateX(-80px)}to{transform:translateX(1230px)}}@keyframes wd-pulse{50%{opacity:.25}}@keyframes wd-dash{to{stroke-dashoffset:-170}}@media(prefers-reduced-motion:reduce){.scan,.pulse,.dash{animation:none}.scan{display:none}}
+  </style>
+  <rect width="1168" height="230" rx="12" fill="url(#wd-panel)"/><rect width="1168" height="230" rx="12" fill="url(#wd-grid)"/><rect x="1" y="1" width="1166" height="228" rx="11" fill="none" stroke="#34433E"/>
+  <g class="scan" opacity=".45"><rect x="0" width="2" height="230" fill="#8FFFC3"/><rect x="2" width="50" height="230" fill="#8FFFC3" opacity=".05"/></g>
+  <text x="30" y="38" class="m" font-size="10" letter-spacing="2" fill="#8FFFC3">W-01 // LIVE REPRODUCIBILITY CHAMBER</text>
+  <text x="30" y="89" class="d" font-size="39" font-weight="780" letter-spacing="-1.5" fill="#EDF6F2">WITNESS</text>
+  <text x="30" y="118" class="m" font-size="11" fill="#8D9D97">Verify the receipt. Execute the pinned code. Inspect the measured trace.</text>
+  <g transform="translate(30 146)"><rect width="470" height="52" fill="#0B1214" stroke="#34433E"/><circle cx="24" cy="26" r="5" fill="#8FFFC3" filter="url(#wd-glow)" class="pulse"/><text x="42" y="23" class="m" font-size="9" letter-spacing="1" fill="#8D9D97">LOCAL EXECUTION</text><text x="42" y="39" class="m" font-size="11" font-weight="700" fill="#EDF6F2">4 CAPSULES  /  4 PINNED COMMITS  /  0 MOCKS</text></g>
+  <g transform="translate(548 36)">
+    <path d="M0 78H566" stroke="#40534B" class="dash"/>
+    <g transform="translate(0)"><rect width="128" height="84" fill="#0D1719" stroke="#40534B"/><text x="14" y="21" class="m" font-size="8" letter-spacing="1.2" fill="#68D7DC">01 / SYSTEMS</text><text x="14" y="47" class="m" font-size="12" font-weight="700" fill="#EDF6F2">C++17 → WASM</text><text x="14" y="67" class="m" font-size="8" fill="#8D9D97">RAFT MINORITY</text></g>
+    <g transform="translate(146)"><rect width="128" height="84" fill="#0D1719" stroke="#40534B"/><text x="14" y="21" class="m" font-size="8" letter-spacing="1.2" fill="#68D7DC">02 / ML</text><text x="14" y="47" class="m" font-size="12" font-weight="700" fill="#EDF6F2">TYPESCRIPT</text><text x="14" y="67" class="m" font-size="8" fill="#8D9D97">SHAPE ORACLE</text></g>
+    <g transform="translate(292)"><rect width="128" height="84" fill="#0D1719" stroke="#40534B"/><text x="14" y="21" class="m" font-size="8" letter-spacing="1.2" fill="#68D7DC">03 / AUTONOMY</text><text x="14" y="47" class="m" font-size="12" font-weight="700" fill="#EDF6F2">PYODIDE</text><text x="14" y="67" class="m" font-size="8" fill="#8D9D97">CLUTTER LLR</text></g>
+    <g transform="translate(438)"><rect width="128" height="84" fill="#0D1719" stroke="#8FFFC3"/><text x="14" y="21" class="m" font-size="8" letter-spacing="1.2" fill="#8FFFC3">04 / QUANT</text><text x="14" y="47" class="m" font-size="12" font-weight="700" fill="#EDF6F2">PYODIDE</text><text x="14" y="67" class="m" font-size="8" fill="#8D9D97">RISK LEDGER</text></g>
+    <g transform="translate(0 110)"><text y="18" class="m" font-size="9" letter-spacing="1.4" fill="#8D9D97">RECEIPT SHA-256</text><path d="M124 14H438" stroke="#40534B"/><circle cx="454" cy="14" r="7" fill="#8FFFC3" filter="url(#wd-glow)"/><text x="474" y="18" class="m" font-size="10" font-weight="700" fill="#8FFFC3">INVARIANT HELD</text></g>
+  </g>
+  <text x="1032" y="213" class="m" font-size="9" letter-spacing="1.5" fill="#8FFFC3">EXECUTE →</text>
+</svg>

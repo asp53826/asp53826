@@ -6,6 +6,7 @@
 
 <p align="center">
   <a href="https://asp53826.github.io/counterexample/"><strong>ENTER COUNTEREXAMPLE</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/witness/"><strong>RUN WITNESS</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/proofgraph/"><strong>OPEN PROOFGRAPH</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/recruiter/"><strong>OPEN ENGINEERING OS</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/tours/">TAKE A PROOF TOUR</a>&nbsp;&nbsp;·&nbsp;&nbsp;
@@ -18,6 +19,22 @@
   <source media="(prefers-color-scheme: light)" srcset="assets/proof-bus-light.svg">
   <img alt="Verification bus: claim, attack, oracle, boundary, and receipt" src="assets/proof-bus-dark.svg" width="100%">
 </picture>
+
+## Execute the evidence
+
+<a href="https://asp53826.github.io/witness/">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/witness-chamber-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/witness-chamber-light.svg">
+  <img alt="Open WITNESS, a live reproducibility chamber for four receipt-bound engineering counterexamples" src="assets/witness-chamber-dark.svg" width="100%">
+</picture>
+</a>
+
+**[WITNESS](https://asp53826.github.io/witness/)** verifies each canonical
+receipt, runs the pinned C++/WebAssembly, TypeScript, or Python implementation
+inside the browser, compares the observed trace with its oracle, and emits a
+local run receipt. The local receipt is explicitly unattested; release
+provenance remains bound to COUNTEREXAMPLE.
 
 ## Choose your route
 
@@ -85,6 +102,7 @@ limitations.
 | **[KERNELARENA](https://asp53826.github.io/labs/kernelarena/)** | typed tensor IR, fusion, liveness-aware memory reuse, generated WGSL, and a browser-local oracle |
 | **[SIGNALROOM](https://asp53826.github.io/labs/signalroom/)** | truth, measurements, residuals, uncertainty, and the manoeuvre regime where an estimator loses |
 | **[MARKETWIRE](https://asp53826.github.io/labs/marketwire/)** | toxicity, quote age, inventory control, deterministic shocks, and a committed 20,000-step benchmark |
+| **[WITNESS](https://asp53826.github.io/witness/)** | receipt hashing, pinned browser execution, deterministic oracles, tamper detection, and local run receipts |
 | **[Benchmark Observatory](https://asp53826.github.io/benchmarks/)** | exact commits, commands, environments, units, baselines, and limitations |
 | **[Demo Cinema](https://asp53826.github.io/cinema/)** | four captioned engineering films under one minute with direct routes into the running system |
 
