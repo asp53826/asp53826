@@ -170,9 +170,9 @@ account or legal decisions remain outside the autonomous boundary.
 | [track-fusion](https://github.com/asp53826/track-fusion) | Python | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/track-fusion/actions/runs/31705678908) |
 | [tensorforge-webgpu](https://github.com/asp53826/tensorforge-webgpu) | TypeScript | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/tensorforge-webgpu/actions/runs/31705451182) |
 | [columnar-engine](https://github.com/asp53826/columnar-engine) | C++ | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/columnar-engine/actions/runs/31705462306) |
-| [hotstuff-bft](https://github.com/asp53826/hotstuff-bft) | Python | No published release | [Autonomous Engineering Lab: cancelled](https://github.com/asp53826/hotstuff-bft/actions/runs/31705641178) |
+| [lsm-tree](https://github.com/asp53826/lsm-tree) | C++ | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/lsm-tree/actions/runs/31705519571) |
 | [counterexample](https://github.com/asp53826/counterexample) | CSS | [v1.0.0](https://github.com/asp53826/counterexample/releases/tag/v1.0.0) | [OpenSSF Scorecard: success](https://github.com/asp53826/counterexample/actions/runs/31469800250) |
-| [portfolio-ops](https://github.com/asp53826/portfolio-ops) | Python | No published release | [Push on main: success](https://github.com/asp53826/portfolio-ops/actions/runs/31705162886) |
+| [portfolio-ops](https://github.com/asp53826/portfolio-ops) | Python | No published release | [Control Plane CI: success](https://github.com/asp53826/portfolio-ops/actions/runs/31706473274) |
 
 This block is regenerated only when GitHub's repository, release, or workflow data changes.
 <!-- portfolio-status:end -->
