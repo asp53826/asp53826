@@ -77,11 +77,11 @@
   <g class="boot b3">
     <rect x="50" y="292" width="1100" height="105" rx="10" fill="#FFFFFF" fill-opacity=".9" stroke="#B9CCD0"/>
     <path d="M306 307V382M562 307V382M818 307V382" stroke="#B9CCD0"/>
-    <text x="76" y="335" class="utility" font-size="24" font-weight="700" fill="#087C78">27</text>
+    <text x="76" y="335" class="utility" font-size="24" font-weight="700" fill="#087C78">29</text>
     <text x="76" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#536A72">PUBLIC SYSTEMS</text>
-    <text x="332" y="335" class="utility" font-size="24" font-weight="700" fill="#167A43">895</text>
+    <text x="332" y="335" class="utility" font-size="24" font-weight="700" fill="#167A43">947</text>
     <text x="332" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#536A72">TEST FUNCTIONS</text>
-    <text x="588" y="335" class="utility" font-size="24" font-weight="700" fill="#9A5700">1,671 KB</text>
+    <text x="588" y="335" class="utility" font-size="24" font-weight="700" fill="#9A5700">1,843 KB</text>
     <text x="588" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#536A72">MEASURED SOURCE</text>
     <text x="844" y="335" class="utility" font-size="24" font-weight="700" fill="#6546C6">4 ROUTES</text>
     <text x="844" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#536A72">ROLE-SPECIFIC ENTRY</text>
