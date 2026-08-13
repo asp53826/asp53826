@@ -7,6 +7,7 @@
 <p align="center">
   <a href="https://asp53826.github.io/counterexample/"><strong>ENTER COUNTEREXAMPLE</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/witness/"><strong>RUN WITNESS</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/witness/publications/WITNESS-Technical-Monograph.pdf"><strong>READ MONOGRAPH</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/proofgraph/"><strong>OPEN PROOFGRAPH</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/recruiter/"><strong>OPEN ENGINEERING OS</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/tours/">TAKE A PROOF TOUR</a>&nbsp;&nbsp;·&nbsp;&nbsp;
@@ -35,6 +36,16 @@ receipts, runs each pinned C++/WebAssembly, TypeScript, or Python implementation
 inside the browser, compares the observed trace with its oracle, and emits a
 local run receipt. The local receipt is explicitly unattested; release
 provenance remains bound to COUNTEREXAMPLE.
+
+**[Read the 23-page technical monograph](https://asp53826.github.io/witness/publications/WITNESS-Technical-Monograph.pdf)** ·
+**[Inspect the GitHub edition](https://github.com/asp53826/witness/blob/main/docs/WITNESS-Technical-Monograph.md)** ·
+**[Download the Word edition](https://github.com/asp53826/witness/raw/main/docs/WITNESS-Technical-Monograph.docx)**
+
+The publication formalizes WITNESS as an executable-evidence system through a
+threat model, eight capsule studies, eleven original diagrams, artifact-review
+readiness, explicit limitations, and a pinned identity register. It is
+independent technical documentation, not an awarded degree or peer-reviewed
+thesis.
 
 ## Choose your route
 
