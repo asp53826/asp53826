@@ -26,12 +26,12 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/witness-chamber-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/witness-chamber-light.svg">
-  <img alt="Open WITNESS, a live reproducibility chamber for four receipt-bound engineering counterexamples" src="assets/witness-chamber-dark.svg" width="100%">
+  <img alt="Open WITNESS, a live reproducibility chamber for eight receipt-bound engineering counterexamples" src="assets/witness-chamber-dark.svg" width="100%">
 </picture>
 </a>
 
-**[WITNESS](https://asp53826.github.io/witness/)** verifies each canonical
-receipt, runs the pinned C++/WebAssembly, TypeScript, or Python implementation
+**[WITNESS](https://asp53826.github.io/witness/)** verifies eight canonical
+receipts, runs each pinned C++/WebAssembly, TypeScript, or Python implementation
 inside the browser, compares the observed trace with its oracle, and emits a
 local run receipt. The local receipt is explicitly unattested; release
 provenance remains bound to COUNTEREXAMPLE.
