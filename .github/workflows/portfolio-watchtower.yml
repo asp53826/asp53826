@@ -16,7 +16,7 @@ jobs:
   profile-curator:
     permissions:
       contents: write
-    uses: asp53826/portfolio-ops/.github/workflows/profile-curator.yml@v1.3.0
+    uses: asp53826/portfolio-ops/.github/workflows/profile-curator.yml@v1.3.1
     with:
       owner: asp53826
       repositories: |-
