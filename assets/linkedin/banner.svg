@@ -19,9 +19,9 @@
     <path d="M30 198H322M176 52V344" stroke="#25424B"/><circle cx="176" cy="198" r="26" fill="#0D2028" stroke="#72E4DA"/>
     <text x="176" y="195" text-anchor="middle" class="utility" font-size="10" fill="#72E4DA">VERIFY</text><text x="176" y="211" text-anchor="middle" class="utility" font-size="8" fill="#789098">THEN CLAIM</text>
   </g>
-  <text x="385" y="88" class="utility" font-size="13" letter-spacing="3" fill="#72E4DA">SYSTEMS + ML INFRASTRUCTURE</text>
+  <text x="385" y="88" class="utility" font-size="13" letter-spacing="3" fill="#72E4DA">SYSTEMS / ML INFRASTRUCTURE / CAUSAL RELIABILITY</text>
   <text x="385" y="157" class="display" font-size="56" font-weight="780" letter-spacing="-2" fill="#D8E5E8">AARYAN PATEL</text>
-  <text x="385" y="198" class="utility" font-size="15" fill="#D8E5E8">C++ · Python · distributed systems · databases · GPU compilers</text>
+  <text x="385" y="198" class="utility" font-size="15" fill="#D8E5E8">C++ · Python · distributed systems · databases · GPU compilers · incident analysis</text>
   <text x="385" y="229" class="utility" font-size="12" fill="#789098">Industrial data engineering @ MP Equipment  ·  UGA ’26</text>
   <path d="M385 274H1460" stroke="#25424B" stroke-width="3"/>
   <path d="M385 274H1460" stroke="#72E4DA" stroke-width="2" stroke-dasharray="4 15"/>

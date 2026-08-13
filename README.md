@@ -49,12 +49,13 @@ router across those routes: choose a hiring lens, then traverse one claim
 through its attack, oracle, measurement, boundary, exact source revision, and
 signed receipt.
 
-## Six proof cartridges
+## Eight proof cartridges
 
 | [<img alt="COUNTEREXAMPLE public failure register" src="assets/projects/counterexample-dark.svg" width="100%">](https://asp53826.github.io/counterexample/) | [<img alt="Raft and MVCC consensus under attack" src="assets/projects/raft-mvcc-dark.svg" width="100%">](https://asp53826.github.io/labs/faultline/) |
 |---|---|
 | [<img alt="TensorForge browser tensor compiler" src="assets/projects/tensorforge-webgpu-dark.svg" width="100%">](https://asp53826.github.io/labs/kernelarena/) | [<img alt="SignalRoom autonomy mission control" src="assets/projects/track-fusion-dark.svg" width="100%">](https://asp53826.github.io/labs/signalroom/) |
 | [<img alt="EDGAR MCP bounded financial data" src="assets/projects/edgar-mcp-dark.svg" width="100%">](https://asp53826.github.io/edgar-mcp/) | [<img alt="vLLM-lite paged inference scheduler" src="assets/projects/vllm-lite-dark.svg" width="100%">](https://github.com/asp53826/vllm-lite) |
+| [<img alt="FaultGraph causal incident workbench" src="assets/projects/faultgraph-dark.svg" width="100%">](https://github.com/asp53826/faultgraph) | [<img alt="Portfolio Ops autonomous engineering control plane" src="assets/projects/portfolio-ops-dark.svg" width="100%">](https://github.com/asp53826/portfolio-ops) |
 
 ### Current flagship: COUNTEREXAMPLE
 
@@ -66,6 +67,29 @@ source revision, downloadable receipt, and GitHub-signed stable release.
 **[Inspect the source](https://github.com/asp53826/counterexample)** ·
 **[Verify the release](https://github.com/asp53826/counterexample/releases/tag/v1.0.0)** ·
 **[Submit a bounded counterexample](https://github.com/asp53826/counterexample/issues/new/choose)**
+
+### Current release: FaultGraph
+
+**[FaultGraph](https://github.com/asp53826/faultgraph)** is a causal incident
+analysis workbench for operating on evidence rather than decorating a postmortem.
+It combines a FastAPI service, typed event contracts, checksum-addressed SQLite
+experiments, server-sent events, and a React/TypeScript forensic console.
+
+| surface | released evidence |
+|---|---|
+| **Model** | transparent dynamic linear influence model with documented assumptions and bounded `do(source=0)` counterfactuals |
+| **Workbench** | dependency graph, event timeline, ranked evidence, competing hypotheses, replay ledger, and keyboard command palette |
+| **Verification** | **11 backend + 4 frontend tests**, strict type/lint gates, container build, CodeQL, and zero open security alerts at release |
+| **Supply chain** | signed **[v0.1.0](https://github.com/asp53826/faultgraph/releases/tag/v0.1.0)** wheel, workbench archive, checksums, and GitHub attestations |
+
+The model is deliberately bounded: it ranks evidence and executes explicit
+interventions; it does not claim unrestricted causal discovery from arbitrary
+observational logs.
+
+**[Inspect the workbench](https://github.com/asp53826/faultgraph)** ·
+**[Read the architecture](https://github.com/asp53826/faultgraph/blob/main/docs/ARCHITECTURE.md)** ·
+**[Audit the research protocol](https://github.com/asp53826/faultgraph/blob/main/docs/RESEARCH_PROTOCOL.md)** ·
+**[Verify CI](https://github.com/asp53826/faultgraph/actions/runs/31710995157)**
 
 ## Three reproducible passports
 
@@ -109,9 +133,16 @@ limitations.
 <details>
 <summary><strong>Open the complete source catalog</strong></summary>
 
+### Evidence + reliability
+
+**[faultgraph](https://github.com/asp53826/faultgraph)** ·
+**[counterexample](https://github.com/asp53826/counterexample)** ·
+**[portfolio-ops](https://github.com/asp53826/portfolio-ops)** ·
+**[witness](https://github.com/asp53826/witness)** ·
+**[proofgraph](https://github.com/asp53826/proofgraph)**
+
 ### Correctness + storage
 
-**[counterexample](https://github.com/asp53826/counterexample)** ·
 **[raft-mvcc](https://github.com/asp53826/raft-mvcc)** ·
 **[dst-harness](https://github.com/asp53826/dst-harness)** ·
 **[hotstuff-bft](https://github.com/asp53826/hotstuff-bft)** ·
