@@ -1,133 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-label="Aaryan Patel. Systems engineer building measured infrastructure across storage, machine learning, sensing, and financial data.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-label="Aaryan Patel verification instrument for systems and machine learning infrastructure.">
+
   <defs>
-    <linearGradient id="bg-light" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f7fbff"/>
-      <stop offset=".55" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#eef5ff"/>
+    <linearGradient id="hero-light-panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F3F8F8"/><stop offset=".62" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7F1F2"/>
     </linearGradient>
-    <radialGradient id="halo-light">
-      <stop offset="0" stop-color="#007d9d" stop-opacity=".23"/>
-      <stop offset=".45" stop-color="#145fe0" stop-opacity=".08"/>
-      <stop offset="1" stop-color="#145fe0" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="signal-light" x1="0" x2="1">
-      <stop stop-color="#145fe0"/>
-      <stop offset=".5" stop-color="#007d9d"/>
-      <stop offset="1" stop-color="#7048d7"/>
-    </linearGradient>
-    <pattern id="grid-light" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#5b789d" stroke-opacity=".075"/>
+    <pattern id="hero-light-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#B9CCD0" stroke-opacity=".24"/>
     </pattern>
-    <filter id="glow-light" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="hero-light-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <clipPath id="clip-light"><rect width="1200" height="500" rx="18"/></clipPath>
   </defs>
+
   <style>
-    .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-    .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
-    .trace { stroke-dasharray: 7 12; animation: flow 8s linear infinite; }
-    .trace.b { animation-duration: 11s; animation-direction: reverse; }
-    .orbit { transform-box: fill-box; transform-origin: center; animation: spin 24s linear infinite; }
-    .orbit.b { animation-duration: 36s; animation-direction: reverse; }
-    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.8s ease-in-out infinite; }
-    .pulse.b { animation-delay: -1.3s; }
-    .scan { animation: scan 7s ease-in-out infinite; }
-    .reveal { opacity: 0; transform: translateY(8px); animation: reveal .7s cubic-bezier(.2,.8,.2,1) forwards; }
-    .r2 { animation-delay: .15s; }
-    .r3 { animation-delay: .3s; }
-    .r4 { animation-delay: .45s; }
-    .blink { animation: blink 1.2s steps(1) infinite; }
-    @keyframes flow { to { stroke-dashoffset: -190; } }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    @keyframes pulse { 0%,100% { opacity:.45; transform:scale(.84); } 50% { opacity:1; transform:scale(1.16); } }
-    @keyframes scan { 0%,100% { transform:translateY(-18px); opacity:0; } 18%,82% { opacity:.22; } 50% { transform:translateY(500px); opacity:.08; } }
-    @keyframes reveal { to { opacity:1; transform:none; } }
-    @keyframes blink { 50% { opacity:.2; } }
+    .display { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .utility { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .packet { stroke-dasharray: 4 15; animation: packet 4.8s linear infinite; }
+    .packet.return { animation-direction: reverse; animation-duration: 7s; }
+    .sweep { animation: sweep 5.5s ease-in-out infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: instrument-pulse 2.6s ease-in-out infinite; }
+    .boot { opacity:1; transform:none; animation:boot .55s cubic-bezier(.2,.8,.2,1) backwards; }
+    .b2 { animation-delay:.12s; } .b3 { animation-delay:.24s; } .b4 { animation-delay:.36s; }
+    @keyframes packet { to { stroke-dashoffset:-190; } }
+    @keyframes sweep { 0%,100% { transform:translateX(-140px); opacity:0; } 20%,80% { opacity:.12; } 50% { transform:translateX(1240px); opacity:.04; } }
+    @keyframes instrument-pulse { 0%,100% { opacity:.5; transform:scale(.82); } 50% { opacity:1; transform:scale(1.18); } }
+    @keyframes boot { from { opacity:0; transform:translateY(7px); } }
     @media (prefers-reduced-motion: reduce) {
-      .trace,.orbit,.pulse,.scan,.reveal,.blink { animation:none; }
-      .reveal { opacity:1; transform:none; }
-      .scan { display:none; }
+      .packet,.sweep,.pulse,.boot { animation:none; } .boot { opacity:1; transform:none; } .sweep { display:none; }
     }
   </style>
+  <rect width="1200" height="440" rx="18" fill="url(#hero-light-panel)"/>
+  <rect width="1200" height="440" rx="18" fill="url(#hero-light-grid)"/>
+  <rect x="1" y="1" width="1198" height="438" rx="17" fill="none" stroke="#B9CCD0"/>
+  <rect width="1200" height="44" rx="18" fill="#FFFFFF" fill-opacity=".86"/>
+  <path d="M0 44H1200" stroke="#B9CCD0"/>
+  <circle cx="22" cy="22" r="4" fill="#C52F4B"/><circle cx="38" cy="22" r="4" fill="#9A5700"/><circle cx="54" cy="22" r="4" fill="#167A43"/>
+  <text x="76" y="27" class="utility" font-size="11" letter-spacing="2" fill="#536A72">EVIDENCE INSTRUMENT // AP-26</text>
+  <text x="1168" y="27" text-anchor="end" class="utility" font-size="10" letter-spacing="1.3" fill="#167A43">VERIFIABLE</text>
 
-  <g clip-path="url(#clip-light)">
-    <rect width="1200" height="500" rx="18" fill="url(#bg-light)"/>
-    <rect width="1200" height="500" fill="url(#grid-light)"/>
-    <circle cx="950" cy="235" r="270" fill="url(#halo-light)"/>
-
-    <path d="M-30 86H260L310 136H506L558 84H780" fill="none" stroke="#145fe0" stroke-opacity=".26" class="trace"/>
-    <path d="M420 442H628L700 370H860L925 435H1230" fill="none" stroke="#7048d7" stroke-opacity=".24" class="trace b"/>
-    <path d="M0 320H156L214 262H398" fill="none" stroke="#007d9d" stroke-opacity=".18" class="trace b"/>
-
-    <rect x="0" y="0" width="1200" height="46" fill="#ffffff" fill-opacity=".72"/>
-    <line x1="0" y1="46" x2="1200" y2="46" stroke="#c4d5ea"/>
-    <circle cx="24" cy="23" r="4" fill="#c83755"/>
-    <circle cx="40" cy="23" r="4" fill="#9b6400"/>
-    <circle cx="56" cy="23" r="4" fill="#087a4c"/>
-    <text x="82" y="28" class="mono" font-size="11" letter-spacing="2.2" fill="#526a88">AARYAN_PATEL // SYSTEMS COMMAND</text>
-    <circle cx="1030" cy="23" r="4" fill="#087a4c" class="blink"/>
-    <text x="1042" y="28" class="mono" font-size="11" letter-spacing="1.4" fill="#087a4c">ALL SYSTEMS MEASURED</text>
-
-    <g class="reveal">
-      <text x="58" y="106" class="mono" font-size="12" letter-spacing="3" fill="#007d9d">COMPUTER SCIENCE · UGA</text>
-      <text x="58" y="176" class="sans" font-size="62" font-weight="760" letter-spacing="-3.5" fill="#0b1730">AARYAN</text>
-      <text x="58" y="236" class="sans" font-size="62" font-weight="760" letter-spacing="-3.5" fill="#0b1730">PATEL<tspan fill="#007d9d">_</tspan></text>
-    </g>
-    <g class="reveal r2">
-      <rect x="58" y="268" width="434" height="2" fill="url(#signal-light)"/>
-      <text x="58" y="304" class="mono" font-size="15" fill="#0b1730">I build the layer underneath the model.</text>
-      <text x="58" y="330" class="mono" font-size="13" fill="#526a88">storage · distributed systems · ML infrastructure</text>
-      <text x="58" y="352" class="mono" font-size="13" fill="#526a88">signal processing · financial data systems</text>
-    </g>
-
-    <g transform="translate(948 235)">
-      <circle r="164" fill="none" stroke="#c4d5ea" stroke-width="1"/>
-      <circle r="124" fill="none" stroke="#c4d5ea" stroke-width="1"/>
-      <circle r="84" fill="none" stroke="#c4d5ea" stroke-width="1"/>
-      <circle r="146" fill="none" stroke="#145fe0" stroke-opacity=".72" stroke-width="2" stroke-dasharray="5 19" class="orbit"/>
-      <circle r="104" fill="none" stroke="#7048d7" stroke-opacity=".65" stroke-width="2" stroke-dasharray="2 17" class="orbit b"/>
-      <path d="M-160 0H160M0-160V160" stroke="#c4d5ea" stroke-opacity=".55"/>
-      <path d="M-113-113L113 113M113-113L-113 113" stroke="#c4d5ea" stroke-opacity=".35"/>
-      <circle r="54" fill="#ffffff" stroke="#007d9d" stroke-width="1.5" filter="url(#glow-light)"/>
-      <circle r="39" fill="none" stroke="#007d9d" stroke-opacity=".35" class="pulse"/>
-      <text y="-5" text-anchor="middle" class="mono" font-size="12" letter-spacing="2" fill="#007d9d">MEASURE</text>
-      <text y="15" text-anchor="middle" class="mono" font-size="10" fill="#526a88">THEN CLAIM</text>
-
-      <g transform="translate(0 -145)">
-        <circle r="8" fill="#145fe0"/><circle r="16" fill="none" stroke="#145fe0" class="pulse"/>
-        <text y="-21" text-anchor="middle" class="mono" font-size="10" letter-spacing="1.3" fill="#0b1730">ML INFRA</text>
-      </g>
-      <g transform="translate(145 0)">
-        <circle r="8" fill="#7048d7"/><circle r="16" fill="none" stroke="#7048d7" class="pulse b"/>
-        <text x="22" y="4" class="mono" font-size="10" letter-spacing="1.3" fill="#0b1730">FINANCE</text>
-      </g>
-      <g transform="translate(0 145)">
-        <circle r="8" fill="#9b6400"/><circle r="16" fill="none" stroke="#9b6400" class="pulse"/>
-        <text y="-21" text-anchor="middle" class="mono" font-size="10" letter-spacing="1.3" fill="#0b1730">SENSING</text>
-      </g>
-      <g transform="translate(-145 0)">
-        <circle r="8" fill="#087a4c"/><circle r="16" fill="none" stroke="#087a4c" class="pulse b"/>
-        <text x="-22" y="4" text-anchor="end" class="mono" font-size="10" letter-spacing="1.3" fill="#0b1730">STORAGE</text>
-      </g>
-    </g>
-
-    <g class="reveal r3">
-      <rect x="58" y="390" width="1084" height="72" rx="10" fill="#ffffff" fill-opacity=".88" stroke="#c4d5ea"/>
-      <line x1="313" y1="402" x2="313" y2="450" stroke="#c4d5ea"/>
-      <line x1="568" y1="402" x2="568" y2="450" stroke="#c4d5ea"/>
-      <line x1="823" y1="402" x2="823" y2="450" stroke="#c4d5ea"/>
-      <text x="82" y="422" class="mono" font-size="22" font-weight="700" fill="#007d9d">27</text>
-      <text x="82" y="443" class="mono" font-size="10" letter-spacing="1.5" fill="#526a88">PUBLIC SYSTEMS</text>
-      <text x="337" y="422" class="mono" font-size="22" font-weight="700" fill="#087a4c">895</text>
-      <text x="337" y="443" class="mono" font-size="10" letter-spacing="1.5" fill="#526a88">TEST FUNCTIONS</text>
-      <text x="592" y="422" class="mono" font-size="22" font-weight="700" fill="#7048d7">1,671 KB</text>
-      <text x="592" y="443" class="mono" font-size="10" letter-spacing="1.5" fill="#526a88">MEASURED SOURCE</text>
-      <text x="847" y="422" class="mono" font-size="22" font-weight="700" fill="#9b6400">MIT</text>
-      <text x="847" y="443" class="mono" font-size="10" letter-spacing="1.5" fill="#526a88">CLONE · RUN · VERIFY</text>
-    </g>
-    <rect class="scan" x="0" y="-18" width="1200" height="18" fill="#007d9d" opacity=".12"/>
+  <g class="boot">
+    <text x="50" y="102" class="utility" font-size="11" letter-spacing="3" fill="#087C78">SYSTEMS + ML INFRASTRUCTURE</text>
+    <text x="50" y="174" class="display" font-size="62" font-weight="780" letter-spacing="-3" fill="#10242B">AARYAN PATEL</text>
+    <text x="50" y="210" class="utility" font-size="14" fill="#10242B">C++ · Python · distributed systems · databases · GPU compilers</text>
+    <text x="50" y="238" class="utility" font-size="12" fill="#536A72">Build the mechanism. Attack the assumption. Publish where it loses.</text>
   </g>
-  <rect x=".75" y=".75" width="1198.5" height="498.5" rx="18" fill="none" stroke="#c4d5ea" stroke-width="1.5"/>
+
+  <path d="M554 221H1144" fill="none" stroke="#B9CCD0" stroke-width="2"/>
+  <path d="M554 221H1144" fill="none" stroke="#087C78" stroke-width="3" class="packet"/>
+
+      <g class="boot b1">
+        <rect x="565" y="190" width="94" height="62" rx="7" fill="#FFFFFF" stroke="#B9CCD0"/>
+        <circle cx="612" cy="210" r="5" fill="#087C78"/><circle cx="612" cy="210" r="11" fill="none" stroke="#087C78" class="pulse"/>
+        <text x="612" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#10242B">CLAIM</text>
+      </g>
+      <g class="boot b2">
+        <rect x="685" y="190" width="94" height="62" rx="7" fill="#FFFFFF" stroke="#B9CCD0"/>
+        <circle cx="732" cy="210" r="5" fill="#C52F4B"/><circle cx="732" cy="210" r="11" fill="none" stroke="#C52F4B" class="pulse"/>
+        <text x="732" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#10242B">ATTACK</text>
+      </g>
+      <g class="boot b3">
+        <rect x="805" y="190" width="94" height="62" rx="7" fill="#FFFFFF" stroke="#B9CCD0"/>
+        <circle cx="852" cy="210" r="5" fill="#9A5700"/><circle cx="852" cy="210" r="11" fill="none" stroke="#9A5700" class="pulse"/>
+        <text x="852" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#10242B">ORACLE</text>
+      </g>
+      <g class="boot b4">
+        <rect x="925" y="190" width="94" height="62" rx="7" fill="#FFFFFF" stroke="#B9CCD0"/>
+        <circle cx="972" cy="210" r="5" fill="#6546C6"/><circle cx="972" cy="210" r="11" fill="none" stroke="#6546C6" class="pulse"/>
+        <text x="972" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#10242B">BOUNDARY</text>
+      </g>
+      <g class="boot b4">
+        <rect x="1045" y="190" width="94" height="62" rx="7" fill="#FFFFFF" stroke="#B9CCD0"/>
+        <circle cx="1092" cy="210" r="5" fill="#167A43"/><circle cx="1092" cy="210" r="11" fill="none" stroke="#167A43" class="pulse"/>
+        <text x="1092" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#10242B">RECEIPT</text>
+      </g>
+
+  <g class="boot b3">
+    <rect x="50" y="292" width="1100" height="105" rx="10" fill="#FFFFFF" fill-opacity=".9" stroke="#B9CCD0"/>
+    <path d="M306 307V382M562 307V382M818 307V382" stroke="#B9CCD0"/>
+    <text x="76" y="335" class="utility" font-size="24" font-weight="700" fill="#087C78">27</text>
+    <text x="76" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#536A72">PUBLIC SYSTEMS</text>
+    <text x="332" y="335" class="utility" font-size="24" font-weight="700" fill="#167A43">895</text>
+    <text x="332" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#536A72">TEST FUNCTIONS</text>
+    <text x="588" y="335" class="utility" font-size="24" font-weight="700" fill="#9A5700">1,671 KB</text>
+    <text x="588" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#536A72">MEASURED SOURCE</text>
+    <text x="844" y="335" class="utility" font-size="24" font-weight="700" fill="#6546C6">4 ROUTES</text>
+    <text x="844" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#536A72">ROLE-SPECIFIC ENTRY</text>
+  </g>
+  <rect x="-140" y="0" width="120" height="440" fill="#087C78" class="sweep"/>
 </svg>

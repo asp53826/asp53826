@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396" role="img" aria-label="Aaryan Patel, systems and machine learning infrastructure engineer.">
+
+  <defs>
+    <linearGradient id="linkedin-banner-panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#071319"/><stop offset=".62" stop-color="#0D2028"/><stop offset="1" stop-color="#102B34"/>
+    </linearGradient>
+    <pattern id="linkedin-banner-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#25424B" stroke-opacity=".24"/>
+    </pattern>
+    <filter id="linkedin-banner-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>.display{font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif}.utility{font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace}</style>
+  <rect width="1584" height="396" fill="url(#linkedin-banner-panel)"/><rect width="1584" height="396" fill="url(#linkedin-banner-grid)"/>
+  <path d="M0 330H1584" stroke="#25424B"/><path d="M0 340H1584" stroke="#25424B" stroke-opacity=".5"/>
+  <g opacity=".78">
+    <circle cx="176" cy="198" r="118" fill="none" stroke="#25424B"/><circle cx="176" cy="198" r="82" fill="none" stroke="#72E4DA" stroke-dasharray="5 13"/>
+    <path d="M30 198H322M176 52V344" stroke="#25424B"/><circle cx="176" cy="198" r="26" fill="#0D2028" stroke="#72E4DA"/>
+    <text x="176" y="195" text-anchor="middle" class="utility" font-size="10" fill="#72E4DA">VERIFY</text><text x="176" y="211" text-anchor="middle" class="utility" font-size="8" fill="#789098">THEN CLAIM</text>
+  </g>
+  <text x="385" y="88" class="utility" font-size="13" letter-spacing="3" fill="#72E4DA">SYSTEMS + ML INFRASTRUCTURE</text>
+  <text x="385" y="157" class="display" font-size="56" font-weight="780" letter-spacing="-2" fill="#D8E5E8">AARYAN PATEL</text>
+  <text x="385" y="198" class="utility" font-size="15" fill="#D8E5E8">C++ · Python · distributed systems · databases · GPU compilers</text>
+  <text x="385" y="229" class="utility" font-size="12" fill="#789098">Industrial data engineering @ MP Equipment  ·  UGA ’26</text>
+  <path d="M385 274H1460" stroke="#25424B" stroke-width="3"/>
+  <path d="M385 274H1460" stroke="#72E4DA" stroke-width="2" stroke-dasharray="4 15"/>
+  <g class="utility" font-size="10" letter-spacing="1" fill="#D8E5E8">
+    <text x="385" y="304">CLAIM</text><text x="596" y="304">ATTACK</text><text x="807" y="304">ORACLE</text><text x="1018" y="304">BOUNDARY</text><text x="1250" y="304">RECEIPT</text>
+  </g>
+  <g fill="#72E4DA"><circle cx="405" cy="274" r="6"/><circle cx="616" cy="274" r="6" fill="#FF6B7E"/><circle cx="827" cy="274" r="6" fill="#FFB45E"/><circle cx="1038" cy="274" r="6" fill="#B39BFF"/><circle cx="1270" cy="274" r="6" fill="#7CE7A6"/></g>
+  <text x="1460" y="356" text-anchor="end" class="utility" font-size="10" letter-spacing="1.5" fill="#7CE7A6">asp53826.github.io</text>
+</svg>
