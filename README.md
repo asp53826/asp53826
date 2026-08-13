@@ -149,6 +149,19 @@ executes 598 assertions.
 
 </details>
 
+## Autonomous operations
+
+**[Portfolio Ops](https://github.com/asp53826/portfolio-ops)** maintains the
+public systems through seven auditable roles: repository verification,
+benchmark evidence, dependency care, documentation checks, demo monitoring,
+verified releases, and achievement-state monitoring. Automation uses the
+GitHub Actions bot identity, retains raw evidence, and does not manufacture
+human contributions or interact with third-party repositories.
+
+Patch dependency updates may auto-merge only after repository checks pass.
+Source changes, major upgrades, external contributions, benchmark claims, and
+account or legal decisions remain outside the autonomous boundary.
+
 ## Open channel
 
 **[aaryansp26@gmail.com](mailto:aaryansp26@gmail.com)** ·

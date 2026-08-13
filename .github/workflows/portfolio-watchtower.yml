@@ -1,0 +1,30 @@
+name: Portfolio Watchtower
+
+on:
+  schedule:
+    - cron: "7 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-watchtower
+  cancel-in-progress: true
+
+jobs:
+  public-surfaces:
+    permissions:
+      contents: read
+      issues: write
+    uses: asp53826/portfolio-ops/.github/workflows/demo-watchtower.yml@v1.0.0
+    with:
+      urls: |-
+        https://asp53826.github.io/
+        https://asp53826.github.io/counterexample/
+        https://asp53826.github.io/labs/faultline/
+        https://asp53826.github.io/labs/signalroom/
+        https://asp53826.github.io/labs/marketwire/
+        https://asp53826.github.io/labs/kernelarena/
+        https://asp53826.github.io/benchmarks/
+        https://asp53826.github.io/contributions/
