@@ -79,9 +79,9 @@
     <path d="M306 307V382M562 307V382M818 307V382" stroke="#25424B"/>
     <text x="76" y="335" class="utility" font-size="24" font-weight="700" fill="#72E4DA">29</text>
     <text x="76" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#789098">PUBLIC SYSTEMS</text>
-    <text x="332" y="335" class="utility" font-size="24" font-weight="700" fill="#7CE7A6">947</text>
+    <text x="332" y="335" class="utility" font-size="24" font-weight="700" fill="#7CE7A6">965</text>
     <text x="332" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#789098">TEST FUNCTIONS</text>
-    <text x="588" y="335" class="utility" font-size="24" font-weight="700" fill="#FFB45E">1,843 KB</text>
+    <text x="588" y="335" class="utility" font-size="24" font-weight="700" fill="#FFB45E">1,857 KB</text>
     <text x="588" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#789098">MEASURED SOURCE</text>
     <text x="844" y="335" class="utility" font-size="24" font-weight="700" fill="#B39BFF">4 ROUTES</text>
     <text x="844" y="360" class="utility" font-size="10" letter-spacing="1.4" fill="#789098">ROLE-SPECIFIC ENTRY</text>
