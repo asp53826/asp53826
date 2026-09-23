@@ -232,11 +232,11 @@ account or legal decisions remain outside the autonomous boundary.
 | Project | Primary language | Latest release | Latest completed workflow |
 |---|---|---|---|
 | [faultgraph](https://github.com/asp53826/faultgraph) | Python | [v0.1.0](https://github.com/asp53826/faultgraph/releases/tag/v0.1.0) | [Autonomous Engineering Lab: success](https://github.com/asp53826/faultgraph/actions/runs/35611166276) |
-| [raft-mvcc](https://github.com/asp53826/raft-mvcc) | C++ | [v1.0.0](https://github.com/asp53826/raft-mvcc/releases/tag/v1.0.0) | [Autonomous Engineering Lab: success](https://github.com/asp53826/raft-mvcc/actions/runs/35093462500) |
+| [raft-mvcc](https://github.com/asp53826/raft-mvcc) | C++ | [v1.0.0](https://github.com/asp53826/raft-mvcc/releases/tag/v1.0.0) | [Autonomous Engineering Lab: success](https://github.com/asp53826/raft-mvcc/actions/runs/35858573896) |
 | [edgar-mcp](https://github.com/asp53826/edgar-mcp) | Python | [v0.1.0](https://github.com/asp53826/edgar-mcp/releases/tag/v0.1.0) | [Autonomous Engineering Lab: success](https://github.com/asp53826/edgar-mcp/actions/runs/35601234535) |
 | [track-fusion](https://github.com/asp53826/track-fusion) | Python | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/track-fusion/actions/runs/35724564619) |
 | [tensorforge-webgpu](https://github.com/asp53826/tensorforge-webgpu) | TypeScript | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/tensorforge-webgpu/actions/runs/35232592107) |
-| [columnar-engine](https://github.com/asp53826/columnar-engine) | C++ | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/columnar-engine/actions/runs/35093529170) |
+| [columnar-engine](https://github.com/asp53826/columnar-engine) | C++ | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/columnar-engine/actions/runs/35858631012) |
 | [lsm-tree](https://github.com/asp53826/lsm-tree) | C++ | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/lsm-tree/actions/runs/35734347891) |
 | [counterexample](https://github.com/asp53826/counterexample) | CSS | [v1.0.0](https://github.com/asp53826/counterexample/releases/tag/v1.0.0) | [OpenSSF Scorecard: success](https://github.com/asp53826/counterexample/actions/runs/35722853813) |
 | [portfolio-ops](https://github.com/asp53826/portfolio-ops) | Python | No published release | [Achievement Scout: success](https://github.com/asp53826/portfolio-ops/actions/runs/35612679471) |
