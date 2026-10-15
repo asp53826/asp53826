@@ -47,6 +47,20 @@ readiness, explicit limitations, and a pinned identity register. It is
 independent technical documentation, not an awarded degree or peer-reviewed
 thesis.
 
+## Vidur: speculative decoding
+
+**[Explore the results](https://asp53826.github.io/vidur/)** ·
+**[Inspect the source](https://github.com/asp53826/vidur)** ·
+**[Read the modeling notes](https://github.com/asp53826/vidur/blob/spec-decode/docs/speculative_decoding.md)**
+
+An independent extension of Microsoft Vidur for proposal generation, target-model
+verification, accepted-token progress, and lookahead KV memory. The interactive
+page explores a **39-row simulator sweep** where the verify-attention assumption
+can reverse whether speculation appears beneficial. These are predictions;
+real GPU validation is pending. The repository includes a matched-workload vLLM
+validation harness and **68 passing unit and fake-server tests**; one additional
+end-to-end test requires a trained predictor cache.
+
 ## Choose your route
 
 | [<img alt="Open Systems route" src="assets/routes/systems-dark.svg" width="100%">](https://asp53826.github.io/systems/) | [<img alt="Open ML Infrastructure route" src="assets/routes/ml-infrastructure-dark.svg" width="100%">](https://asp53826.github.io/ml-infrastructure/) | [<img alt="Open Autonomy route" src="assets/routes/defense-dark.svg" width="100%">](https://asp53826.github.io/defense/) | [<img alt="Open Quant route" src="assets/routes/quant-dark.svg" width="100%">](https://asp53826.github.io/quant/) |
