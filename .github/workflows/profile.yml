@@ -46,6 +46,11 @@ jobs:
       - name: Profile visuals
         run: python3 banner.py
 
+      - name: Now-shipping strip (latest human commit)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/now.py
+
       - name: Baseline proof wall
         run: python3 scripts/proofwall.py
 

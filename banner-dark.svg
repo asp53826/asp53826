@@ -24,7 +24,7 @@
     @keyframes packet { to { stroke-dashoffset:-190; } }
     @keyframes sweep { 0%,100% { transform:translateX(-140px); opacity:0; } 20%,80% { opacity:.12; } 50% { transform:translateX(1240px); opacity:.04; } }
     @keyframes instrument-pulse { 0%,100% { opacity:.5; transform:scale(.82); } 50% { opacity:1; transform:scale(1.18); } }
-    @keyframes boot { from { opacity:0; transform:translateY(7px); } }
+    @keyframes boot { from { transform:translateY(7px); } }
     @media (prefers-reduced-motion: reduce) {
       .packet,.sweep,.pulse,.boot { animation:none; } .boot { opacity:1; transform:none; } .sweep { display:none; }
     }
@@ -45,33 +45,33 @@
     <text x="50" y="238" class="utility" font-size="12" fill="#789098">Build the mechanism. Attack the assumption. Publish where it loses.</text>
   </g>
 
-  <path d="M554 221H1144" fill="none" stroke="#25424B" stroke-width="2"/>
-  <path d="M554 221H1144" fill="none" stroke="#72E4DA" stroke-width="3" class="packet"/>
+  <path d="M596 221H1144" fill="none" stroke="#25424B" stroke-width="2"/>
+  <path d="M596 221H1144" fill="none" stroke="#72E4DA" stroke-width="3" class="packet"/>
 
       <g class="boot b1">
-        <rect x="565" y="190" width="94" height="62" rx="7" fill="#0D2028" stroke="#25424B"/>
-        <circle cx="612" cy="210" r="5" fill="#72E4DA"/><circle cx="612" cy="210" r="11" fill="none" stroke="#72E4DA" class="pulse"/>
-        <text x="612" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#D8E5E8">CLAIM</text>
+        <rect x="603" y="190" width="94" height="62" rx="7" fill="#0D2028" stroke="#25424B"/>
+        <circle cx="650" cy="210" r="5" fill="#72E4DA"/><circle cx="650" cy="210" r="11" fill="none" stroke="#72E4DA" class="pulse"/>
+        <text x="650" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#D8E5E8">CLAIM</text>
       </g>
       <g class="boot b2">
-        <rect x="685" y="190" width="94" height="62" rx="7" fill="#0D2028" stroke="#25424B"/>
-        <circle cx="732" cy="210" r="5" fill="#FF6B7E"/><circle cx="732" cy="210" r="11" fill="none" stroke="#FF6B7E" class="pulse"/>
-        <text x="732" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#D8E5E8">ATTACK</text>
+        <rect x="714" y="190" width="94" height="62" rx="7" fill="#0D2028" stroke="#25424B"/>
+        <circle cx="761" cy="210" r="5" fill="#FF6B7E"/><circle cx="761" cy="210" r="11" fill="none" stroke="#FF6B7E" class="pulse"/>
+        <text x="761" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#D8E5E8">ATTACK</text>
       </g>
       <g class="boot b3">
-        <rect x="805" y="190" width="94" height="62" rx="7" fill="#0D2028" stroke="#25424B"/>
-        <circle cx="852" cy="210" r="5" fill="#FFB45E"/><circle cx="852" cy="210" r="11" fill="none" stroke="#FFB45E" class="pulse"/>
-        <text x="852" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#D8E5E8">ORACLE</text>
+        <rect x="825" y="190" width="94" height="62" rx="7" fill="#0D2028" stroke="#25424B"/>
+        <circle cx="872" cy="210" r="5" fill="#FFB45E"/><circle cx="872" cy="210" r="11" fill="none" stroke="#FFB45E" class="pulse"/>
+        <text x="872" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#D8E5E8">ORACLE</text>
       </g>
       <g class="boot b4">
-        <rect x="925" y="190" width="94" height="62" rx="7" fill="#0D2028" stroke="#25424B"/>
-        <circle cx="972" cy="210" r="5" fill="#B39BFF"/><circle cx="972" cy="210" r="11" fill="none" stroke="#B39BFF" class="pulse"/>
-        <text x="972" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#D8E5E8">BOUNDARY</text>
+        <rect x="936" y="190" width="94" height="62" rx="7" fill="#0D2028" stroke="#25424B"/>
+        <circle cx="983" cy="210" r="5" fill="#B39BFF"/><circle cx="983" cy="210" r="11" fill="none" stroke="#B39BFF" class="pulse"/>
+        <text x="983" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#D8E5E8">BOUNDARY</text>
       </g>
       <g class="boot b4">
-        <rect x="1045" y="190" width="94" height="62" rx="7" fill="#0D2028" stroke="#25424B"/>
-        <circle cx="1092" cy="210" r="5" fill="#7CE7A6"/><circle cx="1092" cy="210" r="11" fill="none" stroke="#7CE7A6" class="pulse"/>
-        <text x="1092" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#D8E5E8">RECEIPT</text>
+        <rect x="1047" y="190" width="94" height="62" rx="7" fill="#0D2028" stroke="#25424B"/>
+        <circle cx="1094" cy="210" r="5" fill="#7CE7A6"/><circle cx="1094" cy="210" r="11" fill="none" stroke="#7CE7A6" class="pulse"/>
+        <text x="1094" y="235" text-anchor="middle" class="utility" font-size="10" letter-spacing="1.2" fill="#D8E5E8">RECEIPT</text>
       </g>
 
   <g class="boot b3">

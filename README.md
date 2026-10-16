@@ -4,16 +4,50 @@
   <img alt="Aaryan Patel — systems and ML infrastructure engineer whose public claims pass through attack, oracle, boundary, and receipt" src="banner-dark.svg" width="100%">
 </picture>
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/now-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/now-light.svg"><img alt="Now shipping: the latest human commit across the public portfolio" src="assets/now-dark.svg" width="100%"></picture>
+
 <p align="center">
-  <a href="https://asp53826.github.io/counterexample/"><strong>ENTER COUNTEREXAMPLE</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://asp53826.github.io/witness/"><strong>RUN WITNESS</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://asp53826.github.io/witness/publications/WITNESS-Technical-Monograph.pdf"><strong>READ MONOGRAPH</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://asp53826.github.io/proofgraph/"><strong>OPEN PROOFGRAPH</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://asp53826.github.io/recruiter/"><strong>OPEN ENGINEERING OS</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://asp53826.github.io/tours/">TAKE A PROOF TOUR</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://asp53826.github.io/resume/Aaryan-Patel-Systems-Resume.pdf">RÉSUMÉ</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://asp53826.github.io/data/evidence.json">EVIDENCE MANIFEST</a>
+  <a href="https://asp53826.github.io/lab/"><strong>▶ ENTER THE LAB</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/labs/faultline/"><strong>BREAK A RAFT CLUSTER</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://asp53826.github.io/resume/Aaryan-Patel-Systems-Resume.pdf"><strong>RÉSUMÉ</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:aaryansp26@gmail.com"><strong>EMAIL</strong></a>
 </p>
+
+<a href="https://asp53826.github.io/lab/"><img alt="The live site asp53826.github.io/lab, filmed in a real browser by CI: an aurora field steered by the cursor behind the line 'I build systems, then I try to break them.'" src="assets/live/lab.webp" width="100%"></a>
+
+<sub>↑ Not a mockup. A GitHub Action opens <a href="https://asp53826.github.io/lab/">the live site</a> in a real browser, steers it, and re-films this window whenever the site changes.</sub>
+
+## The 30-second version
+
+- **What I build:** systems in C++ and Python, including consensus, storage engines, query planners, LLM inference and GPU compilers. Each one ships with a test suite, a named baseline, and the regime where it breaks.
+- **Strongest evidence:** [raft-mvcc](https://github.com/asp53826/raft-mvcc) passes **598 assertions** under seeded faults · [vllm-lite](https://github.com/asp53826/vllm-lite) reaches **2.9× throughput** at 94% KV-cache use · [track-fusion](https://github.com/asp53826/track-fusion) cuts localization error **47%** in its published regime.
+- **Now:** UGA computer science, graduating December 2026 · industrial data engineering at **MP Equipment** · open to full-time **systems and ML infrastructure** roles.
+
+## See it run
+
+<table>
+<tr>
+<td width="50%"><a href="https://asp53826.github.io/labs/faultline/"><img alt="FAULTLINE: isolating a Raft leader produces two leaders in different terms; the invariant monitor flags the commit-index split, then healing repairs it" src="assets/demos/faultline.gif" width="100%"></a></td>
+<td width="50%"><a href="https://asp53826.github.io/labs/signalroom/"><img alt="SIGNALROOM: measured replay of an IMM tracker on a maneuvering target and crossing tracks, with truth, measurements and estimates" src="assets/demos/signalroom.gif" width="100%"></a></td>
+</tr>
+<tr>
+<td><strong>FAULTLINE</strong>: the real C++17 Raft + MVCC engine in WebAssembly. Isolate the leader, watch two leaders appear in different terms, then heal and verify repair.</td>
+<td><strong>SIGNALROOM</strong>: measured replays of the published tracking results, with truth, measurements and estimates kept separate, including the regime where the estimator loses.</td>
+</tr>
+</table>
+
+## The arcade
+
+<table>
+<tr>
+<td width="50%"><a href="https://asp53826.github.io/lab/play/"><img alt="Short Gamma gameplay: hedging a short-volatility options book as delta swings, Greeks from the aad-greeks reverse-mode engine" src="assets/live/short-gamma.gif" width="100%"></a></td>
+<td width="50%"><a href="https://asp53826.github.io/lab/royale/"><img alt="Order Book Royale gameplay: eight traders on one live order book on the lob-market-making matching engine" src="assets/live/royale.gif" width="100%"></a></td>
+</tr>
+<tr>
+<td><strong><a href="https://asp53826.github.io/lab/play/">SHORT GAMMA ▶</a></strong>: you inherit a short-volatility book with ten days to the close. Every Greek on screen comes off the <a href="https://github.com/asp53826/aad-greeks">aad-greeks</a> reverse-mode tape, and one number is wrong on purpose.</td>
+<td><strong><a href="https://asp53826.github.io/lab/royale/">ORDER BOOK ROYALE ▶</a></strong>: eight seats, one live order book, four minutes, last trader standing. It runs on the <a href="https://github.com/asp53826/lob-market-making">lob-market-making</a> matching engine.</td>
+</tr>
+</table>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/proof-bus-dark.svg">
@@ -63,8 +97,14 @@ end-to-end test requires a trained predictor cache.
 
 ## Choose your route
 
-| [<img alt="Open Systems route" src="assets/routes/systems-dark.svg" width="100%">](https://asp53826.github.io/systems/) | [<img alt="Open ML Infrastructure route" src="assets/routes/ml-infrastructure-dark.svg" width="100%">](https://asp53826.github.io/ml-infrastructure/) | [<img alt="Open Autonomy route" src="assets/routes/defense-dark.svg" width="100%">](https://asp53826.github.io/defense/) | [<img alt="Open Quant route" src="assets/routes/quant-dark.svg" width="100%">](https://asp53826.github.io/quant/) |
-|---|---|---|---|
+<table>
+<tr>
+<td width="25%"><a href="https://asp53826.github.io/systems/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/routes/systems-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/routes/systems-light.svg"><img alt="Open Systems route" src="assets/routes/systems-dark.svg" width="100%"></picture></a></td>
+<td width="25%"><a href="https://asp53826.github.io/ml-infrastructure/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/routes/ml-infrastructure-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/routes/ml-infrastructure-light.svg"><img alt="Open ML Infrastructure route" src="assets/routes/ml-infrastructure-dark.svg" width="100%"></picture></a></td>
+<td width="25%"><a href="https://asp53826.github.io/defense/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/routes/defense-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/routes/defense-light.svg"><img alt="Open Autonomy route" src="assets/routes/defense-dark.svg" width="100%"></picture></a></td>
+<td width="25%"><a href="https://asp53826.github.io/quant/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/routes/quant-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/routes/quant-light.svg"><img alt="Open Quant route" src="assets/routes/quant-dark.svg" width="100%"></picture></a></td>
+</tr>
+</table>
 
 Each route is a short, role-specific path through live systems, source, tests,
 measured evidence, and the regime where the result stops holding.
@@ -76,11 +116,24 @@ signed receipt.
 
 ## Eight proof cartridges
 
-| [<img alt="COUNTEREXAMPLE public failure register" src="assets/projects/counterexample-dark.svg" width="100%">](https://asp53826.github.io/counterexample/) | [<img alt="Raft and MVCC consensus under attack" src="assets/projects/raft-mvcc-dark.svg" width="100%">](https://asp53826.github.io/labs/faultline/) |
-|---|---|
-| [<img alt="TensorForge browser tensor compiler" src="assets/projects/tensorforge-webgpu-dark.svg" width="100%">](https://asp53826.github.io/labs/kernelarena/) | [<img alt="SignalRoom autonomy mission control" src="assets/projects/track-fusion-dark.svg" width="100%">](https://asp53826.github.io/labs/signalroom/) |
-| [<img alt="EDGAR MCP bounded financial data" src="assets/projects/edgar-mcp-dark.svg" width="100%">](https://asp53826.github.io/edgar-mcp/) | [<img alt="vLLM-lite paged inference scheduler" src="assets/projects/vllm-lite-dark.svg" width="100%">](https://github.com/asp53826/vllm-lite) |
-| [<img alt="FaultGraph causal incident workbench" src="assets/projects/faultgraph-dark.svg" width="100%">](https://github.com/asp53826/faultgraph) | [<img alt="Portfolio Ops autonomous engineering control plane" src="assets/projects/portfolio-ops-dark.svg" width="100%">](https://github.com/asp53826/portfolio-ops) |
+<table>
+<tr>
+<td width="50%"><a href="https://asp53826.github.io/counterexample/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/counterexample-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/projects/counterexample-light.svg"><img alt="COUNTEREXAMPLE public failure register" src="assets/projects/counterexample-dark.svg" width="100%"></picture></a></td>
+<td width="50%"><a href="https://asp53826.github.io/labs/faultline/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/raft-mvcc-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/projects/raft-mvcc-light.svg"><img alt="Raft and MVCC consensus under attack" src="assets/projects/raft-mvcc-dark.svg" width="100%"></picture></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://asp53826.github.io/labs/kernelarena/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/tensorforge-webgpu-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/projects/tensorforge-webgpu-light.svg"><img alt="TensorForge browser tensor compiler" src="assets/projects/tensorforge-webgpu-dark.svg" width="100%"></picture></a></td>
+<td width="50%"><a href="https://asp53826.github.io/labs/signalroom/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/track-fusion-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/projects/track-fusion-light.svg"><img alt="SignalRoom autonomy mission control" src="assets/projects/track-fusion-dark.svg" width="100%"></picture></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://asp53826.github.io/edgar-mcp/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/edgar-mcp-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/projects/edgar-mcp-light.svg"><img alt="EDGAR MCP bounded financial data" src="assets/projects/edgar-mcp-dark.svg" width="100%"></picture></a></td>
+<td width="50%"><a href="https://github.com/asp53826/vllm-lite"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/vllm-lite-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/projects/vllm-lite-light.svg"><img alt="vLLM-lite paged inference scheduler" src="assets/projects/vllm-lite-dark.svg" width="100%"></picture></a></td>
+</tr>
+<tr>
+<td width="50%"><a href="https://github.com/asp53826/faultgraph"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/faultgraph-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/projects/faultgraph-light.svg"><img alt="FaultGraph causal incident workbench" src="assets/projects/faultgraph-dark.svg" width="100%"></picture></a></td>
+<td width="50%"><a href="https://github.com/asp53826/portfolio-ops"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/projects/portfolio-ops-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/projects/portfolio-ops-light.svg"><img alt="Portfolio Ops autonomous engineering control plane" src="assets/projects/portfolio-ops-dark.svg" width="100%"></picture></a></td>
+</tr>
+</table>
 
 ### Current flagship: COUNTEREXAMPLE
 
@@ -264,6 +317,11 @@ This block is regenerated only when GitHub's repository, release, or workflow da
 **[Systems résumé](https://asp53826.github.io/resume/Aaryan-Patel-Systems-Resume.pdf)** ·
 **[Systems Observatory](https://asp53826.github.io/)** ·
 **[LinkedIn](https://www.linkedin.com/in/aaryanpatelsystems/)**
+
+**[Engineering OS](https://asp53826.github.io/recruiter/)** ·
+**[Proof tours](https://asp53826.github.io/tours/)** ·
+**[PROOFGRAPH](https://asp53826.github.io/proofgraph/)** ·
+**[Evidence manifest](https://asp53826.github.io/data/evidence.json)**
 
 UGA computer science, December 2026. Industrial data engineering at
 **MP Equipment**. Every system above is MIT licensed: clone one, run the

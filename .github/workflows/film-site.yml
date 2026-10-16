@@ -1,0 +1,73 @@
+name: film live site
+
+# Re-films the live website (asp53826.github.io/lab) into the README loops in
+# assets/live/. A README cannot run the site, so CI opens it in a real browser,
+# drives it, and records it.
+#
+# To keep the repository small it only re-films when the site itself changed:
+# it fingerprints the pages and scripts it films and compares that with the
+# fingerprint stored next to the loops. Run it by hand with "force" to re-film anyway.
+
+on:
+  schedule:
+    - cron: "41 5 * * *"          # daily check, off the hour
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-film even if the site has not changed"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: film-site                # one filming at a time; the commit step rebases before pushing
+  cancel-in-progress: false
+
+jobs:
+  film:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fingerprint the live site
+        id: site
+        run: |
+          set -euo pipefail
+          base=https://asp53826.github.io/lab
+          sum=$(for f in / /play/ /play/game.js /play/engine.js /royale/ /royale/ui.js /royale/engine.js; do
+                  curl -fsSL "$base$f"; done | sha256sum | cut -c1-16)
+          old=$(cat assets/live/SITE_FINGERPRINT 2>/dev/null || echo none)
+          echo "now=$sum was=$old"
+          echo "sum=$sum" >> "$GITHUB_OUTPUT"
+          if [ "$sum" != "$old" ] || [ "${{ inputs.force }}" = "true" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Site unchanged since the last filming; nothing to do."
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.site.outputs.changed == 'true'
+        with:
+          node-version: "20"
+
+      - name: Film
+        if: steps.site.outputs.changed == 'true'
+        run: |
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
+          npx playwright install --with-deps chromium
+          node scripts/film_site.cjs
+          echo "${{ steps.site.outputs.sum }}" > assets/live/SITE_FINGERPRINT
+
+      - name: Commit new loops
+        if: steps.site.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/live
+          if git diff --cached --quiet; then echo "No change."; exit 0; fi
+          git commit -m "Re-film live site loops [skip ci]"
+          git pull --rebase origin main
+          git push

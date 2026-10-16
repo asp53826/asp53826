@@ -161,7 +161,7 @@ def hero(t, repo_count, test_count, source_kb):
     .pulse {{ transform-box: fill-box; transform-origin: center; animation: pulse 2.8s ease-in-out infinite; }}
     .pulse.b {{ animation-delay: -1.3s; }}
     .scan {{ animation: scan 7s ease-in-out infinite; }}
-    .reveal {{ opacity: 0; transform: translateY(8px); animation: reveal .7s cubic-bezier(.2,.8,.2,1) forwards; }}
+    .reveal {{ transform: translateY(8px); animation: reveal .7s cubic-bezier(.2,.8,.2,1) forwards; }}
     .r2 {{ animation-delay: .15s; }}
     .r3 {{ animation-delay: .3s; }}
     .r4 {{ animation-delay: .45s; }}
@@ -170,7 +170,7 @@ def hero(t, repo_count, test_count, source_kb):
     @keyframes spin {{ to {{ transform: rotate(360deg); }} }}
     @keyframes pulse {{ 0%,100% {{ opacity:.45; transform:scale(.84); }} 50% {{ opacity:1; transform:scale(1.16); }} }}
     @keyframes scan {{ 0%,100% {{ transform:translateY(-18px); opacity:0; }} 18%,82% {{ opacity:.22; }} 50% {{ transform:translateY(500px); opacity:.08; }} }}
-    @keyframes reveal {{ to {{ opacity:1; transform:none; }} }}
+    @keyframes reveal {{ to {{ transform:none; }} }}
     @keyframes blink {{ 50% {{ opacity:.2; }} }}
     @media (prefers-reduced-motion: reduce) {{
       .trace,.orbit,.pulse,.scan,.reveal,.blink {{ animation:none; }}
@@ -298,11 +298,11 @@ def system_map(t):
     .mono {{ font-family: {MONO}; }}
     .bus {{ stroke-dasharray: 8 13; animation: route 6s linear infinite; }}
     .return {{ animation-direction: reverse; animation-duration: 8s; }}
-    .node {{ opacity:0; animation: node-in .55s ease forwards; }}
+    .node {{ animation: node-in .55s ease both; }}
     .n1 {{ animation-delay:.12s; }} .n2 {{ animation-delay:.24s; }} .n3 {{ animation-delay:.36s; }}
     .ping {{ transform-box:fill-box; transform-origin:center; animation: ping 2.4s ease-in-out infinite; }}
     @keyframes route {{ to {{ stroke-dashoffset:-168; }} }}
-    @keyframes node-in {{ from {{ opacity:0; transform:translateY(7px); }} to {{ opacity:1; transform:none; }} }}
+    @keyframes node-in {{ from {{ transform:translateY(7px); }} to {{ transform:none; }} }}
     @keyframes ping {{ 0%,100% {{ opacity:.45; transform:scale(.75); }} 50% {{ opacity:1; transform:scale(1.3); }} }}
     @media (prefers-reduced-motion: reduce) {{
       .bus,.node,.ping {{ animation:none; }}
@@ -374,7 +374,7 @@ def instrument_style():
     @keyframes packet {{ to {{ stroke-dashoffset:-190; }} }}
     @keyframes sweep {{ 0%,100% {{ transform:translateX(-140px); opacity:0; }} 20%,80% {{ opacity:.12; }} 50% {{ transform:translateX(1240px); opacity:.04; }} }}
     @keyframes instrument-pulse {{ 0%,100% {{ opacity:.5; transform:scale(.82); }} 50% {{ opacity:1; transform:scale(1.18); }} }}
-    @keyframes boot {{ from {{ opacity:0; transform:translateY(7px); }} }}
+    @keyframes boot {{ from {{ transform:translateY(7px); }} }}
     @media (prefers-reduced-motion: reduce) {{
       .packet,.sweep,.pulse,.boot {{ animation:none; }} .boot {{ opacity:1; transform:none; }} .sweep {{ display:none; }}
     }}
@@ -384,11 +384,11 @@ def instrument_style():
 def instrument_hero(theme, repo_count, test_count, source_kb):
     t = instrument_tokens(theme)
     stages = [
-        (612, "CLAIM", t["signal"]),
-        (732, "ATTACK", t["fault"]),
-        (852, "ORACLE", t["trigger"]),
-        (972, "BOUNDARY", t["violet"]),
-        (1092, "RECEIPT", t["pass"]),
+        (650, "CLAIM", t["signal"]),
+        (761, "ATTACK", t["fault"]),
+        (872, "ORACLE", t["trigger"]),
+        (983, "BOUNDARY", t["violet"]),
+        (1094, "RECEIPT", t["pass"]),
     ]
     nodes = []
     for i, (x, label, color) in enumerate(stages):
@@ -417,8 +417,8 @@ def instrument_hero(theme, repo_count, test_count, source_kb):
     <text x="50" y="238" class="utility" font-size="12" fill="{t['quiet']}">Build the mechanism. Attack the assumption. Publish where it loses.</text>
   </g>
 
-  <path d="M554 221H1144" fill="none" stroke="{t['hairline']}" stroke-width="2"/>
-  <path d="M554 221H1144" fill="none" stroke="{t['signal']}" stroke-width="3" class="packet"/>
+  <path d="M596 221H1144" fill="none" stroke="{t['hairline']}" stroke-width="2"/>
+  <path d="M596 221H1144" fill="none" stroke="{t['signal']}" stroke-width="3" class="packet"/>
   {''.join(nodes)}
 
   <g class="boot b3">

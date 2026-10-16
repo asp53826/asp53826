@@ -24,7 +24,7 @@
     @keyframes packet { to { stroke-dashoffset:-190; } }
     @keyframes sweep { 0%,100% { transform:translateX(-140px); opacity:0; } 20%,80% { opacity:.12; } 50% { transform:translateX(1240px); opacity:.04; } }
     @keyframes instrument-pulse { 0%,100% { opacity:.5; transform:scale(.82); } 50% { opacity:1; transform:scale(1.18); } }
-    @keyframes boot { from { opacity:0; transform:translateY(7px); } }
+    @keyframes boot { from { transform:translateY(7px); } }
     @media (prefers-reduced-motion: reduce) {
       .packet,.sweep,.pulse,.boot { animation:none; } .boot { opacity:1; transform:none; } .sweep { display:none; }
     }
