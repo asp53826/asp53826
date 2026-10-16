@@ -1,21 +1,26 @@
+<a href="https://asp53826.github.io/labs/faultline/">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="banner-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="banner-light.svg">
-  <img alt="Aaryan Patel — systems and ML infrastructure engineer whose public claims pass through attack, oracle, boundary, and receipt" src="banner-dark.svg" width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/fault-chamber/fault-chamber-mobile-dark-still.png">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px) and (prefers-color-scheme: light)" srcset="assets/fault-chamber/fault-chamber-mobile-light-still.png">
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/fault-chamber/fault-chamber-mobile-dark.png">
+  <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="assets/fault-chamber/fault-chamber-mobile-light.png">
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/fault-chamber/fault-chamber-dark-still.png">
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)" srcset="assets/fault-chamber/fault-chamber-light-still.png">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/fault-chamber/fault-chamber-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/fault-chamber/fault-chamber-light.png">
+  <img alt="FAULT CHAMBER: a five-node Raft cluster is partitioned, elects a leader, repairs conflicting history, and emits a verification receipt" src="assets/fault-chamber/fault-chamber-dark-still.png" width="1200" height="520">
 </picture>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/now-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/now-light.svg"><img alt="Now shipping: the latest human commit across the public portfolio" src="assets/now-dark.svg" width="100%"></picture>
+</a>
 
 <p align="center">
   <a href="https://asp53826.github.io/lab/"><strong>▶ ENTER THE LAB</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/labs/faultline/"><strong>BREAK A RAFT CLUSTER</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/asp53826/raft-mvcc"><strong>INSPECT THE SOURCE</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://asp53826.github.io/resume/Aaryan-Patel-Systems-Resume.pdf"><strong>RÉSUMÉ</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="mailto:aaryansp26@gmail.com"><strong>EMAIL</strong></a>
 </p>
 
-<a href="https://asp53826.github.io/lab/"><img alt="The live site asp53826.github.io/lab, filmed in a real browser by CI: an aurora field steered by the cursor behind the line 'I build systems, then I try to break them.'" src="assets/live/lab.webp" width="100%"></a>
-
-<sub>↑ Not a mockup. A GitHub Action opens <a href="https://asp53826.github.io/lab/">the live site</a> in a real browser, steers it, and re-films this window whenever the site changes.</sub>
+> I build systems that can show where—and why—they fail.
 
 ## The 30-second version
 
@@ -23,7 +28,15 @@
 - **Strongest evidence:** [raft-mvcc](https://github.com/asp53826/raft-mvcc) passes **598 assertions** under seeded faults · [vllm-lite](https://github.com/asp53826/vllm-lite) reaches **2.9× throughput** at 94% KV-cache use · [track-fusion](https://github.com/asp53826/track-fusion) cuts localization error **47%** in its published regime.
 - **Now:** UGA computer science, graduating December 2026 · industrial data engineering at **MP Equipment** · open to full-time **systems and ML infrastructure** roles.
 
-## See it run
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/now-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/now-light.svg"><img alt="Now shipping: the latest human commit across the public portfolio" src="assets/now-dark.svg" width="1200" height="56"></picture>
+
+## Enter the working lab
+
+<a href="https://asp53826.github.io/lab/"><img alt="The live site asp53826.github.io/lab, filmed in a real browser by CI: an aurora field steered by the cursor behind the line 'I build systems, then I try to break them.'" src="assets/live/lab.webp" width="1200" height="675"></a>
+
+<sub>↑ Not a mockup. A GitHub Action opens <a href="https://asp53826.github.io/lab/">the live site</a> in a real browser, steers it, and re-films this window whenever the site changes.</sub>
+
+## Inside the mechanism
 
 <table>
 <tr>
@@ -50,9 +63,9 @@
 </table>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/proof-bus-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/proof-bus-light.svg">
-  <img alt="Verification bus: claim, attack, oracle, boundary, and receipt" src="assets/proof-bus-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/fault-chamber/evidence-stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/fault-chamber/evidence-stack-light.svg">
+  <img alt="Evidence stack: claim, attack, oracle, boundary, and source-bound receipt" src="assets/fault-chamber/evidence-stack-dark.svg" width="1200" height="250">
 </picture>
 
 ## Execute the evidence
