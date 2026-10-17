@@ -8,7 +8,7 @@
   <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)" srcset="assets/fault-chamber/fault-chamber-light-still.png">
   <source media="(prefers-color-scheme: dark)" srcset="assets/fault-chamber/fault-chamber-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="assets/fault-chamber/fault-chamber-light.png">
-  <img alt="FAULT CHAMBER: a five-node Raft cluster is partitioned, elects a leader, repairs conflicting history, and emits a verification receipt" src="assets/fault-chamber/fault-chamber-dark-still.png" width="1200" height="520">
+  <img alt="FAULT CHAMBER: a five-node Raft cluster is partitioned, elects a leader, repairs conflicting history, and emits a verification receipt" src="assets/fault-chamber/fault-chamber-dark-still.png" width="100%">
 </picture>
 </a>
 
@@ -28,11 +28,15 @@
 - **Strongest evidence:** [raft-mvcc](https://github.com/asp53826/raft-mvcc) passes **598 assertions** under seeded faults · [vllm-lite](https://github.com/asp53826/vllm-lite) reaches **2.9× throughput** at 94% KV-cache use · [track-fusion](https://github.com/asp53826/track-fusion) cuts localization error **47%** in its published regime.
 - **Now:** UGA computer science, graduating December 2026 · industrial data engineering at **MP Equipment** · open to full-time **systems and ML infrastructure** roles.
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/now-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/now-light.svg"><img alt="Now shipping: the latest human commit across the public portfolio" src="assets/now-dark.svg" width="1200" height="56"></picture>
+<a href="https://asp53826.github.io/labs/faultline/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/fun/terminal-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/fun/terminal-light.svg"><img alt="Animated terminal: whoami, then make test in raft-mvcc passes 598 assertions, a FAULTLINE leader isolation produces two leaders that heal into one, and current status. A second pane shows a live lab monitor." src="assets/fun/terminal-dark.svg" width="100%"></picture></a>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/now-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/now-light.svg"><img alt="Now shipping: the latest human commit across the public portfolio" src="assets/now-dark.svg" width="100%"></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/fun/divider-a-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/fun/divider-a-light.svg"><img alt="" src="assets/fun/divider-a-dark.svg" width="100%"></picture>
 
 ## Enter the working lab
 
-<a href="https://asp53826.github.io/lab/"><img alt="The live site asp53826.github.io/lab, filmed in a real browser by CI: an aurora field steered by the cursor behind the line 'I build systems, then I try to break them.'" src="assets/live/lab.webp" width="1200" height="675"></a>
+<a href="https://asp53826.github.io/lab/"><img alt="The live site asp53826.github.io/lab, filmed in a real browser by CI: an aurora field steered by the cursor behind the line 'I build systems, then I try to break them.'" src="assets/live/lab.webp" width="100%"></a>
 
 <sub>↑ Not a mockup. A GitHub Action opens <a href="https://asp53826.github.io/lab/">the live site</a> in a real browser, steers it, and re-films this window whenever the site changes.</sub>
 
@@ -51,6 +55,8 @@
 
 ## The arcade
 
+<a href="https://asp53826.github.io/lab/play/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/fun/highscores-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/fun/highscores-light.svg"><img alt="Arcade high-score screen built from measured results: 598 assertions, 138x warm read, 2.9x throughput, 47% less error, 68 tests. A pixel ship turns split-brain, stale-read and lost-write bugs into regression tests." src="assets/fun/highscores-dark.svg" width="100%"></picture></a>
+
 <table>
 <tr>
 <td width="50%"><a href="https://asp53826.github.io/lab/play/"><img alt="Short Gamma gameplay: hedging a short-volatility options book as delta swings, Greeks from the aad-greeks reverse-mode engine" src="assets/live/short-gamma.gif" width="100%"></a></td>
@@ -65,8 +71,10 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/fault-chamber/evidence-stack-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/fault-chamber/evidence-stack-light.svg">
-  <img alt="Evidence stack: claim, attack, oracle, boundary, and source-bound receipt" src="assets/fault-chamber/evidence-stack-dark.svg" width="1200" height="250">
+  <img alt="Evidence stack: claim, attack, oracle, boundary, and source-bound receipt" src="assets/fault-chamber/evidence-stack-dark.svg" width="100%">
 </picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/fun/divider-b-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/fun/divider-b-light.svg"><img alt="" src="assets/fun/divider-b-dark.svg" width="100%"></picture>
 
 ## Execute the evidence
 
@@ -107,6 +115,8 @@ can reverse whether speculation appears beneficial. These are predictions;
 real GPU validation is pending. The repository includes a matched-workload vLLM
 validation harness and **68 passing unit and fake-server tests**; one additional
 end-to-end test requires a trained predictor cache.
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/fun/divider-c-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/fun/divider-c-light.svg"><img alt="" src="assets/fun/divider-c-dark.svg" width="100%"></picture>
 
 ## Choose your route
 
@@ -181,6 +191,8 @@ observational logs.
 **[Read the architecture](https://github.com/asp53826/faultgraph/blob/main/docs/ARCHITECTURE.md)** ·
 **[Audit the research protocol](https://github.com/asp53826/faultgraph/blob/main/docs/RESEARCH_PROTOCOL.md)** ·
 **[Verify CI](https://github.com/asp53826/faultgraph/actions/runs/31710995157)**
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/fun/divider-a-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/fun/divider-a-light.svg"><img alt="" src="assets/fun/divider-a-dark.svg" width="100%"></picture>
 
 ## Three reproducible passports
 
@@ -295,6 +307,8 @@ executes 598 assertions.
 
 </details>
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/fun/divider-b-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/fun/divider-b-light.svg"><img alt="" src="assets/fun/divider-b-dark.svg" width="100%"></picture>
+
 ## Autonomous operations
 
 **[Portfolio Ops](https://github.com/asp53826/portfolio-ops)** maintains the
@@ -324,6 +338,18 @@ account or legal decisions remain outside the autonomous boundary.
 This block is regenerated only when GitHub's repository, release, or workflow data changes.
 <!-- portfolio-status:end -->
 
+<details>
+<summary><kbd>↑</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>B</kbd> <kbd>A</kbd></summary>
+<br>
+
+<a href="https://asp53826.github.io/labs/faultline/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/fun/secret-level-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/fun/secret-level-light.svg"><img alt="Secret level: isolating N1 leaves two leaders in two terms; healing makes N1 step down, rolls back its conflicting entries, and unlocks an achievement." src="assets/fun/secret-level-dark.svg" width="100%"></picture></a>
+
+<sub>That was a cartoon. <a href="https://asp53826.github.io/labs/faultline/">FAULTLINE</a> runs the real C++17 Raft engine in your browser, so you can isolate the leader yourself and watch the safety check decide.</sub>
+
+</details>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/fun/divider-c-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/fun/divider-c-light.svg"><img alt="" src="assets/fun/divider-c-dark.svg" width="100%"></picture>
+
 ## Open channel
 
 **[aaryansp26@gmail.com](mailto:aaryansp26@gmail.com)** ·
@@ -340,5 +366,8 @@ UGA computer science, December 2026. Industrial data engineering at
 **MP Equipment**. Every system above is MIT licensed: clone one, run the
 benchmark, and inspect the regime where it breaks.
 
-<sub>All profile visuals are first-party SVGs generated in this repository.
-Motion is limited to signal flow and respects <code>prefers-reduced-motion</code>.</sub>
+<a href="https://asp53826.github.io/lab/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/fun/patrol-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/fun/patrol-light.svg"><img alt="Thanks for playing: a small robot walks the commit log and zaps split-brain, stale-read, lost-write and off-by-one bugs, turning each one into a test." src="assets/fun/patrol-dark.svg" width="100%"></picture></a>
+
+<sub>All profile visuals are first-party SVGs generated in this repository; the play layer comes from
+<code>scripts/arcade.py</code>. Every animation is plain CSS and stops under <code>prefers-reduced-motion</code>.
+Psst: there is a secret level above the contact links.</sub>

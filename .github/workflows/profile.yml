@@ -57,6 +57,9 @@ jobs:
       - name: Source-backed toolchain matrix
         run: python3 scripts/toolchain.py
 
+      - name: Play layer (terminal, dividers, arcade, secret level, patrol)
+        run: python3 scripts/arcade.py
+
       # The contribution-snake animation is generated but deliberately not
       # shown in the README. It renders the contribution calendar, and at 17
       # contributions across 5 days that calendar is nearly empty -- GitHub
