@@ -331,7 +331,7 @@ account or legal decisions remain outside the autonomous boundary.
 | [track-fusion](https://github.com/asp53826/track-fusion) | Python | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/track-fusion/actions/runs/38413934806) |
 | [tensorforge-webgpu](https://github.com/asp53826/tensorforge-webgpu) | TypeScript | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/tensorforge-webgpu/actions/runs/39796258371) |
 | [columnar-engine](https://github.com/asp53826/columnar-engine) | C++ | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/columnar-engine/actions/runs/38563197276) |
-| [lsm-tree](https://github.com/asp53826/lsm-tree) | C++ | No published release | No completed workflow |
+| [lsm-tree](https://github.com/asp53826/lsm-tree) | C++ | No published release | [Autonomous Engineering Lab: success](https://github.com/asp53826/lsm-tree/actions/runs/39433177453) |
 | [counterexample](https://github.com/asp53826/counterexample) | CSS | [v1.0.0](https://github.com/asp53826/counterexample/releases/tag/v1.0.0) | [OpenSSF Scorecard: success](https://github.com/asp53826/counterexample/actions/runs/39416647181) |
 | [portfolio-ops](https://github.com/asp53826/portfolio-ops) | Python | No published release | [Achievement Scout: success](https://github.com/asp53826/portfolio-ops/actions/runs/39273509369) |
 
