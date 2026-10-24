@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="56" viewBox="0 0 1200 56" role="img" aria-label="Now shipping: asp53826.github.io, Lab v3: kill -9, daily challenge, autopilot tour, flags, soun…, 3 days ago.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="56" viewBox="0 0 1200 56" role="img" aria-label="Now shipping: faultgraph, Refresh artifact action and serialize CodeQL, 72 days ago.">
   <style>
     .display { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .utility { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
     .live { transform-box: fill-box; transform-origin: center; animation: live 2.2s ease-in-out infinite; }
@@ -11,7 +11,7 @@
   <circle cx="28" cy="28" r="5" fill="#7CE7A6"/><circle cx="28" cy="28" r="10" fill="none" stroke="#7CE7A6" class="live"/>
   <text x="48" y="33" class="utility" font-size="11" letter-spacing="2" fill="#7CE7A6">NOW SHIPPING</text>
   <path d="M168 16V40" stroke="#25424B"/>
-  <text x="186" y="33" class="utility" font-size="13" font-weight="700" fill="#72E4DA">asp53826.github.io</text>
-  <text x="340" y="33" class="utility" font-size="13" fill="#D8E5E8">› Lab v3: kill -9, daily challenge, autopilot tour, flags, soun…<tspan class="caret" fill="#72E4DA"> ▍</tspan></text>
-  <text x="1176" y="33" text-anchor="end" class="utility" font-size="11" letter-spacing="1" fill="#789098">3 DAYS AGO</text>
+  <text x="186" y="33" class="utility" font-size="13" font-weight="700" fill="#72E4DA">faultgraph</text>
+  <text x="276" y="33" class="utility" font-size="13" fill="#D8E5E8">› Refresh artifact action and serialize CodeQL<tspan class="caret" fill="#72E4DA"> ▍</tspan></text>
+  <text x="1176" y="33" text-anchor="end" class="utility" font-size="11" letter-spacing="1" fill="#789098">72 DAYS AGO</text>
 </svg>
