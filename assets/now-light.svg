@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="56" viewBox="0 0 1200 56" role="img" aria-label="Now shipping: counterexample, Scope privileged workflow tokens to jobs, 77 days ago.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="56" viewBox="0 0 1200 56" role="img" aria-label="Now shipping: faultgraph, Refresh artifact action and serialize CodeQL, 75 days ago.">
   <style>
     .display { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .utility { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
     .live { transform-box: fill-box; transform-origin: center; animation: live 2.2s ease-in-out infinite; }
@@ -11,7 +11,7 @@
   <circle cx="28" cy="28" r="5" fill="#167A43"/><circle cx="28" cy="28" r="10" fill="none" stroke="#167A43" class="live"/>
   <text x="48" y="33" class="utility" font-size="11" letter-spacing="2" fill="#167A43">NOW SHIPPING</text>
   <path d="M168 16V40" stroke="#B9CCD0"/>
-  <text x="186" y="33" class="utility" font-size="13" font-weight="700" fill="#087C78">counterexample</text>
-  <text x="308" y="33" class="utility" font-size="13" fill="#10242B">› Scope privileged workflow tokens to jobs<tspan class="caret" fill="#087C78"> ▍</tspan></text>
-  <text x="1176" y="33" text-anchor="end" class="utility" font-size="11" letter-spacing="1" fill="#536A72">77 DAYS AGO</text>
+  <text x="186" y="33" class="utility" font-size="13" font-weight="700" fill="#087C78">faultgraph</text>
+  <text x="276" y="33" class="utility" font-size="13" fill="#10242B">› Refresh artifact action and serialize CodeQL<tspan class="caret" fill="#087C78"> ▍</tspan></text>
+  <text x="1176" y="33" text-anchor="end" class="utility" font-size="11" letter-spacing="1" fill="#536A72">75 DAYS AGO</text>
 </svg>
